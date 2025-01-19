@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.ExpressionsForCyclomaticComplexityManipulationSettings"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.ASTCyclomaticTransformationProcessor"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.CustomConfigurationExpressionAsJSON"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.NativeConfigurationExpression"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionType"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings"/>
+    <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityEvaluationProjectWalker"/>
+    <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityComparator"/>
+    <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityMeasuresSettings"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.ASTTextExtractorTools"/>
+    <fullyQualifiedTypeName name="astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatement"/>
+</qualifiedTypeNameHistroy>

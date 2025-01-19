@@ -32,6 +32,7 @@ public class SPLDecoratorComplexityComparator {
 	private ComplexityDataAnalyzedFilePersistence complexityDataAnalyzedFilePersistence;
 	private String pathToProjectTree;
 	
+
 	public SPLDecoratorComplexityComparator(String pathToProjectTree, DecoratorComplexityMeasuresSettings complexitySettings) {	
 		this.pathToProjectTree = pathToProjectTree;
 		this.complexitySettings = complexitySettings;
@@ -131,7 +132,7 @@ public class SPLDecoratorComplexityComparator {
 		ComplexityRecordsCollector recordCollector;
 		
 		String usedServiceName;
-		for(ComplexityService chosenComplexityService: this.complexitySettings.getComplexityServices()) {
+		for(ComplexityService chosenComplexityService: this.cyclomaticComplexitySettings.getComplexityServices()) {
 			usedServiceName = chosenComplexityService.getName();
 			recordCollector = this.recordsCollectorFromService.get(usedServiceName);
 			this.cyclomaticComplexityProjectWalker.evaluateOnExistingProject(
@@ -140,7 +141,7 @@ public class SPLDecoratorComplexityComparator {
 					expressionsForCyclomaticComplexityManipulationSettings2);
 		}
 
-		for(ComplexityService chosenComplexityService: this.complexitySettings.getComplexityServices()) {
+		for(ComplexityService chosenComplexityService: this.cyclomaticComplexitySettings.getComplexityServices()) {
 			usedServiceName = chosenComplexityService.getName();
 			recordCollector = this.recordsCollectorFromService.get(usedServiceName);
 			this.serializeMeasurements(recordCollector, usedServiceName);

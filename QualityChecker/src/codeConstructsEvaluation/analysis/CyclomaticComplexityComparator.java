@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 
 import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
 import astFileProcessor.processors.ASTClassDecoratorProcessor;
@@ -26,11 +27,13 @@ public class CyclomaticComplexityComparator {
 	
 	private TransformationOutput removeOrTransformDecorators(String fileContent, 
 			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings) 
-			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		JSONObject astRoot = ASTConverterClient.convertFromCodeToASTJSON(fileContent);
 		ASTCyclomaticTransformationProcessor astCyclomaticTransformationProcessor = new ASTCyclomaticTransformationProcessor();
 		astCyclomaticTransformationProcessor.transformVariabilityAnnotations(astRoot, decoratorsManipulationSettings);
+		System.out.println("Convertion");
 		String resultingCode = ASTConverterClient.convertFromASTToCode(astRoot.get("ast").toString());
+		System.out.println(resultingCode);
 		//System.out.println(astRoot.get("ast").toString());
 		return new TransformationOutput(resultingCode, List.of());
 	}
@@ -48,7 +51,7 @@ public class CyclomaticComplexityComparator {
 			String fileWithDecoratorsPath, ComplexityService complexityService,
 			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings1, 
 			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings2) 
-					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		String fileWithoutDecoratorsContent;
 		TransformationOutput transformationOutput1 = null, transformationOutput2 = null;
 		String fileWithDecoratorsContent = PostRequester.loadFileContent(fileWithDecoratorsPath);
@@ -86,7 +89,7 @@ public class CyclomaticComplexityComparator {
 			ComplexityService complexityService, 
 			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings1, 
 			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings2) 
-					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		String fileWithDecoratorsContent = PostRequester.loadFileContent(fileWithDecoratorsPath);
 		String fileWithoutDecoratorsContent;
 		// clone String data twice to make transformation from both independent
@@ -115,7 +118,7 @@ public class CyclomaticComplexityComparator {
 	public ComplexityMeasurement evaluateAndAssociateDecoratorComplexities(String fileWithDecoratorsPath, 
 			ComplexityService complexityService, ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings) 
 					throws IOException, InterruptedException, NonExistingDecoratorTransformationType,
-														IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+														IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		String fileWithDecoratorsContent = PostRequester.loadFileContent(fileWithDecoratorsPath);
 		// clone String data twice to make transformation from both independent
 		fileWithDecoratorsContent = complexityService.doCleaning(fileWithDecoratorsContent);
@@ -130,7 +133,7 @@ public class CyclomaticComplexityComparator {
 	}
 	
 	private static void test(ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings1) 
-					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		//String fileWithDecoratorsPath = "E://aspects/spaProductLine/QualityChecker/src/astFileProcessor/testFiles/serviceCode.txt";
 		//String fileWithDecoratorsPath = "E://aspects/spaProductLine/QualityChecker/src/astFileProcessor/testFiles/serviceCodeMix.txt";
 		//String fileWithDecoratorsPath = "E://aspects/spaProductLine/QualityChecker/src/astFileProcessor/testFiles/angularAnnotations/alternativeTest.txt";
@@ -139,7 +142,7 @@ public class CyclomaticComplexityComparator {
 		//String fileWithDecoratorsPath = "E://aspects/spaProductLine/QualityChecker/src/astFileProcessor/testFiles/angularAnnotations/importTest.txt";
 		//String fileWithDecoratorsPath = "E://aspects/spaProductLine/QualityChecker/src/astFileProcessor/testFiles/angularAnnotations/argumentTest.txt";
 		//String fileWithDecoratorsPath = "E://aspects/spaProductLine/QualityChecker/src/astFileProcessor/testFiles/angularAnnotations/classVariableTest.txt";
-		String fileWithDecoratorsPath = "E://aspects/spaProductLine/QualityChecker/src/astFileProcessor/testFiles/angularAnnotations/classParameterTest.txt";
+		String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningClass.txt";
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings2 = ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForEntireConfigurationExpressionAsJSON();
 		cyclomaticComplexityExpressionsManipulationSettings2.setWholeFileContentToBeStoredOption(true);
 		cyclomaticComplexityExpressionsManipulationSettings1.setWholeFileContentToBeStoredOption(true);
@@ -153,21 +156,22 @@ public class CyclomaticComplexityComparator {
 	}
 	
 	private static void useFirstClassEntityRestrictedMechanism() 
-			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings = new ExpressionsForCyclomaticComplexityManipulationSettings();
 		CyclomaticComplexityComparator.test(decoratorsManipulationSettings);
 	}
 	
 	private static void useSecondGeneralDecoratorParsingMechanism() 
-			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
 				= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForConfigurationExpressionsEvaluatedAsLayers();
-
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
 		CyclomaticComplexityComparator.test(cyclomaticComplexityExpressionsManipulationSettings);
 	}
 	
 	public static void main(String[] args) throws IOException, InterruptedException, 
-	                               NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+	                               NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		//DecoratorComplexityComparator.useFirstClassEntityRestrictedMechanism();
 		CyclomaticComplexityComparator.useSecondGeneralDecoratorParsingMechanism();
 	}

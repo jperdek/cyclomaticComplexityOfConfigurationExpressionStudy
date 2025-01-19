@@ -2,8 +2,8 @@ package astFileProcessor.astObjects.cyclomaticComplexity;
 
 public class ASTConditionalStatement {
 
-	public String getAstConditionalExpressionStatement(String innerConfigurationExpressionAst, String expressionName, String thenStatementAst) {
-		String conditionalStatementInAst = String.join( "{",
+	public static String getAstConditionalExpressionStatement(String innerConfigurationExpressionAstProperties, String expressionName, String thenStatementAst) {
+		String conditionalStatementInAst = String.join("", "{",
 		  "\"pos\": 168,",
 		  "\"end\": 747,",
 		  "\"flags\": 0,",
@@ -49,7 +49,7 @@ public class ASTConditionalStatement {
 		  "                    \"modifierFlagsCache\": 0,",
 		  "                    \"transformFlags\": 0,",
 		  "                    \"kind\": 207,",
-		  "                    \"properties\": [" + innerConfigurationExpressionAst + "],",
+		  "                    \"properties\": " + innerConfigurationExpressionAstProperties + ",",
 		  "                    \"multiLine\": false",
 		  "                }",
 		  "            }",
@@ -78,4 +78,7 @@ public class ASTConditionalStatement {
 		"}");
 		return conditionalStatementInAst;
 	}
+	
+	
+	
 }

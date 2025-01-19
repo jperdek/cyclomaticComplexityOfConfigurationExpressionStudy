@@ -1,5 +1,7 @@
 package astFileProcessor.processors.cyclomaticComplexity;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -24,7 +26,11 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 	private Map<String, Integer> notAllowedDecoratorNames = null;
 	
 	
-	public ExpressionsForCyclomaticComplexityManipulationSettings() {}
+	public ExpressionsForCyclomaticComplexityManipulationSettings() {
+		this.allowedDecoratorNames = new HashMap<String, Integer>();
+		this.notAllowedDecoratorNames = new HashMap<String, Integer>();
+		this.importedDecoratorNames = new HashSet<String>();
+	}
 	
 	public boolean shouldWholeFileContentBeStored() { return this.shouldWholeFileContentBeStored; }
 	

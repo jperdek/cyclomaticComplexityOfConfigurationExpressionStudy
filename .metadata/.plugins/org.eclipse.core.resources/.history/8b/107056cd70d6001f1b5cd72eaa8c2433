@@ -1,0 +1,138 @@
+package astFileProcessor.processors.cyclomaticComplexity;
+
+import java.io.IOException;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
+import astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatement;
+import astFileProcessor.processors.ASTTextExtractorTools;
+import unsupportedDecoratorsManagement.NonExistingDecoratorTransformationType;
+import unsupportedDecoratorsManagement.entities.IllegalImportNameSpecifiedException;
+
+
+public class ASTCyclomaticTransformationProcessor {
+
+	private ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings;
+	
+	
+	public ASTCyclomaticTransformationProcessor() {
+	}
+	
+	public void transformVariabilityAnnotations(JSONObject astRoot, 
+			ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings) 
+			throws NonExistingDecoratorTransformationType, IOException, InterruptedException, 
+			       IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		this.expressionsForCyclomaticComplexityManipulationSettings = expressionsForCyclomaticComplexityManipulationSettings;
+		this.transformVariabilityAnnotations(astRoot, astRoot);
+		this.removeVariabilityAnnotations(astRoot, astRoot);
+	}
+	
+	private void transformAccordingToFoundVariabilityAnnotation(JSONObject astElement, JSONObject astParent) throws IOException, InterruptedException, ParseException {
+		String decoratorName = "";
+		if (astElement.containsKey("modifiers")) {
+			boolean shouldTransform = false;
+			
+			JSONObject decoratorElement;
+			for (Object decoratorElementObject: (Object[]) astElement.get("modifiers")) {
+				decoratorElement = (JSONObject) decoratorElementObject;
+				decoratorName = ASTTextExtractorTools.getTextFromAstIncludingNameAndExpressions(decoratorElement);
+				if (this.expressionsForCyclomaticComplexityManipulationSettings.canBeProcessed(decoratorName, false, true)) {
+					shouldTransform = true;
+				}
+			}
+			
+			if (shouldTransform) {
+				JSONArray statementsArray = (JSONArray) astParent.get("statements");
+				JSONObject statementAST;
+				String statementName;
+				JSONObject innerConfigurationExpressionAst;
+				int place = 0;
+				for (Object statement: statementsArray) {
+					place = place + 1;
+					statementAST = (JSONObject) statement;
+					statementName = ASTTextExtractorTools.getFullTextFromAstExpressions(statementAST);
+					if (statementName.equals(decoratorName)) {
+						innerConfigurationExpressionAst = ASTTextExtractorTools.extractExpressionFromDecoratorAsAst(statementAST, 0);
+						String astObjectString = ASTConditionalStatement.getAstConditionalExpressionStatement(
+								innerConfigurationExpressionAst.toString(), decoratorName, statementAST.toString());
+						if (!statementsArray.remove(statement)) {
+							System.out.println("Unsuccessful removal.");
+							if (!statementsArray.remove(statementAST)) {
+								System.out.println("Unsuccessful removal 2.");
+							}
+						}
+						System.out.println("Extensions:.....");
+						System.out.println(astObjectString);
+						statementsArray.add(place, (JSONObject) new JSONParser().parse(astObjectString));
+						break; 
+					}
+				}
+	
+			}
+		}
+	}
+	
+	private void transformVariabilityAnnotations(JSONObject astElement, JSONObject astParent) throws IOException, InterruptedException, ParseException {
+		String key;
+		if (astElement == null) { return; }
+		this.transformAccordingToFoundVariabilityAnnotation(astElement, astParent);
+		
+		
+		Object entryValue;
+		JSONObject entryJSONObject;
+		JSONArray contextArray;
+		for(Object entryKey: astElement.keySet()) {
+			key = (String) entryKey;
+			entryValue = astElement.get(key);
+			//if (key.equals("illegalDecorators")) {	continue; }
+			if (entryValue instanceof JSONObject) {
+				entryJSONObject = (JSONObject) entryValue;
+				this.transformVariabilityAnnotations(entryJSONObject, astElement);
+			} else if(entryValue instanceof JSONArray) {	
+				contextArray = (JSONArray) entryValue;
+				
+				if (key.equals("modifiers")) { return; }
+				for (int index = 0; index < contextArray.size(); index++) {
+					entryJSONObject = (JSONObject) contextArray.get(index);
+	
+					this.transformVariabilityAnnotations(entryJSONObject, astElement);
+				}
+			}
+		}
+	}
+	
+	private void removeVariabilityAnnotation(JSONObject astElement) {
+			
+	}
+	
+	private void removeVariabilityAnnotations(JSONObject astElement, JSONObject astParent) throws IOException, InterruptedException, ParseException {
+		String key;
+		if (astElement == null) { return; }
+		this.removeVariabilityAnnotation(astElement); 
+		
+		Object entryValue;
+		JSONObject entryJSONObject;
+		JSONArray contextArray;
+		for(Object entryKey: astElement.keySet()) {
+			key = (String) entryKey;
+			entryValue = astElement.get(key);
+			//if (key.equals("illegalDecorators")) {	continue; }
+			if (entryValue instanceof JSONObject) {
+				entryJSONObject = (JSONObject) entryValue;
+				this.transformVariabilityAnnotations(entryJSONObject, astElement);
+			} else if(entryValue instanceof JSONArray) {	
+				contextArray = (JSONArray) entryValue;
+				
+				for (int index = 0; index < contextArray.size(); index++) {
+					entryJSONObject = (JSONObject) contextArray.get(index);
+	
+					this.transformVariabilityAnnotations(entryJSONObject, astElement);
+				}
+			}
+		}
+	}
+}

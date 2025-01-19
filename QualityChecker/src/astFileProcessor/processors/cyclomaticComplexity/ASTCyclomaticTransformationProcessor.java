@@ -4,9 +4,13 @@ import java.io.IOException;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
+import astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatement;
 import astFileProcessor.processors.ASTTextExtractorTools;
+import codeConstructsEvaluation.transformation.ASTConverterClient;
 import unsupportedDecoratorsManagement.NonExistingDecoratorTransformationType;
 import unsupportedDecoratorsManagement.entities.IllegalImportNameSpecifiedException;
 
@@ -22,36 +26,76 @@ public class ASTCyclomaticTransformationProcessor {
 	public void transformVariabilityAnnotations(JSONObject astRoot, 
 			ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings) 
 			throws NonExistingDecoratorTransformationType, IOException, InterruptedException, 
-			       IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+			       IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		this.expressionsForCyclomaticComplexityManipulationSettings = expressionsForCyclomaticComplexityManipulationSettings;
-		this.transformVariabilityAnnotations(astRoot, astRoot);
+		this.transformVariabilityAnnotations(astRoot, astRoot, astRoot);
 		this.removeVariabilityAnnotations(astRoot, astRoot);
 	}
 	
-	private void transformAccordingToFoundVariabilityAnnotation(JSONObject astElement, JSONObject astParent) {
+	private void transformAccordingToFoundVariabilityAnnotation(JSONObject astElement, JSONObject astParent, JSONObject astRoot) throws IOException, InterruptedException, ParseException {
+		String decoratorName = "";
 		if (astElement.containsKey("modifiers")) {
 			boolean shouldTransform = false;
 			
-			JSONObject decoratorElement;
-			for (Object decoratorElementObject: (Object[]) astElement.get("modifiers")) {
+			JSONObject decoratorElement = null;
+			int foundPosition = 0;
+			for (Object decoratorElementObject: (JSONArray) astElement.get("modifiers")) {
 				decoratorElement = (JSONObject) decoratorElementObject;
-				String decoratorName = ASTTextExtractorTools.getTextFromAstIncludingNameAndExpressions(decoratorElement);
+				decoratorName = ASTTextExtractorTools.getTextFromAstIncludingNameAndExpressions(decoratorElement);
 				if (this.expressionsForCyclomaticComplexityManipulationSettings.canBeProcessed(decoratorName, false, true)) {
 					shouldTransform = true;
 				}
+				foundPosition = foundPosition + 1;
 			}
 			
 			if (shouldTransform) {
-				
-				
+				JSONArray statementsArray = (JSONArray) astParent.get("statements");
+				JSONObject statementAST;
+				String statementName;
+				String observedStatementName = (String) ((JSONObject) astElement.get("name")).get("escapedText");
+				JSONObject innerConfigurationExpressionAst;
+				int place = 0;
+				for (Object statement: statementsArray) {
+					statementAST = (JSONObject) statement;
+					JSONObject nameObject = (JSONObject) statementAST.get("name");
+					if (nameObject != null) {
+						statementName = (String) nameObject.get("escapedText");
+					} else {
+						statementName = null;
+					}
+					System.out.println(observedStatementName + " <---> " + statementName);
+					if (statementName != null && statementName.equals(observedStatementName)) {
+						innerConfigurationExpressionAst = ASTTextExtractorTools.extractExpressionFromDecoratorAsAst(
+								decoratorElement, 0);
+						String astObjectString = ASTConditionalStatement.getAstConditionalExpressionStatement(
+								innerConfigurationExpressionAst.get("properties").toString(), decoratorName, 
+								statementAST.toString());
+						if (!statementsArray.remove(statement)) {
+							System.out.println("Unsuccessful removal.");
+							if (!statementsArray.remove(statementAST)) {
+								System.out.println("Unsuccessful removal 2.");
+							}
+						}
+						System.out.println("Extensions:.....");
+						System.out.println(decoratorElement.toString());
+						System.out.println("Extensions:.....");
+						System.out.println(astObjectString);
+						statementsArray.add(place, (JSONObject) new JSONParser().parse(astObjectString));
+						System.out.println(astRoot.toString());
+						///ASTConverterClient.convertFromASTToCode(observedStatementName)
+						break; 
+					}
+					place = place + 1;
+				}
+	
 			}
 		}
 	}
 	
-	private void transformVariabilityAnnotations(JSONObject astElement, JSONObject astParent) {
+	private void transformVariabilityAnnotations(JSONObject astElement, JSONObject astParent, JSONObject astRoot) throws IOException, InterruptedException, ParseException {
 		String key;
 		if (astElement == null) { return; }
-		this.transformAccordingToFoundVariabilityAnnotation(astElement, astParent);
+		this.transformAccordingToFoundVariabilityAnnotation(astElement, astParent, astRoot);
 		
 		
 		Object entryValue;
@@ -63,7 +107,7 @@ public class ASTCyclomaticTransformationProcessor {
 			//if (key.equals("illegalDecorators")) {	continue; }
 			if (entryValue instanceof JSONObject) {
 				entryJSONObject = (JSONObject) entryValue;
-				this.transformVariabilityAnnotations(entryJSONObject, astElement);
+				this.transformVariabilityAnnotations(entryJSONObject, astElement, astRoot);
 			} else if(entryValue instanceof JSONArray) {	
 				contextArray = (JSONArray) entryValue;
 				
@@ -71,7 +115,7 @@ public class ASTCyclomaticTransformationProcessor {
 				for (int index = 0; index < contextArray.size(); index++) {
 					entryJSONObject = (JSONObject) contextArray.get(index);
 	
-					this.transformVariabilityAnnotations(entryJSONObject, astElement);
+					this.transformVariabilityAnnotations(entryJSONObject, astElement, astRoot);
 				}
 			}
 		}
@@ -81,7 +125,7 @@ public class ASTCyclomaticTransformationProcessor {
 			
 	}
 	
-	private void removeVariabilityAnnotations(JSONObject astElement, JSONObject astParent) {
+	private void removeVariabilityAnnotations(JSONObject astElement, JSONObject astParent) throws IOException, InterruptedException, ParseException {
 		String key;
 		if (astElement == null) { return; }
 		this.removeVariabilityAnnotation(astElement); 
@@ -95,14 +139,14 @@ public class ASTCyclomaticTransformationProcessor {
 			//if (key.equals("illegalDecorators")) {	continue; }
 			if (entryValue instanceof JSONObject) {
 				entryJSONObject = (JSONObject) entryValue;
-				this.transformVariabilityAnnotations(entryJSONObject, astElement);
+				this.removeVariabilityAnnotations(entryJSONObject, astElement);
 			} else if(entryValue instanceof JSONArray) {	
 				contextArray = (JSONArray) entryValue;
 				
 				for (int index = 0; index < contextArray.size(); index++) {
 					entryJSONObject = (JSONObject) contextArray.get(index);
 	
-					this.transformVariabilityAnnotations(entryJSONObject, astElement);
+					this.removeVariabilityAnnotations(entryJSONObject, astElement);
 				}
 			}
 		}

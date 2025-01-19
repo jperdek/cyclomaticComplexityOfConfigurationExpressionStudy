@@ -7,6 +7,8 @@ import java.nio.file.Path;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
+import org.json.simple.parser.ParseException;
+
 import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
 import astFileProcessor.processors.DecoratorManipulationSettings;
 import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
@@ -28,7 +30,7 @@ public class CyclomaticComplexityEvaluationProjectWalker {
 			ComplexityService usedComplexityService, String pathToProjectTree, 
 			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings1, 
 			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings2) 
-					throws NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+					throws NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		Stream<Path> s = null;
 		ComplexityMeasurement complexityMeasurement;
 		
@@ -60,7 +62,7 @@ public class CyclomaticComplexityEvaluationProjectWalker {
 	public void evaluateOnExistingProject(ComplexityRecordsCollector complexityRecordsCollector, 
 			ComplexityService usedComplexityService, String pathToProjectTree, 
 			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings) 
-					throws NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+					throws NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		Stream<Path> s = null;
 		ComplexityMeasurement complexityMeasurement;
 		
