@@ -1,0 +1,50 @@
+package astFileProcessor.processors.cyclomaticComplexity;
+
+import astFileProcessor.processors.DecoratorManipulationSettings;
+
+public class ExpressionsForCyclomaticComplexityManipulationSettings {
+
+	private boolean shouldWholeFileContentBeStored = true;
+	
+	public ExpressionsForCyclomaticComplexityManipulationSettings() {
+		
+	}
+	
+	public boolean shouldWholeFileContentBeStored() { return this.shouldWholeFileContentBeStored; }
+	
+	public void setWholeFileContentToBeStoredOption(boolean shouldWholeFileContentBeStored) {
+		this.shouldWholeFileContentBeStored = shouldWholeFileContentBeStored;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getSettingsForEntireConfigurationExpressionAsJSON() {
+		DecoratorManipulationSettings decoratorsManipulationSettings = new DecoratorManipulationSettings();
+		decoratorsManipulationSettings.removeAllAnnotations();
+		decoratorsManipulationSettings.allowOnlyUsedAngularOnes();
+		decoratorsManipulationSettings.setSearchType(DecoratorManipulationSettings.SearchType.START);
+		return decoratorsManipulationSettings;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getSettingsForConfigurationExpressionsEvaluatedAsLayers() {
+		DecoratorManipulationSettings decoratorsManipulationSettings = new DecoratorManipulationSettings();
+		decoratorsManipulationSettings.allowOnlyUsedAngularOnes();
+		decoratorsManipulationSettings.setIfRemoveProcessedDecoratorsOnly(false);
+		decoratorsManipulationSettings.setIfRemoveUnprocessedDecoratorsOnly(false);
+		decoratorsManipulationSettings.setSearchType(DecoratorManipulationSettings.SearchType.START);
+		return decoratorsManipulationSettings;
+	}
+	
+	public static DecoratorManipulationSettings getSettingsForNativeConfigurationExpressions() {
+		DecoratorManipulationSettings decoratorsManipulationSettings = new DecoratorManipulationSettings();
+
+		return decoratorsManipulationSettings;
+	}
+	
+	public static DecoratorManipulationSettings getSettingsForCustomConfigurationExpressionsInJSON() {
+		DecoratorManipulationSettings decoratorsManipulationSettings = new DecoratorManipulationSettings();
+		decoratorsManipulationSettings.removeAllAnnotations();
+		decoratorsManipulationSettings.setIfRemoveProcessedDecoratorsOnly(true);
+		decoratorsManipulationSettings.allowOnlyUsedAngularOnes();
+		decoratorsManipulationSettings.setSearchType(DecoratorManipulationSettings.SearchType.START);
+		return decoratorsManipulationSettings;
+	}
+}

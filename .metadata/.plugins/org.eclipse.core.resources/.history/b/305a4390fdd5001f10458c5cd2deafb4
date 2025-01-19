@@ -1,0 +1,61 @@
+package astFileProcessor.processors.cyclomaticComplexity;
+
+import java.io.IOException;
+
+import org.json.simple.JSONObject;
+
+import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
+import unsupportedDecoratorsManagement.NonExistingDecoratorTransformationType;
+import unsupportedDecoratorsManagement.entities.IllegalImportNameSpecifiedException;
+
+
+public class ASTCyclomaticTransformationProcessor {
+
+	private ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings;
+	
+	public ASTCyclomaticTransformationProcessor() {
+	}
+	
+	public void transformVariabilityAnnotations(JSONObject astRoot, 
+			ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings) 
+			throws NonExistingDecoratorTransformationType, IOException, InterruptedException, 
+			       IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+		this.expressionsForCyclomaticComplexityManipulationSettings = expressionsForCyclomaticComplexityManipulationSettings;
+		this.transformVariabilityAnnotations(astRoot, astRoot);
+	}
+	
+	public void transformVariabilityAnnotations(JSONObject astElement, JSONObject astParent) {
+		String key;
+		if (astTemplatePart == null || astPart == null) { return; }
+
+		Object entryValue;
+		JSONObject entryTemplateJSONObject, entryJSONObject;
+		JSONArray contextTemplateArray, contextArray;
+		for(Object entryKey: astTemplatePart.keySet()) {
+			key = (String) entryKey;
+			entryValue = astTemplatePart.get(key);
+			//if (key.equals("illegalDecorators")) {	continue; }
+			if (entryValue instanceof JSONObject) {
+				entryTemplateJSONObject = (JSONObject) entryValue;
+				entryJSONObject = (JSONObject) astPart.get(key);
+				this.searchForPositiveVariabilityVariationPointMarkers(entryTemplateJSONObject, entryJSONObject, variationPointsContentInjection);
+			} else if(entryValue instanceof JSONArray) {	
+				contextTemplateArray = (JSONArray) entryValue;
+				contextArray = (JSONArray) astPart.get(key); //context to insert functionality
+				JSONArray contextArrayPrevious = new JSONArray();
+				for (Object previousObject: contextArray) {
+					contextArrayPrevious.add((JSONObject) previousObject);
+				}
+				for (int index = 0; index < contextTemplateArray.size(); index++) {
+					entryTemplateJSONObject = (JSONObject) contextTemplateArray.get(index);
+					entryJSONObject = (JSONObject) contextArrayPrevious.get(index);
+					this.processPossiblePositiveVariationPointPlace(entryTemplateJSONObject, key,
+							contextArray, variationPointsContentInjection);
+	
+					this.searchForPositiveVariabilityVariationPointMarkers(
+							entryTemplateJSONObject, entryJSONObject, variationPointsContentInjection);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+package astFileProcessor.processors.cyclomaticComplexity;
+
+import java.io.IOException;
+
+import org.json.simple.JSONObject;
+
+import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
+import unsupportedDecoratorsManagement.NonExistingDecoratorTransformationType;
+import unsupportedDecoratorsManagement.entities.IllegalImportNameSpecifiedException;
+
+
+public class ASTCyclomaticTransformationProcessor {
+
+	private ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings;
+	
+	public ASTCyclomaticTransformationProcessor() {
+	}
+	
+	public void transformVariabilityAnnotations(JSONObject astRoot, 
+			ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings) 
+			throws NonExistingDecoratorTransformationType, IOException, InterruptedException, 
+			       IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+		this.expressionsForCyclomaticComplexityManipulationSettings = expressionsForCyclomaticComplexityManipulationSettings;
+		this.transformVariabilityAnnotations(astRoot, astRoot);
+	}
+	
+	public void transformVariabilityAnnotations(JSONObject astElement, JSONObject astParent) {
+		
+	}
+}

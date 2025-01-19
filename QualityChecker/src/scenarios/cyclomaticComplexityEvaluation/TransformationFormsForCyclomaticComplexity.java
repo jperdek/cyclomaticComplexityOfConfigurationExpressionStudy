@@ -1,0 +1,34 @@
+package scenarios.cyclomaticComplexityEvaluation;
+
+import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
+
+
+public class TransformationFormsForCyclomaticComplexity {
+
+	public TransformationFormsForCyclomaticComplexity() {	
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithEntireHierarchicExpression() {
+		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
+			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForEntireConfigurationExpressionAsJSON();
+		return exprForCyclomaticComplManipSettings;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithNativeConditions() {
+		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
+			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForNativeConfigurationExpressions();
+		return exprForCyclomaticComplManipSettings;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithLayeredConditions() {
+		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
+			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForConfigurationExpressionsEvaluatedAsLayers();
+		return exprForCyclomaticComplManipSettings;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithCustomConditions() {
+		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
+			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForConfigurationExpressionsEvaluatedAsLayers();
+		return exprForCyclomaticComplManipSettings;
+	}
+}

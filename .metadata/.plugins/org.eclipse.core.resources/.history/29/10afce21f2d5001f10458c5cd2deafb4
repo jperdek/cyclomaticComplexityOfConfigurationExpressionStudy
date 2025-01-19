@@ -1,0 +1,51 @@
+package astFileProcessor.processors.cyclomaticComplexity;
+
+import astFileProcessor.processors.DecoratorManipulationSettings;
+
+
+public class ExpressionsForCyclomaticComplexityManipulationSettings {
+
+	private boolean shouldWholeFileContentBeStored = true;
+	
+	public ExpressionsForCyclomaticComplexityManipulationSettings() {
+		
+	}
+	
+	public boolean shouldWholeFileContentBeStored() { return this.shouldWholeFileContentBeStored; }
+	
+	public void setWholeFileContentToBeStoredOption(boolean shouldWholeFileContentBeStored) {
+		this.shouldWholeFileContentBeStored = shouldWholeFileContentBeStored;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getSettingsForEntireConfigurationExpressionAsJSON() {
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
+				= new ExpressionsForCyclomaticComplexityManipulationSettings();
+		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
+				new EntireConfigurationExpressionAsJSON());
+		return cyclomaticComplexityExpressionsManipulationSettings;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getSettingsForConfigurationExpressionsEvaluatedAsLayers() {
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
+				= new ExpressionsForCyclomaticComplexityManipulationSettings();
+		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
+				new ConfigurationExpressionAsLayersAsJSON());
+		return cyclomaticComplexityExpressionsManipulationSettings;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getSettingsForNativeConfigurationExpressions() {
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
+				= new ExpressionsForCyclomaticComplexityManipulationSettings();
+		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
+				new NativeConfigurationExpression());
+		return cyclomaticComplexityExpressionsManipulationSettings;
+	}
+	
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getSettingsForCustomConfigurationExpressionsInJSON() {
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
+				= new ExpressionsForCyclomaticComplexityManipulationSettings();
+		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
+				new CustomConfigurationExpressionAsJSON());
+		return cyclomaticComplexityExpressionsManipulationSettings;
+	}
+}

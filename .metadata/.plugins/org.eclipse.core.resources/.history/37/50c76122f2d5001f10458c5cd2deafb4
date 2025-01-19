@@ -1,0 +1,5 @@
+package astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types;
+
+public class ConfigurationExpressionAsLayersAsJSON {
+
+}

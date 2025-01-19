@@ -1,0 +1,40 @@
+package scenarios.cyclomaticComplexityEvaluation;
+
+import java.io.IOException;
+
+import SPLComplexityEvaluation.SPLDecoratorComplexityComparator;
+import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
+import astFileProcessor.processors.DecoratorManipulationSettings;
+import codeConstructsEvaluation.transformation.ComplexityService;
+import scenarios.Scenario;
+import scenarios.TransformationForms;
+import unsupportedDecoratorsManagement.NonExistingDecoratorTransformationType;
+import unsupportedDecoratorsManagement.entities.IllegalImportNameSpecifiedException;
+
+
+public class ScenarioHierarchicConfigurationExpressionsEval {
+	
+	public ScenarioHierarchicConfigurationExpressionsEval() {}
+	
+	public void launchScenario() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultComplexityComparator();
+		DecoratorManipulationSettings decoratorManipulationSettingsBaseVersion = TransformationForms.getForm1WithPrefereableDecorators();
+		DecoratorManipulationSettings decoratorManipulationSettingsComparedVersion= TransformationForms.getForm2WithoutConfigurationExpressions();
+		splDecoratorComparator.compareComplexityForScenario(
+				decoratorManipulationSettingsBaseVersion, decoratorManipulationSettingsComparedVersion);
+	}
+	
+	public void launchScenario(String pathToProjectTree, ComplexityService complexityService)
+			   throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultComplexityComparator(pathToProjectTree, complexityService);
+		ExpressionsForCyclomaticComplexityManipulationSettings nativeConfExpressionsConf = TransformationFormsForCyclomaticComplexity.ge
+		ExpressionsForCyclomaticComplexityManipulationSettings decoratorManipulationSettingsComparedVersion= TransformationForms.getForm2WithoutConfigurationExpressions();
+		splDecoratorComparator.compareComplexityForScenario(
+				decoratorManipulationSettingsBaseVersion, decoratorManipulationSettingsComparedVersion);
+	}
+
+	public static void main(String args[]) throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {
+		ScenarioHierarchicConfigurationExpressionsEval scenarioHierarchicConfigurationExpressionsEval = new ScenarioHierarchicConfigurationExpressionsEval() ;
+		scenarioHierarchicConfigurationExpressionsEval.launchScenario();
+	}
+}
