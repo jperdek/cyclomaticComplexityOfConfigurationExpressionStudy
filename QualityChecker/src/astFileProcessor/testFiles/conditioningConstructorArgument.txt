@@ -1,0 +1,19 @@
+import { Injectable} from '@angular/core';
+import { DecoratorTypesService } from '../featureManagement/decoratorsVariationPointManagement/decorator-types.service';
+
+@Injectable({providedIn: 'root'})
+class GameConfigurationService {
+
+   constructor(
+	    @DecoratorTypesService.skipLineParameter({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[ARG=drawBordersService]")
+        drawBordersService: DrawBordersService) {
+   }
+
+   myMethod(@DecoratorTypesService.skipLineParameter({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[ARG=drawBordersService]") a: str) {
+
+   }
+}
+
+function myMethod(@DecoratorTypesService.skipLineParameter({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[ARG=drawBordersService]") a: str) {
+
+   }

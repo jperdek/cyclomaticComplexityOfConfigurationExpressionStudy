@@ -1,0 +1,6 @@
+@DecoratorTypesService.skipLineVariableDeclaration({"imageGallery": "true"}, "[NOT=let declGalleryBottomSheetComponent = PuzzleBoardComponent;]")
+const declGalleryBottomSheetComponent = GalleryBottomSheetComponent;
+
+// @ts-ignore
+@DecoratorTypesService.skipLineVariableDeclaration({"zoomCoordinates": "true"}, "[IMPORT=SetZoomPositionComponent]") var newA;
+import { SetZoomPositionComponent } from './pages/zoom-management/set-zoom-position/set-zoom-position.component';

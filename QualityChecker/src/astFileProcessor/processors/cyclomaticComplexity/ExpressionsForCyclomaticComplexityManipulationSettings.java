@@ -186,6 +186,8 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 				= new ExpressionsForCyclomaticComplexityManipulationSettings();
 		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
 				new EntireConfigurationExpressionAsJSON());
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
 		return cyclomaticComplexityExpressionsManipulationSettings;
 	}
 	
@@ -194,6 +196,8 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 				= new ExpressionsForCyclomaticComplexityManipulationSettings();
 		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
 				new ConfigurationExpressionAsLayersAsJSON());
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
 		return cyclomaticComplexityExpressionsManipulationSettings;
 	}
 	
@@ -202,6 +206,8 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 				= new ExpressionsForCyclomaticComplexityManipulationSettings();
 		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
 				new NativeConfigurationExpression());
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
 		return cyclomaticComplexityExpressionsManipulationSettings;
 	}
 	
@@ -210,6 +216,8 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 				= new ExpressionsForCyclomaticComplexityManipulationSettings();
 		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
 				new CustomConfigurationExpressionAsJSON());
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
 		return cyclomaticComplexityExpressionsManipulationSettings;
 	}
 }

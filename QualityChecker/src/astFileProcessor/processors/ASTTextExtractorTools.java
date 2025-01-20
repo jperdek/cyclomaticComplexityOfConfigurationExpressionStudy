@@ -201,6 +201,21 @@ public class ASTTextExtractorTools {
 		return jsonExpression;
 	}
 
+	
+	public static String extractTextFromModifierArgument(JSONObject decoratorAst, int expressionPosition) throws IOException, InterruptedException {
+		JSONArray decoratorArguments = (JSONArray) ((JSONObject) decoratorAst.get("expression")).get("arguments");
+		if (decoratorArguments == null || decoratorArguments.size() <= expressionPosition) {
+			return null;
+		}
+		JSONObject expressionAst = (JSONObject) decoratorArguments.get(expressionPosition);
+		String extractedText =(String) expressionAst.get("text");
+		if (extractedText == null) {
+			JSONArray innerProperties = (JSONArray) expressionAst.get("properties");
+			extractedText = (String) ((JSONObject) ((JSONObject) innerProperties.get(0)).get("name")).get("text");
+		}
+		return extractedText;
+	}
+	
 	/**
 	 * Extracts configuration expression from decorator in AST and converts it into JSON
 	 * 
@@ -212,6 +227,8 @@ public class ASTTextExtractorTools {
 	 * @throws InterruptedException
 	 */
 	public static JSONObject extractExpressionFromDecoratorAsAst(JSONObject decoratorAst, int expressionPosition) throws IOException, InterruptedException {
+		JSONObject expression = (JSONObject) decoratorAst.get("expression");
+		if (expression == null) { return null; }
 		JSONArray decoratorArguments = (JSONArray) ((JSONObject) decoratorAst.get("expression")).get("arguments");
 		if (decoratorArguments == null || decoratorArguments.size() <= expressionPosition) {
 			return null;
@@ -229,5 +246,16 @@ public class ASTTextExtractorTools {
 			jsonExpressionAst.put("properties", (JSONArray) expressionAst.get("properties"));
 		}
 		return jsonExpressionAst;
+	}
+	
+	public static JSONObject getExpressionFromMadeCondition(String conditionInStr) throws IOException, InterruptedException {
+		conditionInStr = conditionInStr.strip();
+		if (!conditionInStr.startsWith("(")) { conditionInStr = "(" + conditionInStr; }
+		if (!conditionInStr.endsWith(")")) { conditionInStr = conditionInStr + ")"; }
+		conditionInStr = "if " + conditionInStr + " {}";
+		System.out.println(conditionInStr);
+		JSONObject defaultClassAst = (JSONObject) ASTConverterClient.convertFromCodeToASTJSON(conditionInStr).get("ast");
+		JSONObject expressionMadeFromCondition = (JSONObject) ((JSONObject) ((JSONArray) defaultClassAst.get("statements")).get(0)).get("expression");
+		return expressionMadeFromCondition;
 	}
 }

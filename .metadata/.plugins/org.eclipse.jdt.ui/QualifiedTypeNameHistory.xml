@@ -12,7 +12,13 @@
     <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityEvaluationProjectWalker"/>
     <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityComparator"/>
     <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityMeasuresSettings"/>
-    <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
     <fullyQualifiedTypeName name="astFileProcessor.processors.ASTTextExtractorTools"/>
     <fullyQualifiedTypeName name="astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatement"/>
+    <fullyQualifiedTypeName name="org.json.simple.parser.ParseException"/>
+    <fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="astFileProcessor.ASTLoader"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="codeConstructsEvaluation.transformation.ASTConverterClient"/>
 </qualifiedTypeNameHistroy>

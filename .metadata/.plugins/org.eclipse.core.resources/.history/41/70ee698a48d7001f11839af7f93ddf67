@@ -1,0 +1,177 @@
+package codeConstructsEvaluation.analysis;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+
+import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
+import astFileProcessor.processors.ASTClassDecoratorProcessor;
+import astFileProcessor.processors.DecoratorManipulationSettings;
+import astFileProcessor.processors.cyclomaticComplexity.ASTCyclomaticTransformationProcessor;
+import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
+import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON;
+import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.NativeConfigurationExpression;
+import codeConstructsEvaluation.ComplexityMeasurement;
+import codeConstructsEvaluation.transformation.ASTConverterClient;
+import codeConstructsEvaluation.transformation.ComplexityService;
+import codeConstructsEvaluation.transformation.PostRequester;
+import codeConstructsEvaluation.transformation.TyphonTypeScriptComplexityAnalysis;
+import unsupportedDecoratorsManagement.NonExistingDecoratorTransformationType;
+import unsupportedDecoratorsManagement.entities.IllegalImportNameSpecifiedException;
+
+
+public class CyclomaticComplexityComparator {
+
+	public CyclomaticComplexityComparator() {	
+	}
+	
+	private TransformationOutput removeOrTransformDecorators(String fileContent, 
+			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings) 
+			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		JSONObject astRoot = ASTConverterClient.convertFromCodeToASTJSON(fileContent);
+		ASTCyclomaticTransformationProcessor astCyclomaticTransformationProcessor = new ASTCyclomaticTransformationProcessor();
+		astCyclomaticTransformationProcessor.transformVariabilityAnnotations(astRoot, decoratorsManipulationSettings);
+		System.out.println("Convertion");
+		String resultingCode = ASTConverterClient.convertFromASTToCode(astRoot.get("ast").toString());
+		System.out.println(resultingCode);
+		//System.out.println(astRoot.get("ast").toString());
+		return new TransformationOutput(resultingCode, List.of());
+	}
+	
+	private String removeDecoratorsClassEntity(String fileContent, DecoratorManipulationSettings 
+			decoratorsManipulationSettings) throws IOException, InterruptedException, NonExistingDecoratorTransformationType {
+		JSONObject astRoot = ASTConverterClient.convertFromCodeToASTJSON(fileContent);
+		ASTClassDecoratorProcessor decoratorProcessor = new ASTClassDecoratorProcessor();
+		decoratorProcessor.getClasses(astRoot, decoratorsManipulationSettings);
+		String removedDecoratorsContent = ASTConverterClient.convertFromASTToCode(astRoot.get("ast").toString());
+		return removedDecoratorsContent;
+	}
+	
+	public ComplexityMeasurement evaluateDecoratorComplexity(
+			String fileWithDecoratorsPath, ComplexityService complexityService,
+			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings1, 
+			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings2) 
+					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		String fileWithoutDecoratorsContent;
+		TransformationOutput transformationOutput1 = null, transformationOutput2 = null;
+		String fileWithDecoratorsContent = PostRequester.loadFileContent(fileWithDecoratorsPath);
+		fileWithoutDecoratorsContent = fileWithDecoratorsContent;
+	
+		transformationOutput1 = this.removeOrTransformDecorators(
+				fileWithDecoratorsContent, decoratorsManipulationSettings1);
+		fileWithDecoratorsContent = transformationOutput1.getTransformedCode();
+
+		ComplexityMeasurement fileWithDecoratorComplexityMeasurement = complexityService.prepareComplexityMeasurement(
+				fileWithDecoratorsPath,  fileWithDecoratorsContent, decoratorsManipulationSettings1.shouldWholeFileContentBeStored());
+		if (transformationOutput1 != null) { 
+			fileWithDecoratorComplexityMeasurement.associateDecoratorsWithFileUnit(
+				transformationOutput1.getParsedGenericDecorators()); 
+			fileWithDecoratorComplexityMeasurement.associateDecoratorsWithEverything(
+				transformationOutput1.getParsedGenericDecorators());
+		}
+	
+		String fileWithDecoratorsContent2 = PostRequester.loadFileContent(fileWithDecoratorsPath);
+		transformationOutput2 = this.removeOrTransformDecorators(
+				fileWithDecoratorsContent2, decoratorsManipulationSettings2);
+		fileWithoutDecoratorsContent = transformationOutput2.getTransformedCode();
+		
+		ComplexityMeasurement fileWithoutDecoratorComplexityMeasurement = complexityService.prepareComplexityMeasurement(
+				fileWithDecoratorsPath,  fileWithoutDecoratorsContent, decoratorsManipulationSettings2.shouldWholeFileContentBeStored());
+		if (transformationOutput2 != null) { 
+			fileWithoutDecoratorComplexityMeasurement.associateDecoratorsWithFileUnit(
+				transformationOutput2.getParsedGenericDecorators()); 
+			fileWithoutDecoratorComplexityMeasurement.associateDecoratorsWithEverything(
+					transformationOutput2.getParsedGenericDecorators());
+		}
+		return (ComplexityMeasurement) fileWithDecoratorComplexityMeasurement.makeDifference(fileWithoutDecoratorComplexityMeasurement);
+	}
+
+	public ComplexityMeasurement evaluateAndAssociateDecoratorComplexities(String fileWithDecoratorsPath, 
+			ComplexityService complexityService, 
+			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings1, 
+			ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings2) 
+					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		String fileWithDecoratorsContent = PostRequester.loadFileContent(fileWithDecoratorsPath);
+		String fileWithoutDecoratorsContent;
+		// clone String data twice to make transformation from both independent
+		fileWithDecoratorsContent = fileWithoutDecoratorsContent = complexityService.doCleaning(fileWithDecoratorsContent);
+		// System.out.println(fileWithDecoratorsContent);
+		TransformationOutput transformationOutput1 = this.removeOrTransformDecorators(fileWithDecoratorsContent, decoratorsManipulationSettings1);
+		fileWithDecoratorsContent = transformationOutput1.getTransformedCode();
+		ComplexityMeasurement fileWithDecoratorComplexityMeasurement = complexityService.prepareComplexityMeasurement(
+				fileWithDecoratorsPath,  fileWithDecoratorsContent, decoratorsManipulationSettings1.shouldWholeFileContentBeStored());
+		
+		TransformationOutput transformationOutput2 = this.removeOrTransformDecorators(fileWithoutDecoratorsContent, decoratorsManipulationSettings2);
+		fileWithoutDecoratorsContent =  transformationOutput2.getTransformedCode();
+		ComplexityMeasurement fileWithoutDecoratorComplexityMeasurement = complexityService.prepareComplexityMeasurement(
+				fileWithDecoratorsPath,  fileWithoutDecoratorsContent, decoratorsManipulationSettings2.shouldWholeFileContentBeStored());
+		fileWithoutDecoratorComplexityMeasurement.associateDecoratorsWithFileUnit(transformationOutput1.getParsedGenericDecorators()); 
+		fileWithoutDecoratorComplexityMeasurement.associateDecoratorsWithEverything(transformationOutput1.getParsedGenericDecorators());
+		fileWithDecoratorComplexityMeasurement.associateDecoratorsWithFileUnit(transformationOutput2.getParsedGenericDecorators()); 
+		fileWithDecoratorComplexityMeasurement.associateDecoratorsWithEverything(transformationOutput2.getParsedGenericDecorators());
+		ComplexityMeasurement finalMeasurement = (ComplexityMeasurement) fileWithDecoratorComplexityMeasurement.makeDifference(
+				fileWithoutDecoratorComplexityMeasurement);
+		finalMeasurement.putAssociatedMeasurement("withDecorators", fileWithDecoratorComplexityMeasurement);
+		finalMeasurement.putAssociatedMeasurement("withoutDecorators", fileWithoutDecoratorComplexityMeasurement);
+		return finalMeasurement;
+	}
+	
+	public ComplexityMeasurement evaluateAndAssociateDecoratorComplexities(String fileWithDecoratorsPath, 
+			ComplexityService complexityService, ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings) 
+					throws IOException, InterruptedException, NonExistingDecoratorTransformationType,
+														IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		String fileWithDecoratorsContent = PostRequester.loadFileContent(fileWithDecoratorsPath);
+		// clone String data twice to make transformation from both independent
+		fileWithDecoratorsContent = complexityService.doCleaning(fileWithDecoratorsContent);
+		// System.out.println(fileWithDecoratorsContent);
+		TransformationOutput transformationOutput = this.removeOrTransformDecorators(fileWithDecoratorsContent, decoratorsManipulationSettings);
+		fileWithDecoratorsContent = transformationOutput.getTransformedCode();
+		ComplexityMeasurement complexityMeasurement = complexityService.prepareComplexityMeasurement(
+				fileWithDecoratorsPath,  fileWithDecoratorsContent, decoratorsManipulationSettings.shouldWholeFileContentBeStored());
+		complexityMeasurement.associateDecoratorsWithFileUnit(transformationOutput.getParsedGenericDecorators());
+		complexityMeasurement.associateDecoratorsWithEverything(transformationOutput.getParsedGenericDecorators());
+		return complexityMeasurement;
+	}
+	
+	private static void test(ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings1) 
+					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningClass.txt";
+		String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningMethod.txt";
+		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningConstructorArgument.txt";
+		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningOneLineStatements.txt";
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings2 = ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForEntireConfigurationExpressionAsJSON();
+		cyclomaticComplexityExpressionsManipulationSettings2.setWholeFileContentToBeStoredOption(true);
+		cyclomaticComplexityExpressionsManipulationSettings1.setWholeFileContentToBeStoredOption(true);
+		cyclomaticComplexityExpressionsManipulationSettings2.setConfigurationExpressionType(new NativeConfigurationExpression());
+		cyclomaticComplexityExpressionsManipulationSettings1.setConfigurationExpressionType(new EntireConfigurationExpressionAsJSON());
+		CyclomaticComplexityComparator decoratorComplexityComparator = new CyclomaticComplexityComparator();
+		ComplexityService typhonComplexityService = new TyphonTypeScriptComplexityAnalysis();
+		ComplexityMeasurement complexityDifference = decoratorComplexityComparator.evaluateDecoratorComplexity(
+				fileWithDecoratorsPath, typhonComplexityService, 
+				cyclomaticComplexityExpressionsManipulationSettings1, cyclomaticComplexityExpressionsManipulationSettings2);
+		complexityDifference.print();
+	}
+	
+	private static void useFirstClassEntityRestrictedMechanism() 
+			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		ExpressionsForCyclomaticComplexityManipulationSettings decoratorsManipulationSettings = new ExpressionsForCyclomaticComplexityManipulationSettings();
+		CyclomaticComplexityComparator.test(decoratorsManipulationSettings);
+	}
+	
+	private static void useSecondGeneralDecoratorParsingMechanism() 
+			throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
+				= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForConfigurationExpressionsEvaluatedAsLayers();
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
+		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
+		CyclomaticComplexityComparator.test(cyclomaticComplexityExpressionsManipulationSettings);
+	}
+	
+	public static void main(String[] args) throws IOException, InterruptedException, 
+	                               NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		//DecoratorComplexityComparator.useFirstClassEntityRestrictedMechanism();
+		CyclomaticComplexityComparator.useSecondGeneralDecoratorParsingMechanism();
+	}
+}

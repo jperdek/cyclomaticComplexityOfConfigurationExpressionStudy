@@ -1,0 +1,23 @@
+package astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types;
+
+import java.io.IOException;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+
+
+public interface ConfigurationExpressionType {
+	
+	public JSONObject transformConfigurationExpressionIntoConditionalStatement(
+			JSONObject innnerConfigurationExpressionAst, String decoratorName, 
+			JSONArray methodStatements) throws ParseException, IOException, InterruptedException;
+	
+	public JSONObject transformConfigurationExpressionIntoConditionalStatement(
+			JSONObject innnerConfigurationExpressionAst, String decoratorName, 
+			JSONObject methodStatement) throws ParseException, IOException, InterruptedException;
+	
+	public JSONObject transformConfigurationExpressionIntoConditionalStatement(
+			JSONObject innnerConfigurationExpressionAst, String decoratorName, String astElement, 
+			JSONArray methodStatements) throws ParseException, IOException, InterruptedException;
+}

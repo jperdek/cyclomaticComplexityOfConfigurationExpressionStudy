@@ -1,0 +1,17 @@
+import { Injectable} from '@angular/core';
+import { DecoratorTypesService } from '../featureManagement/decoratorsVariationPointManagement/decorator-types.service';
+
+@Injectable({providedIn: 'root'})
+class GameConfigurationService {
+
+   constructor(
+        private drawBordersService: DrawBordersService) {
+   }
+
+   @DecoratorTypesService.wholeBlockMethod({"AND": { "zoomValue": "true", "a": "false", "OR": {"b": "false", "c": "false" }}})
+   public addZoomValue(zoomHTML: Element | null): void {
+	console.log("aaaaa");
+	console.log("aaaaa");
+	console.log("aaaaa");	
+   }
+}
