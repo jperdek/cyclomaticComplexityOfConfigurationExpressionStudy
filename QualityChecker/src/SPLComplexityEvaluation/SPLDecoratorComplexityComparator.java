@@ -107,6 +107,25 @@ public class SPLDecoratorComplexityComparator {
 		}
 	}
 
+	public void evaluateComplexitiesOfAllForms(String formName, 
+			ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings) 
+			throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		ComplexityRecordsCollector recordCollector;
+		
+		String usedServiceName;
+		for(ComplexityService chosenComplexityService: this.cyclomaticComplexitySettings.getComplexityServices()) {
+			usedServiceName = chosenComplexityService.getName();
+			recordCollector = this.recordsCollectorFromService.get(usedServiceName);
+			this.cyclomaticComplexityProjectWalker.evaluateOnExistingProject(recordCollector, chosenComplexityService, this.pathToProjectTree, 
+					expressionsForCyclomaticComplexityManipulationSettings);
+		}
+		for(ComplexityService chosenComplexityService: this.cyclomaticComplexitySettings.getComplexityServices()) {
+			usedServiceName = chosenComplexityService.getName();
+			recordCollector = this.recordsCollectorFromService.get(usedServiceName);
+			this.serializeMeasurements(recordCollector, usedServiceName + "_" + formName);
+		}
+	}
+
 	public void compareComplexityForScenario(
 			DecoratorManipulationSettings decoratorsManipulationSettings1, 
 			DecoratorManipulationSettings decoratorsManipulationSettings2) throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap {

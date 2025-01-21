@@ -1,0 +1,8 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/mockups/puzzle-mock-ts
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+import { Puzzle } from "../store/puzzles/puzzles";
+if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+    class DecoratorFileCopy {
+    }
+}
+let PuzzleMock: Puzzle[] = [];

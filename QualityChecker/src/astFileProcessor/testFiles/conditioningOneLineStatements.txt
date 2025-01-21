@@ -4,3 +4,12 @@ const declGalleryBottomSheetComponent = GalleryBottomSheetComponent;
 // @ts-ignore
 @DecoratorTypesService.skipLineVariableDeclaration({"zoomCoordinates": "true"}, "[IMPORT=SetZoomPositionComponent]") var newA;
 import { SetZoomPositionComponent } from './pages/zoom-management/set-zoom-position/set-zoom-position.component';
+
+
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
+import { DecoratorTypesService } from '../featureManagement/decoratorsVariationPointManagement/decorator-types.service';
+// @ts-ignore
+@DecoratorTypesService.skipLineVariableDeclaration({"puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}, "import { Store } from '@ngrx/store';") var newA;
+//import { Store } from '@ngrx/store';

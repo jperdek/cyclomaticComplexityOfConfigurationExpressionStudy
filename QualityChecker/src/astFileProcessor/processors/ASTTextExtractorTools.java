@@ -250,6 +250,7 @@ public class ASTTextExtractorTools {
 	
 	public static JSONObject getExpressionFromMadeCondition(String conditionInStr) throws IOException, InterruptedException {
 		conditionInStr = conditionInStr.strip();
+		if (conditionInStr.equals("")) { conditionInStr = "true"; }
 		if (!conditionInStr.startsWith("(")) { conditionInStr = "(" + conditionInStr; }
 		if (!conditionInStr.endsWith(")")) { conditionInStr = conditionInStr + ")"; }
 		conditionInStr = "if " + conditionInStr + " {}";

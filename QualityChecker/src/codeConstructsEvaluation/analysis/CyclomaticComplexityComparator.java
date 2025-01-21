@@ -7,13 +7,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
-import astFileProcessor.processors.ASTClassDecoratorProcessor;
-import astFileProcessor.processors.DecoratorManipulationSettings;
 import astFileProcessor.processors.cyclomaticComplexity.ASTCyclomaticTransformationProcessor;
 import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
-import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON;
 import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.CustomConfigurationExpressionAsJSON;
-import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON;
 import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.NativeConfigurationExpression;
 import codeConstructsEvaluation.ComplexityMeasurement;
 import codeConstructsEvaluation.transformation.ASTConverterClient;
@@ -36,19 +32,10 @@ public class CyclomaticComplexityComparator {
 		ASTCyclomaticTransformationProcessor astCyclomaticTransformationProcessor = new ASTCyclomaticTransformationProcessor();
 		astCyclomaticTransformationProcessor.transformVariabilityAnnotations(astRoot, decoratorsManipulationSettings);
 		String resultingCode = ASTConverterClient.convertFromASTToCode(astRoot.get("ast").toString());
-		System.out.println("Convertion");
-		System.out.println(resultingCode);
+		//System.out.println("Convertion");
+		//System.out.println(resultingCode);
 		//System.out.println(astRoot.get("ast").toString());
 		return new TransformationOutput(resultingCode, List.of());
-	}
-	
-	private String removeDecoratorsClassEntity(String fileContent, DecoratorManipulationSettings 
-			decoratorsManipulationSettings) throws IOException, InterruptedException, NonExistingDecoratorTransformationType {
-		JSONObject astRoot = ASTConverterClient.convertFromCodeToASTJSON(fileContent);
-		ASTClassDecoratorProcessor decoratorProcessor = new ASTClassDecoratorProcessor();
-		decoratorProcessor.getClasses(astRoot, decoratorsManipulationSettings);
-		String removedDecoratorsContent = ASTConverterClient.convertFromASTToCode(astRoot.get("ast").toString());
-		return removedDecoratorsContent;
 	}
 	
 	public ComplexityMeasurement evaluateDecoratorComplexity(
@@ -127,7 +114,6 @@ public class CyclomaticComplexityComparator {
 		String fileWithDecoratorsContent = PostRequester.loadFileContent(fileWithDecoratorsPath);
 		// clone String data twice to make transformation from both independent
 		fileWithDecoratorsContent = complexityService.doCleaning(fileWithDecoratorsContent);
-		// System.out.println(fileWithDecoratorsContent);
 		TransformationOutput transformationOutput = this.removeOrTransformDecorators(fileWithDecoratorsContent, decoratorsManipulationSettings);
 		fileWithDecoratorsContent = transformationOutput.getTransformedCode();
 		ComplexityMeasurement complexityMeasurement = complexityService.prepareComplexityMeasurement(
@@ -139,10 +125,10 @@ public class CyclomaticComplexityComparator {
 	
 	private static void test(ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings1) 
 					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
-		String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningClass.txt";
+		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningClass.txt";
 		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningMethod.txt";
 		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningConstructorArgument.txt";
-		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningOneLineStatements.txt";
+		String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningOneLineStatements.txt";
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings2 = ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForNativeConfigurationExpressions();
 		cyclomaticComplexityExpressionsManipulationSettings2.setWholeFileContentToBeStoredOption(true);
 		cyclomaticComplexityExpressionsManipulationSettings1.setWholeFileContentToBeStoredOption(true);

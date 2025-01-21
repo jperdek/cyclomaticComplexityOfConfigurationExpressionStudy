@@ -1,10 +1,19 @@
 package scenarios.cyclomaticComplexityEvaluation;
 
+import java.io.IOException;
+
+import org.json.simple.parser.ParseException;
+
+import SPLComplexityEvaluation.SPLDecoratorComplexityComparator;
+import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
 import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
 import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON;
 import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.CustomConfigurationExpressionAsJSON;
 import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON;
 import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.NativeConfigurationExpression;
+import scenarios.Scenario;
+import unsupportedDecoratorsManagement.NonExistingDecoratorTransformationType;
+import unsupportedDecoratorsManagement.entities.IllegalImportNameSpecifiedException;
 
 
 public class TransformationFormsForCyclomaticComplexity {
@@ -50,5 +59,45 @@ public class TransformationFormsForCyclomaticComplexity {
 		exprForCyclomaticComplManipSettings.allowOnlyUsedAngularOnes();
 		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new CustomConfigurationExpressionAsJSON());
 		return exprForCyclomaticComplManipSettings;
+	}
+	
+	public static void evaluateCyclomaticComplexityForm1() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithNativeConditions();
+		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM1", cyclomaticComplexityManipulationSettings);
+	}
+	
+	public static void evaluateCyclomaticComplexityForm2() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithEntireHierarchicExpression();
+		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM2", cyclomaticComplexityManipulationSettings);
+	}
+	
+	public static void evaluateCyclomaticComplexityForm3() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithLayeredConditions();
+		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM3", cyclomaticComplexityManipulationSettings);
+	}
+	
+	public static void evaluateCyclomaticComplexityForm4() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithCustomConditions();
+		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM4", cyclomaticComplexityManipulationSettings);
+	}
+	
+	public static void evaluateAllForms() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm1();
+		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm2();
+		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm3();
+		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm4();
+	}
+
+	public static void main(String args[]) throws NonExistingDecoratorTransformationType, IOException, 
+		IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		TransformationFormsForCyclomaticComplexity.evaluateAllForms();
 	}
 }
