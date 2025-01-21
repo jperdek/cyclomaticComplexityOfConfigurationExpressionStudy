@@ -35,8 +35,8 @@ public class CyclomaticComplexityComparator {
 		JSONObject astRoot = ASTConverterClient.convertFromCodeToASTJSON(fileContent);
 		ASTCyclomaticTransformationProcessor astCyclomaticTransformationProcessor = new ASTCyclomaticTransformationProcessor();
 		astCyclomaticTransformationProcessor.transformVariabilityAnnotations(astRoot, decoratorsManipulationSettings);
-		String resultingCode = ASTConverterClient.convertFromASTToCode(astRoot.get("ast").toString());
 		System.out.println("Convertion");
+		String resultingCode = ASTConverterClient.convertFromASTToCode(astRoot.get("ast").toString());
 		System.out.println(resultingCode);
 		//System.out.println(astRoot.get("ast").toString());
 		return new TransformationOutput(resultingCode, List.of());

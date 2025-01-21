@@ -1,10 +1,6 @@
 package scenarios.cyclomaticComplexityEvaluation;
 
 import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
-import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON;
-import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.CustomConfigurationExpressionAsJSON;
-import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON;
-import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.NativeConfigurationExpression;
 
 
 public class TransformationFormsForCyclomaticComplexity {
@@ -15,40 +11,24 @@ public class TransformationFormsForCyclomaticComplexity {
 	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithEntireHierarchicExpression() {
 		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
 			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForEntireConfigurationExpressionAsJSON();
-		exprForCyclomaticComplManipSettings.setWholeFileContentToBeStoredOption(true);
-		exprForCyclomaticComplManipSettings.allowOnlyDefaultOnes();
-		exprForCyclomaticComplManipSettings.allowOnlyUsedAngularOnes();
-		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new EntireConfigurationExpressionAsJSON());
 		return exprForCyclomaticComplManipSettings;
 	}
 	
 	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithNativeConditions() {
 		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
 			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForNativeConfigurationExpressions();
-		exprForCyclomaticComplManipSettings.setWholeFileContentToBeStoredOption(true);
-		exprForCyclomaticComplManipSettings.allowOnlyDefaultOnes();
-		exprForCyclomaticComplManipSettings.allowOnlyUsedAngularOnes();
-		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new NativeConfigurationExpression());
 		return exprForCyclomaticComplManipSettings;
 	}
 	
 	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithLayeredConditions() {
 		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
 			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForConfigurationExpressionsEvaluatedAsLayers();
-		exprForCyclomaticComplManipSettings.setWholeFileContentToBeStoredOption(true);
-		exprForCyclomaticComplManipSettings.allowOnlyDefaultOnes();
-		exprForCyclomaticComplManipSettings.allowOnlyUsedAngularOnes();
-		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new ConfigurationExpressionAsLayersAsJSON());
 		return exprForCyclomaticComplManipSettings;
 	}
 	
 	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithCustomConditions() {
 		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
 			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForConfigurationExpressionsEvaluatedAsLayers();
-		exprForCyclomaticComplManipSettings.setWholeFileContentToBeStoredOption(true);
-		exprForCyclomaticComplManipSettings.allowOnlyDefaultOnes();
-		exprForCyclomaticComplManipSettings.allowOnlyUsedAngularOnes();
-		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new CustomConfigurationExpressionAsJSON());
 		return exprForCyclomaticComplManipSettings;
 	}
 }

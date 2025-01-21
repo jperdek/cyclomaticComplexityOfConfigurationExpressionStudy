@@ -16,7 +16,6 @@ import org.json.simple.parser.ParseException;
 
 import astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatement;
 import astFileProcessor.processors.ASTTextExtractorTools;
-import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON.Operator;
 
 
 public class CustomConfigurationExpressionAsJSON implements ConfigurationExpressionType {
@@ -44,7 +43,7 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 	    }
 	}
 	
-	/*private void recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
+	private void recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
 			JSONObject configurationExpression, Operator operator, String hierarchicalObjectName, 
 			int depth, Map<String, JSONObject> introducedGroupsMap, List<String> orderOfIntroducedGroups) {
 		JSONObject buildObject = new JSONObject();
@@ -64,12 +63,10 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 			String newGroupIdentifier; 
 			if (value instanceof JSONObject) {
 				if (!key.equals(Operator.AND.text) && !key.equals(Operator.OR.text)) {
-					System.out.println("HERE2" + key);
 					newGroupIdentifier = key + "#" + String.valueOf(depth + 1) + "#" + operator.sign;
 					this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
 							(JSONObject) value, operator, newGroupIdentifier, depth + 1, introducedGroupsMap, orderOfIntroducedGroups);
 				} else {
-					System.out.println("HERE1");
 					Operator innerOperator = Operator.AND;
 					if (key.equals(Operator.OR.text)) { innerOperator = Operator.OR; }
 					this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
@@ -79,83 +76,6 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 				buildObject.put(key, value);
 			}
 		}
-	}*/
-	
-	private String recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-			JSONObject configurationExpression, Operator operator, String hierarchicalObjectName,
-			int depth, JSONObject buildObject, boolean createNew) {
-		String buildString = "";
-		/*for (Entry<Object, Object> configurationExpressionEntry: (Set<Entry<Object, Object>>) configurationExpression.entrySet()) {
-			String key = (String) configurationExpressionEntry.getKey();
-			Object value = configurationExpressionEntry.getValue();
-			if (value instanceof JSONObject) {
-				Operator innerOperator = Operator.AND; //defaults to AND
-				if (key.strip().equals(Operator.OR.text)) { innerOperator = Operator.OR; }
-				//if (!buildString.equals("")) { buildString = buildString + " " + operator.sign + " "; }
-				if (buildString.equals("")) {
-					buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-							(JSONObject) value, innerOperator, depth + 1) + "";
-				} else {
-					buildString = buildString + "  " + innerOperator.sign + " " + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-							(JSONObject) value, innerOperator, depth + 1) + "  ";
-				}
-			} else if (value instanceof String) {
-				buildObject.put(key, value);
-			}
-		}*/
-		
-		JSONObject buildObjectParent;
-		
-		/*if (introducedGroupsMap.containsKey(hierarchicalObjectName)) {
-			buildObjectParent = introducedGroupsMap.get(hierarchicalObjectName);
-			buildObjectParent.put(operator.text, buildObject);
-		} else {
-			buildObject = new JSONObject();
-			orderOfIntroducedGroups.add(hierarchicalObjectName);
-			introducedGroupsMap.put(hierarchicalObjectName, buildObject);
-		}*/
-		
-		for (Entry<Object, Object> configurationExpressionEntry: (Set<Entry<Object, Object>>) configurationExpression.entrySet()) {
-			String key = (String) configurationExpressionEntry.getKey();
-			Object value = configurationExpressionEntry.getValue();
-			String newGroupIdentifier; 
-			if (value instanceof JSONObject) {
-				if (!key.equals(Operator.AND.text) && !key.equals(Operator.OR.text)) {
-					System.out.println("HERE2" + key);
-					JSONObject extendedObjectNew = new JSONObject();
-					newGroupIdentifier = key + "I" + String.valueOf(depth + 1) + "I" + operator.text;
-					if (buildString.equals("")) {
-						buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, operator, newGroupIdentifier, depth + 1, extendedObjectNew, true);
-					} else {
-						buildString = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, operator, newGroupIdentifier, depth + 1, extendedObjectNew, true) 
-								+ " " + operator.sign + " " + buildString;
-					}
-				} else {
-					System.out.println("HERE1");
-					Operator innerOperator = Operator.AND;
-					if (key.equals(Operator.OR.text)) { innerOperator = Operator.OR; }
-					JSONObject extendedObjectNew = new JSONObject();
-					buildObject.put(innerOperator.text, extendedObjectNew);
-					if (buildString.equals("")) {
-						buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, innerOperator, innerOperator.text, depth + 1, extendedObjectNew, false);
-					} else {
-						buildString =  this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, innerOperator, innerOperator.text, depth + 1, extendedObjectNew, false);
-					}
-					//this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-					//		(JSONObject) value, innerOperator, hierarchicalObjectName, depth + 1, introducedGroupsMap, orderOfIntroducedGroups);
-				}	
-			} else {
-				buildObject.put(key, value);
-			}
-		}
-		if (!createNew) { return buildString; }
-		if (buildObject.keySet().size() == 0) { return buildString; }
-		if (buildString.equals("")) { return "{ \"" + hierarchicalObjectName + "\": "  + buildObject.toString() + " }." + hierarchicalObjectName; }
-		return "({ \"" + hierarchicalObjectName + "\": "  + buildObject.toString() + " }." + hierarchicalObjectName + " " + operator.sign + " " + buildString + " )";
 	}
 	
 	private String createConfigurationExpressionFromPredefinedGroups(
@@ -170,7 +90,7 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 
 		previousBracketsPosition = 1;
 		//groupName = configurationExpressionGroup.getKey();
-		Collections.reverse(orderOfIntroducedGroups);
+		Collections.reverse(orderOfIntroducedGroups)
 		for (String groupName: orderOfIntroducedGroups) {
 			configurationExpressionPart = introducedGroupsMap.get(groupName);
 
@@ -198,12 +118,11 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 	public JSONObject transformConfigurationExpressionIntoConditionalStatement(
 			JSONObject innnerConfigurationExpressionAst, String decoratorName, JSONArray methodStatements) throws ParseException, IOException, InterruptedException {
 		JSONObject configurationExpression = ASTTextExtractorTools.getJSONObjectFromVariable(innnerConfigurationExpressionAst);
-		//Map<String, JSONObject> introducedGroupsMap = new HashMap<String, JSONObject>();
-		//List<String> orderOfIntroducedGroups = new ArrayList<String>();
-	    //this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
-		//String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups);
-		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject(), true);
-		
+		Map<String, JSONObject> introducedGroupsMap = new HashMap<String, JSONObject>();
+		List<String> orderOfIntroducedGroups = new ArrayList<String>();
+	    this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
+	    String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups);
+
 	    JSONObject expressionFromMadeCondition = ASTTextExtractorTools.getExpressionFromMadeCondition(transformedConfigurationExpression);
 		String astObjectString = ASTConditionalStatement.getAstConditionalExpressionStatementEntirelyChangedExpression(
 						expressionFromMadeCondition, (JSONArray) new JSONParser().parse(methodStatements.toString()));
@@ -215,12 +134,11 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 	public JSONObject transformConfigurationExpressionIntoConditionalStatement(
 			JSONObject innnerConfigurationExpressionAst, String decoratorName, JSONObject methodStatement) throws ParseException, IOException, InterruptedException {
 		JSONObject configurationExpression = ASTTextExtractorTools.getJSONObjectFromVariable(innnerConfigurationExpressionAst);
-		//Map<String, JSONObject> introducedGroupsMap = new HashMap<String, JSONObject>();
-		//List<String> orderOfIntroducedGroups = new ArrayList<String>();
-		//this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
-		//String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups);
-		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject(), true);
-		
+		Map<String, JSONObject> introducedGroupsMap = new HashMap<String, JSONObject>();
+		List<String> orderOfIntroducedGroups = new ArrayList<String>();
+		this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
+		String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups);
+
 		JSONObject expressionFromMadeCondition = ASTTextExtractorTools.getExpressionFromMadeCondition(transformedConfigurationExpression);
 		String astObjectString = ASTConditionalStatement.getAstConditionalExpressionStatementEntirelyChangedExpression(
 						expressionFromMadeCondition, methodStatement.toString());
@@ -234,12 +152,11 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 			JSONObject innnerConfigurationExpressionAst, String decoratorName, JSONObject astElement, 
 			JSONArray methodStatements) throws ParseException, IOException, InterruptedException {
 		JSONObject configurationExpression = ASTTextExtractorTools.getJSONObjectFromVariable(innnerConfigurationExpressionAst);
-		//Map<String, JSONObject> introducedGroupsMap = new HashMap<String, JSONObject>();
-		//List<String> orderOfIntroducedGroups = new ArrayList<String>();
-		//this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
-		//String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups); 
-		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject(), true);
-				
+		Map<String, JSONObject> introducedGroupsMap = new HashMap<String, JSONObject>();
+		List<String> orderOfIntroducedGroups = new ArrayList<String>();
+		this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
+		String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups); 
+
 		JSONObject expressionFromMadeCondition = ASTTextExtractorTools.getExpressionFromMadeCondition(transformedConfigurationExpression);
 		String astObjectString = ASTConditionalStatement.getAstConditionalExpressionStatementWithElsePart(
 						expressionFromMadeCondition, astElement, (JSONArray) new JSONParser().parse(methodStatements.toString()));

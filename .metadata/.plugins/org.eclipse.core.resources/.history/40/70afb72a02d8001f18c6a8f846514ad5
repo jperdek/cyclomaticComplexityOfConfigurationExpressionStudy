@@ -83,7 +83,7 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 	
 	private String recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
 			JSONObject configurationExpression, Operator operator, String hierarchicalObjectName,
-			int depth, JSONObject buildObject, boolean createNew) {
+			int depth, JSONObject buildObject) {
 		String buildString = "";
 		/*for (Entry<Object, Object> configurationExpressionEntry: (Set<Entry<Object, Object>>) configurationExpression.entrySet()) {
 			String key = (String) configurationExpressionEntry.getKey();
@@ -122,15 +122,15 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 			if (value instanceof JSONObject) {
 				if (!key.equals(Operator.AND.text) && !key.equals(Operator.OR.text)) {
 					System.out.println("HERE2" + key);
+					Operator innerOperator = Operator.AND;
 					JSONObject extendedObjectNew = new JSONObject();
-					newGroupIdentifier = key + "I" + String.valueOf(depth + 1) + "I" + operator.text;
+					newGroupIdentifier = key + "#" + String.valueOf(depth + 1) + "#" + operator.sign;
 					if (buildString.equals("")) {
 						buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, operator, newGroupIdentifier, depth + 1, extendedObjectNew, true);
+								(JSONObject) value, innerOperator, newGroupIdentifier, depth + 1, extendedObjectNew);
 					} else {
-						buildString = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, operator, newGroupIdentifier, depth + 1, extendedObjectNew, true) 
-								+ " " + operator.sign + " " + buildString;
+						buildString = buildString + "  " + innerOperator.sign + " " + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
+								(JSONObject) value, innerOperator, newGroupIdentifier, depth + 1, extendedObjectNew);
 					}
 				} else {
 					System.out.println("HERE1");
@@ -140,10 +140,10 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 					buildObject.put(innerOperator.text, extendedObjectNew);
 					if (buildString.equals("")) {
 						buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, innerOperator, innerOperator.text, depth + 1, extendedObjectNew, false);
+								(JSONObject) value, innerOperator, innerOperator.text, depth + 1, extendedObjectNew);
 					} else {
-						buildString =  this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, innerOperator, innerOperator.text, depth + 1, extendedObjectNew, false);
+						buildString = buildString + "  " + innerOperator.sign + " " + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
+								(JSONObject) value, innerOperator, innerOperator.text, depth + 1, extendedObjectNew);
 					}
 					//this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
 					//		(JSONObject) value, innerOperator, hierarchicalObjectName, depth + 1, introducedGroupsMap, orderOfIntroducedGroups);
@@ -152,9 +152,9 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 				buildObject.put(key, value);
 			}
 		}
-		if (!createNew) { return buildString; }
 		if (buildObject.keySet().size() == 0) { return buildString; }
-		if (buildString.equals("")) { return "{ \"" + hierarchicalObjectName + "\": "  + buildObject.toString() + " }." + hierarchicalObjectName; }
+		if (buildString.equals("")) { return "{ \"" + hierarchicalObjectName + "\": "  + buildObject.toString() + " }." + hierarchicalObjectName
+				+ String.valueOf(depth); }
 		return "({ \"" + hierarchicalObjectName + "\": "  + buildObject.toString() + " }." + hierarchicalObjectName + " " + operator.sign + " " + buildString + " )";
 	}
 	
@@ -202,7 +202,7 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 		//List<String> orderOfIntroducedGroups = new ArrayList<String>();
 	    //this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
 		//String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups);
-		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject(), true);
+		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject());
 		
 	    JSONObject expressionFromMadeCondition = ASTTextExtractorTools.getExpressionFromMadeCondition(transformedConfigurationExpression);
 		String astObjectString = ASTConditionalStatement.getAstConditionalExpressionStatementEntirelyChangedExpression(
@@ -219,7 +219,7 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 		//List<String> orderOfIntroducedGroups = new ArrayList<String>();
 		//this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
 		//String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups);
-		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject(), true);
+		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject());
 		
 		JSONObject expressionFromMadeCondition = ASTTextExtractorTools.getExpressionFromMadeCondition(transformedConfigurationExpression);
 		String astObjectString = ASTConditionalStatement.getAstConditionalExpressionStatementEntirelyChangedExpression(
@@ -238,7 +238,7 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 		//List<String> orderOfIntroducedGroups = new ArrayList<String>();
 		//this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base#1#&&", 1, introducedGroupsMap, orderOfIntroducedGroups);
 		//String transformedConfigurationExpression = this.createConfigurationExpressionFromPredefinedGroups(introducedGroupsMap, orderOfIntroducedGroups); 
-		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject(), true);
+		String transformedConfigurationExpression = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(configurationExpression, Operator.AND, "base", 1, new JSONObject());
 				
 		JSONObject expressionFromMadeCondition = ASTTextExtractorTools.getExpressionFromMadeCondition(transformedConfigurationExpression);
 		String astObjectString = ASTConditionalStatement.getAstConditionalExpressionStatementWithElsePart(

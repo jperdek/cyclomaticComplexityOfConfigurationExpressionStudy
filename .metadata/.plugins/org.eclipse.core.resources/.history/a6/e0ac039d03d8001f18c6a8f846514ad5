@@ -122,15 +122,15 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 			if (value instanceof JSONObject) {
 				if (!key.equals(Operator.AND.text) && !key.equals(Operator.OR.text)) {
 					System.out.println("HERE2" + key);
+					Operator innerOperator = Operator.AND;
 					JSONObject extendedObjectNew = new JSONObject();
-					newGroupIdentifier = key + "I" + String.valueOf(depth + 1) + "I" + operator.text;
+					newGroupIdentifier = key + "#" + String.valueOf(depth + 1) + "#" + operator.text;
 					if (buildString.equals("")) {
 						buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, operator, newGroupIdentifier, depth + 1, extendedObjectNew, true);
+								(JSONObject) value, innerOperator, newGroupIdentifier, depth + 1, extendedObjectNew, true);
 					} else {
-						buildString = this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, operator, newGroupIdentifier, depth + 1, extendedObjectNew, true) 
-								+ " " + operator.sign + " " + buildString;
+						buildString = buildString + "  " + innerOperator.sign + " " + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
+								(JSONObject) value, innerOperator, newGroupIdentifier, depth + 1, extendedObjectNew, true);
 					}
 				} else {
 					System.out.println("HERE1");
@@ -140,10 +140,10 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 					buildObject.put(innerOperator.text, extendedObjectNew);
 					if (buildString.equals("")) {
 						buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, innerOperator, innerOperator.text, depth + 1, extendedObjectNew, false);
+								(JSONObject) value, innerOperator, key, depth + 1, extendedObjectNew, false);
 					} else {
 						buildString =  this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-								(JSONObject) value, innerOperator, innerOperator.text, depth + 1, extendedObjectNew, false);
+								(JSONObject) value, innerOperator, key, depth + 1, extendedObjectNew, false);
 					}
 					//this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
 					//		(JSONObject) value, innerOperator, hierarchicalObjectName, depth + 1, introducedGroupsMap, orderOfIntroducedGroups);

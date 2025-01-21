@@ -123,7 +123,7 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 				if (!key.equals(Operator.AND.text) && !key.equals(Operator.OR.text)) {
 					System.out.println("HERE2" + key);
 					JSONObject extendedObjectNew = new JSONObject();
-					newGroupIdentifier = key + "I" + String.valueOf(depth + 1) + "I" + operator.text;
+					newGroupIdentifier = key + "#" + String.valueOf(depth + 1) + "#" + operator.text;
 					if (buildString.equals("")) {
 						buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
 								(JSONObject) value, operator, newGroupIdentifier, depth + 1, extendedObjectNew, true);
