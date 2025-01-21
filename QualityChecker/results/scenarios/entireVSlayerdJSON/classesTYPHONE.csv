@@ -1,86 +1,86 @@
-Associated with;Overall file decorastors;Cycl. Number;Cycl. Density;Halstead Bugs;Halstead Difficulty;Halstead Effort;Halstead Length;Halstead Time;Halstead Vocabulary;Halstead Volume;Halstead Identifiers Distinct;Halstead Identifiers Total;Halstead Identifiers Names;Halstead Identifiers Distinct;Halstead Identifiers Total;Halstead Identifiers Names;LOC Physical;LOC Logical;Class Name;Class Maintainability;Class number methods;
-CLASS: AppRoutingModule;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;AppRoutingModule;0,0;0;
-CLASS: AppModule;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;AppModule;0,0;0;
-CLASS: MainNavigationComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;MainNavigationComponent;0,0;10;
-CLASS: SmallMainMenuComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;SmallMainMenuComponent;0,0;5;
-CLASS: DragAndDropDirective;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DragAndDropDirective;0,0;8;
-CLASS: RemoveDirective;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;RemoveDirective;0,0;2;
-CLASS: AppEffects;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;AppEffects;0,0;3;
-CLASS: DecoratorTypesService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorTypesService;0,0;14;
-CLASS: ServiceToSkipService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ServiceToSkipService;0,0;1;
-CLASS: FeatureConfigLoaderService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;FeatureConfigLoaderService;0,0;4;
-CLASS: MenuManagerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;MenuManagerService;0,0;10;
-CLASS: PuzzleAlgorithmManagerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleAlgorithmManagerService;0,0;3;
-CLASS: VariableSettingsConfigService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;VariableSettingsConfigService;0,0;8;
-CLASS: ZoomSettingsConfigService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomSettingsConfigService;0,0;15;
-CLASS: TreeManagerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TreeManagerService;0,0;1;
-CLASS: AnnotationExtractorService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;AnnotationExtractorService;0,0;5;
-CLASS: ComponentFactoryService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ComponentFactoryService;0,0;2;
-CLASS: FabricMenuHelperService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;FabricMenuHelperService;0,0;1;
-CLASS: GameConfigurationComponent;0;0,0;0,0;-0,0030000000000000027;0,6119999999999983;492,73399999999856;0,0;27,374000000000024;-2,0;-9,245000000000005;2,0;0,0;layerAND1,"layerAND1";0,0;0,0;;-16,0;0,0;GameConfigurationComponent;-0,3370000000000033;3;
-CLASS: MaterialModule;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;MaterialModule;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: RoutingModelMock;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;RoutingModelMock;0,0;1;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: AppComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;2,0;0,0;"layerAND1",layerAND1;0,0;0,0;;-2,0;0,0;AppComponent;0,0;1;
-CLASS: DragAndDropImageComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DragAndDropImageComponent;0,0;11;
-CLASS: ZoomBlockComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomBlockComponent;0,0;2;
-CLASS: ZoomMenuComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomMenuComponent;0,0;5;
-CLASS: GalleryBottomSheetComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;GalleryBottomSheetComponent;0,0;2;
-CLASS: InsertTemplateImageBottomSheetComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;InsertTemplateImageBottomSheetComponent;0,0;2;
-CLASS: PuzzleChooserBottomSheetComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleChooserBottomSheetComponent;0,0;2;
-CLASS: TemplatePreviewBottomSheetComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TemplatePreviewBottomSheetComponent;0,0;2;
-CLASS: ZoomManagementBottomSheetComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomManagementBottomSheetComponent;0,0;2;
-CLASS: GalleryComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;GalleryComponent;0,0;3;
-CLASS: InitialPageComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;InitialPageComponent;0,0;5;
-CLASS: InsertTemplateImageComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;InsertTemplateImageComponent;0,0;0;
-CLASS: PuzzleBoardComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleBoardComponent;0,0;4;
-CLASS: PuzzleBuilderComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleBuilderComponent;0,0;1;
-CLASS: PuzzleChooserComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleChooserComponent;0,0;4;
-CLASS: TemplatePreviewComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TemplatePreviewComponent;0,0;2;
-CLASS: SetZoomComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;SetZoomComponent;0,0;2;
-CLASS: SetZoomPositionComponent;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;SetZoomPositionComponent;0,0;2;
-CLASS: ZoomManagementComponent;0;0,0;0,24499999999999744;-0,014000000000000012;0,6020000000000003;1225,3560000000143;-3,0;68,07499999999982;-3,0;-41,072999999999865;4,0;-1,0;"layerAND1",layerOR2,"layerOR2",layerAND1;0,0;-2,0;;-14,0;-1,0;ZoomManagementComponent;0,17899999999998784;24;
-CLASS: PuzzleBuilderRoutingModule;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleBuilderRoutingModule;0,0;0;
-CLASS: PuzzleBuilderModule;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleBuilderModule;0,0;0;
-CLASS: ComponentFactoryService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ComponentFactoryService;0,0;2;
-CLASS: GameConfigurationService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;GameConfigurationService;0,0;4;
-CLASS: OldPuzzleService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;OldPuzzleService;0,0;5;
-CLASS: BringToBackService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;BringToBackService;0,0;4;
-CLASS: BringToFrontService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;BringToFrontService;0,0;4;
-CLASS: BottomLeftFabricMenuService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;BottomLeftFabricMenuService;0,0;13;
-CLASS: BottomRightFabricMenuService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;BottomRightFabricMenuService;0,0;13;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: PuzzleControllerManagerService2;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleControllerManagerService2;0,0;10;
-CLASS: TopLeftFabricMenuService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TopLeftFabricMenuService;0,0;13;
-CLASS: TopRightFabricMenuService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TopRightFabricMenuService;0,0;13;
-CLASS: DeletePuzzleServiceService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DeletePuzzleServiceService;0,0;4;
-CLASS: HelpPuzzleServiceService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;HelpPuzzleServiceService;0,0;4;
-CLASS: PuzzleController;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleController;0,0;0;
-CLASS: PuzzleControllerManagerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleControllerManagerService;0,0;11;
-CLASS: ManipulationHandlerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ManipulationHandlerService;0,0;8;
-CLASS: ResizeHandlerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ResizeHandlerService;0,0;9;
-CLASS: ZoomManagerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomManagerService;0,0;13;
-CLASS: DrawAdjacentPointsService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DrawAdjacentPointsService;0,0;7;
-CLASS: ImageSizeManagerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ImageSizeManagerService;0,0;3;
-CLASS: ManageGraphicsService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ManageGraphicsService;0,0;19;
-CLASS: PuzzleManagerService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleManagerService;0,0;15;
-CLASS: DrawBordersService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DrawBordersService;0,0;13;
-CLASS: PuzzleGeneratorQuadroService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleGeneratorQuadroService;0,0;16;
-CLASS: DrawBordersService2;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DrawBordersService2;0,0;13;
-CLASS: PuzzleGeneratorQuadroService2;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleGeneratorQuadroService2;0,0;16;
-CLASS: ScanLineService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ScanLineService;0,0;6;
-CLASS: SetPuzzleAreaOnBoardService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;SetPuzzleAreaOnBoardService;0,0;14;
-CLASS: DisableControlsService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DisableControlsService;0,0;2;
-CLASS: RandomUtilsService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;RandomUtilsService;0,0;1;
-CLASS: ShufflePuzzlesService;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ShufflePuzzlesService;0,0;2;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
-CLASS: DecoratorFileCopy;0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;
+Associated with;Cycl. Number;Cycl. Density;Halstead Bugs;Halstead Difficulty;Halstead Effort;Halstead Length;Halstead Time;Halstead Vocabulary;Halstead Volume;Halstead Identifiers Distinct;Halstead Identifiers Total;Halstead Identifiers Names;Halstead Identifiers Distinct;Halstead Identifiers Total;Halstead Identifiers Names;LOC Physical;LOC Logical;Class Name;Class Maintainability;Class number methods;Associated with;Overall file decorastors 2
+CLASS: AppRoutingModule;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;AppRoutingModule;0,0;0;CLASS: AppRoutingModule;1
+CLASS: AppModule;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;AppModule;0,0;0;CLASS: AppModule;1
+CLASS: MainNavigationComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;MainNavigationComponent;0,0;10;CLASS: MainNavigationComponent;1
+CLASS: SmallMainMenuComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;SmallMainMenuComponent;0,0;5;CLASS: SmallMainMenuComponent;1
+CLASS: DragAndDropDirective;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DragAndDropDirective;0,0;8;CLASS: DragAndDropDirective;1
+CLASS: RemoveDirective;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;RemoveDirective;0,0;2;CLASS: RemoveDirective;1
+CLASS: AppEffects;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;AppEffects;0,0;3;CLASS: AppEffects;1
+CLASS: DecoratorTypesService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorTypesService;0,0;14;CLASS: DecoratorTypesService;0
+CLASS: ServiceToSkipService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ServiceToSkipService;0,0;1;CLASS: ServiceToSkipService;0
+CLASS: FeatureConfigLoaderService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;FeatureConfigLoaderService;0,0;4;CLASS: FeatureConfigLoaderService;0
+CLASS: MenuManagerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;MenuManagerService;0,0;10;CLASS: MenuManagerService;0
+CLASS: PuzzleAlgorithmManagerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleAlgorithmManagerService;0,0;3;CLASS: PuzzleAlgorithmManagerService;0
+CLASS: VariableSettingsConfigService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;VariableSettingsConfigService;0,0;8;CLASS: VariableSettingsConfigService;0
+CLASS: ZoomSettingsConfigService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomSettingsConfigService;0,0;15;CLASS: ZoomSettingsConfigService;0
+CLASS: TreeManagerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TreeManagerService;0,0;1;CLASS: TreeManagerService;0
+CLASS: AnnotationExtractorService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;AnnotationExtractorService;0,0;5;CLASS: AnnotationExtractorService;0
+CLASS: ComponentFactoryService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ComponentFactoryService;0,0;2;CLASS: ComponentFactoryService;0
+CLASS: FabricMenuHelperService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;FabricMenuHelperService;0,0;1;CLASS: FabricMenuHelperService;0
+CLASS: GameConfigurationComponent;0,0;0,0;-0,0030000000000000027;0,6119999999999983;492,73399999999856;0,0;27,374000000000024;-2,0;-9,245000000000005;2,0;0,0;"layerAND1,""layerAND1""";0,0;0,0;;-16,0;0,0;GameConfigurationComponent;-0,3370000000000033;3;CLASS: GameConfigurationComponent;12
+CLASS: MaterialModule;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;MaterialModule;0,0;0;CLASS: MaterialModule;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: RoutingModelMock;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;RoutingModelMock;0,0;1;CLASS: RoutingModelMock;7
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: AppComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;2,0;0,0;layerAND1,layerAND1;0,0;0,0;;-2,0;0,0;AppComponent;0,0;1;CLASS: AppComponent;3
+CLASS: DragAndDropImageComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DragAndDropImageComponent;0,0;11;CLASS: DragAndDropImageComponent;1
+CLASS: ZoomBlockComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomBlockComponent;0,0;2;CLASS: ZoomBlockComponent;1
+CLASS: ZoomMenuComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomMenuComponent;0,0;5;CLASS: ZoomMenuComponent;1
+CLASS: GalleryBottomSheetComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;GalleryBottomSheetComponent;0,0;2;CLASS: GalleryBottomSheetComponent;1
+CLASS: InsertTemplateImageBottomSheetComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;InsertTemplateImageBottomSheetComponent;0,0;2;CLASS: InsertTemplateImageBottomSheetComponent;1
+CLASS: PuzzleChooserBottomSheetComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleChooserBottomSheetComponent;0,0;2;CLASS: PuzzleChooserBottomSheetComponent;1
+CLASS: TemplatePreviewBottomSheetComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TemplatePreviewBottomSheetComponent;0,0;2;CLASS: TemplatePreviewBottomSheetComponent;1
+CLASS: ZoomManagementBottomSheetComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomManagementBottomSheetComponent;0,0;2;CLASS: ZoomManagementBottomSheetComponent;1
+CLASS: GalleryComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;GalleryComponent;0,0;3;CLASS: GalleryComponent;1
+CLASS: InitialPageComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;InitialPageComponent;0,0;5;CLASS: InitialPageComponent;1
+CLASS: InsertTemplateImageComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;InsertTemplateImageComponent;0,0;0;CLASS: InsertTemplateImageComponent;1
+CLASS: PuzzleBoardComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleBoardComponent;0,0;4;CLASS: PuzzleBoardComponent;1
+CLASS: PuzzleBuilderComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleBuilderComponent;0,0;1;CLASS: PuzzleBuilderComponent;1
+CLASS: PuzzleChooserComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleChooserComponent;0,0;4;CLASS: PuzzleChooserComponent;1
+CLASS: TemplatePreviewComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TemplatePreviewComponent;0,0;2;CLASS: TemplatePreviewComponent;1
+CLASS: SetZoomComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;SetZoomComponent;0,0;2;CLASS: SetZoomComponent;1
+CLASS: SetZoomPositionComponent;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;SetZoomPositionComponent;0,0;2;CLASS: SetZoomPositionComponent;1
+CLASS: ZoomManagementComponent;0,0;0,24499999999999744;-0,014000000000000012;0,6020000000000003;1225,3560000000143;-3,0;68,07499999999982;-3,0;-41,072999999999865;4,0;-1,0;"layerAND1,layerOR2,""layerOR2"",layerAND1";0,0;-2,0;;-14,0;-1,0;ZoomManagementComponent;0,17899999999998784;24;CLASS: ZoomManagementComponent;11
+CLASS: PuzzleBuilderRoutingModule;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleBuilderRoutingModule;0,0;0;CLASS: PuzzleBuilderRoutingModule;1
+CLASS: PuzzleBuilderModule;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleBuilderModule;0,0;0;CLASS: PuzzleBuilderModule;17
+CLASS: ComponentFactoryService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ComponentFactoryService;0,0;2;CLASS: ComponentFactoryService;1
+CLASS: GameConfigurationService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;GameConfigurationService;0,0;4;CLASS: GameConfigurationService;10
+CLASS: OldPuzzleService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;OldPuzzleService;0,0;5;CLASS: OldPuzzleService;1
+CLASS: BringToBackService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;BringToBackService;0,0;4;CLASS: BringToBackService;1
+CLASS: BringToFrontService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;BringToFrontService;0,0;4;CLASS: BringToFrontService;1
+CLASS: BottomLeftFabricMenuService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;BottomLeftFabricMenuService;0,0;13;CLASS: BottomLeftFabricMenuService;1
+CLASS: BottomRightFabricMenuService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;BottomRightFabricMenuService;0,0;13;CLASS: BottomRightFabricMenuService;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: PuzzleControllerManagerService2;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleControllerManagerService2;0,0;10;CLASS: PuzzleControllerManagerService2;1
+CLASS: TopLeftFabricMenuService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TopLeftFabricMenuService;0,0;13;CLASS: TopLeftFabricMenuService;1
+CLASS: TopRightFabricMenuService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;TopRightFabricMenuService;0,0;13;CLASS: TopRightFabricMenuService;1
+CLASS: DeletePuzzleServiceService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DeletePuzzleServiceService;0,0;4;CLASS: DeletePuzzleServiceService;1
+CLASS: HelpPuzzleServiceService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;HelpPuzzleServiceService;0,0;4;CLASS: HelpPuzzleServiceService;1
+CLASS: PuzzleController;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleController;0,0;0;CLASS: PuzzleController;1
+CLASS: PuzzleControllerManagerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleControllerManagerService;0,0;11;CLASS: PuzzleControllerManagerService;1
+CLASS: ManipulationHandlerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ManipulationHandlerService;0,0;8;CLASS: ManipulationHandlerService;1
+CLASS: ResizeHandlerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ResizeHandlerService;0,0;9;CLASS: ResizeHandlerService;1
+CLASS: ZoomManagerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ZoomManagerService;0,0;13;CLASS: ZoomManagerService;1
+CLASS: DrawAdjacentPointsService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DrawAdjacentPointsService;0,0;7;CLASS: DrawAdjacentPointsService;1
+CLASS: ImageSizeManagerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ImageSizeManagerService;0,0;3;CLASS: ImageSizeManagerService;1
+CLASS: ManageGraphicsService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ManageGraphicsService;0,0;19;CLASS: ManageGraphicsService;1
+CLASS: PuzzleManagerService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleManagerService;0,0;15;CLASS: PuzzleManagerService;5
+CLASS: DrawBordersService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DrawBordersService;0,0;13;CLASS: DrawBordersService;1
+CLASS: PuzzleGeneratorQuadroService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleGeneratorQuadroService;0,0;16;CLASS: PuzzleGeneratorQuadroService;1
+CLASS: DrawBordersService2;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DrawBordersService2;0,0;13;CLASS: DrawBordersService2;1
+CLASS: PuzzleGeneratorQuadroService2;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;PuzzleGeneratorQuadroService2;0,0;16;CLASS: PuzzleGeneratorQuadroService2;1
+CLASS: ScanLineService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ScanLineService;0,0;6;CLASS: ScanLineService;1
+CLASS: SetPuzzleAreaOnBoardService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;SetPuzzleAreaOnBoardService;0,0;14;CLASS: SetPuzzleAreaOnBoardService;1
+CLASS: DisableControlsService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DisableControlsService;0,0;2;CLASS: DisableControlsService;1
+CLASS: RandomUtilsService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;RandomUtilsService;0,0;1;CLASS: RandomUtilsService;1
+CLASS: ShufflePuzzlesService;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;ShufflePuzzlesService;0,0;2;CLASS: ShufflePuzzlesService;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
+CLASS: DecoratorFileCopy;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;;0,0;0,0;;0,0;0,0;DecoratorFileCopy;0,0;0;CLASS: DecoratorFileCopy;1
