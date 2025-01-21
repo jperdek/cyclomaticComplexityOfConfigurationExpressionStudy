@@ -11,7 +11,6 @@ import astFileProcessor.processors.ASTClassDecoratorProcessor;
 import astFileProcessor.processors.DecoratorManipulationSettings;
 import astFileProcessor.processors.cyclomaticComplexity.ASTCyclomaticTransformationProcessor;
 import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
-import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON;
 import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON;
 import astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.NativeConfigurationExpression;
 import codeConstructsEvaluation.ComplexityMeasurement;
@@ -138,16 +137,15 @@ public class CyclomaticComplexityComparator {
 	
 	private static void test(ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings1) 
 					throws IOException, InterruptedException, NonExistingDecoratorTransformationType, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
-		String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningClass.txt";
+		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningClass.txt";
 		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningMethod.txt";
 		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningConstructorArgument.txt";
-		//String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningOneLineStatements.txt";
+		String fileWithDecoratorsPath = "E://aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/src/astFileProcessor/testFiles/conditioningOneLineStatements.txt";
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings2 = ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForNativeConfigurationExpressions();
 		cyclomaticComplexityExpressionsManipulationSettings2.setWholeFileContentToBeStoredOption(true);
 		cyclomaticComplexityExpressionsManipulationSettings1.setWholeFileContentToBeStoredOption(true);
 		cyclomaticComplexityExpressionsManipulationSettings2.setConfigurationExpressionType(new NativeConfigurationExpression());
-		//cyclomaticComplexityExpressionsManipulationSettings1.setConfigurationExpressionType(new EntireConfigurationExpressionAsJSON());
-		cyclomaticComplexityExpressionsManipulationSettings1.setConfigurationExpressionType(new ConfigurationExpressionAsLayersAsJSON());
+		cyclomaticComplexityExpressionsManipulationSettings1.setConfigurationExpressionType(new EntireConfigurationExpressionAsJSON());
 		CyclomaticComplexityComparator decoratorComplexityComparator = new CyclomaticComplexityComparator();
 		ComplexityService typhonComplexityService = new TyphonTypeScriptComplexityAnalysis();
 		ComplexityMeasurement complexityDifference = decoratorComplexityComparator.evaluateDecoratorComplexity(

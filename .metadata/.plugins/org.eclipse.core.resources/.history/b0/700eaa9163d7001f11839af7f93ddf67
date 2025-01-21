@@ -42,6 +42,7 @@ public class ConfigurationExpressionAsLayersAsJSON implements ConfigurationExpre
 	private String recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(JSONObject configurationExpression, Operator operator, int depth) {
 		String buildString = "";
 		JSONObject buildObject = new JSONObject();
+		System.out.println("HEEEEEEEEEEEEEEEEEEEEREEEEEEEEEEE");
 		for (Entry<Object, Object> configurationExpressionEntry: (Set<Entry<Object, Object>>) configurationExpression.entrySet()) {
 			String key = (String) configurationExpressionEntry.getKey();
 			Object value = configurationExpressionEntry.getValue();
@@ -53,18 +54,18 @@ public class ConfigurationExpressionAsLayersAsJSON implements ConfigurationExpre
 					buildString = "" + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
 							(JSONObject) value, innerOperator, depth + 1) + "";
 				} else {
-					buildString = buildString + "  " + innerOperator.sign + " " + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
-							(JSONObject) value, innerOperator, depth + 1) + "  ";
+					buildString = " " + this.recursivelyTransformConfigurationExpressionIntoLayerSensitiveConditions(
+							(JSONObject) value, innerOperator, depth + 1) + " " + operator.sign + " "+ buildString ;
 				}
 			} else if (value instanceof String) {
 				buildObject.put(key, value);
 			}
 		}
 		if (buildObject.keySet().size() == 0) { return buildString; }
-		if (buildString.equals("")) { return "{ \"layer" + operator.text + String.valueOf(depth) + "\": "  + buildObject.toString() + " }.layer" + operator.text
+		if (buildString.equals("")) { return "{ \"layer" + String.valueOf(depth) + "\": "  + buildObject.toString() + " }.layer"
 				+ String.valueOf(depth); }
-		return "({ \"layer" + operator.text + String.valueOf(depth) + "\": "  + buildObject.toString() + " }.layer" + operator.text
-				+ String.valueOf(depth) + " " + operator.sign + " " + buildString + " )";
+		return "{ \"layer" + String.valueOf(depth) + "\": "  + buildObject.toString() + " }.layer"
+				+ String.valueOf(depth) + " " + operator.sign + " " + buildString;
 	}
 	
 	@Override

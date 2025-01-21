@@ -4,7 +4,7 @@ import { Injectable} from '@angular/core';
 import { DecoratorTypesService } from '../featureManagement/decoratorsVariationPointManagement/decorator-types.service';
 
 @Injectable({providedIn: 'root'})
-@DecoratorTypesService.wholeBlockFile({"AND": {"a": "b", "c": "d"}})
+@DecoratorTypesService.wholeBlockFile({"AND": {"a": "b", "c": "d", "OR": { "e": "f", "g": "h", "OR": {"j": "k"}}, "AND": { "w": "f"}}})
 class GameConfigurationService {
 
    constructor(drawBordersService: DrawBordersService) {

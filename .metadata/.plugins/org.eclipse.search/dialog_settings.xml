@@ -26,8 +26,6 @@
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="">
-		<item key="org.eclipse.jdt.search.resultpage.limit" value="1000"/>
-		<item key="org.eclipse.jdt.search.resultpage.limit_enabled" value="TRUE"/>
 		<item key="org.eclipse.search.resultpage.limit" value="1000"/>
 	</section>
 	<section name="org.eclipse.jdt.ui.JavaSearchResultPage">
@@ -45,7 +43,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="convertFromCodeToASTJSON"/>
+			<item key="textPattern" value="allowOnlyDefaultOnes()"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -60,7 +58,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="removeOrTransformDecorators"/>
+			<item key="textPattern" value="convertFromCodeToASTJSON"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -72,7 +70,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="Convertion"/>
+			<item key="textPattern" value="removeOrTransformDecorators"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -84,7 +82,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="getAstConditionalExpressionStatement"/>
+			<item key="textPattern" value="Convertion"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -96,7 +94,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="getFullTextFromAstExpressions"/>
+			<item key="textPattern" value="getAstConditionalExpressionStatement"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -108,7 +106,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="allowOnlyDefaultOnes()"/>
+			<item key="textPattern" value="getFullTextFromAstExpressions"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
