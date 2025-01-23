@@ -1,7 +1,7 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/directives/remove-directive-ts
 import { Directive, ElementRef } from "@angular/core";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class RemoveDirective {
         constructor(element: ElementRef) {
             element.nativeElement.addEventListener("click", () => {

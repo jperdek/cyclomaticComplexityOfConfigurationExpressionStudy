@@ -16,7 +16,7 @@ const routes: Routes = [
         loadChildren: () => import("./puzzle-builder/puzzle-builder.module").then(m => m.PuzzleBuilderModule)
     }
 ];
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class AppRoutingModule {
     }
 }

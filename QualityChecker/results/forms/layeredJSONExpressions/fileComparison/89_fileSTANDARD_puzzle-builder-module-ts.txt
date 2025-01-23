@@ -14,85 +14,77 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { PuzzleChooserBottomSheetComponent } from "./pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
 import { TemplatePreviewBottomSheetComponent } from "./pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
 import { InsertTemplateImageBottomSheetComponent } from "./pages/bottom-sheets/insert-template-image-bottom-sheet/insert-template-image-bottom-sheet.component";
-if ({ "layerOR2": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR2) {
+if ({ "zoomValue": "true", "zoomCoordinates": "true" }) {
 }
 import { ZoomManagementComponent } from "./pages/zoom-management/zoom-management.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-if ({ "layerAND1": { "zoom": "true" } }.layerAND1) {
+if ({ "zoom": "true" }) {
 }
 import { ZoomMenuComponent } from "./components/zoom-menu/zoom-menu.component";
-if ({ "layerAND1": { "imageGallery": "true" }
-}.layerAND1) {
+if ({ "imageGallery": "true" }) {
 }
 import { GalleryComponent } from "./pages/gallery/gallery.component";
 import { DragAndDropImageComponent } from "./components/drag-and-drop-image/drag-and-drop-image.component";
-if ({ "layerAND1": { "imageGallery": "true" }
-}.layerAND1) {
+if ({ "imageGallery": "true" }) {
 }
 import { GalleryBottomSheetComponent } from "./pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
-if ({ "layerOR2": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR2) {
+if ({ "zoomValue": "true", "zoomCoordinates": "true" }) {
 }
 import { ZoomManagementBottomSheetComponent } from "./pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
 import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
-if ({ "layerAND1": { "zoom": "true" } }.layerAND1) {
+if ({ "zoom": "true" }) {
 }
 import { ZoomBlockComponent } from "./components/zoom-block/zoom-block.component";
-if ({ "layerAND1": { "zoomValue": "true" } }
-    .
-        layerAND1) {
+if ({ "zoomValue": "true" }) {
 }
 import { SetZoomComponent } from "./pages/zoom-management/set-zoom/set-zoom.component";
-if ({ "layerAND1": { "zoomCoordinates": "true" } }.layerAND1) {
+if ({ "zoomCoordinates": "true" }) {
 }
 import { SetZoomPositionComponent } from "./pages/zoom-management/set-zoom-position/set-zoom-position.component";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "layerOR2": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR2) {
+if ({ "zoomValue": "true", "zoomCoordinates": "true" }) {
     const declZoomManagementComponent = ZoomManagementComponent;
 }
 else {
     let declZoomManagementComponent = PuzzleBoardComponent;
 }
-if ({ "layerAND1": { "zoom": "true" } }.layerAND1) {
+if ({ "zoom": "true" }) {
     const declZoomMenuComponent = ZoomMenuComponent;
 }
 else {
     let declZoomMenuComponent = PuzzleBoardComponent;
 }
-if ({ "layerAND1": { "imageGallery": "true" }
-}.layerAND1) {
+if ({ "imageGallery": "true" }) {
     const declGalleryComponent = GalleryComponent;
 }
 else {
     let declGalleryComponent = PuzzleBoardComponent;
 }
-if ({ "layerAND1": { "imageGallery": "true" }
-}.layerAND1) {
+if ({ "imageGallery": "true" }) {
     const declGalleryBottomSheetComponent = GalleryBottomSheetComponent;
 }
 else {
     let declGalleryBottomSheetComponent = PuzzleBoardComponent;
 }
-if ({ "layerOR2": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR2) {
+if ({ "zoomValue": "true", "zoomCoordinates": "true" }) {
     const declZoomManagementBottomSheetComponent = ZoomManagementBottomSheetComponent;
 }
 else {
     let declZoomManagementBottomSheetComponent = PuzzleBoardComponent;
 }
-if ({ "layerAND1": { "zoom": "true" } }.layerAND1) {
+if ({ "zoom": "true" }) {
     const declZoomBlockComponent = ZoomBlockComponent;
 }
 else {
     let declZoomBlockComponent = PuzzleBoardComponent;
 }
-if ({ "layerAND1": { "zoomValue": "true" } }
-    .
-        layerAND1) {
+if ({ "zoomValue": "true" }) {
     const declSetZoomComponent = SetZoomComponent;
 }
 else {
     let declSetZoomComponent = PuzzleBoardComponent;
 }
-if ({ "layerAND1": { "zoomCoordinates": "true" } }.layerAND1) {
+if ({ "zoomCoordinates": "true" }) {
     const declSetZoomPositionComponent = SetZoomPositionComponent;
 }
 else {

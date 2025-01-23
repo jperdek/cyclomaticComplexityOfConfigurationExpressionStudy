@@ -2,7 +2,7 @@
 import { fabric } from "fabric";
 import { Puzzle } from "../store/puzzles/puzzles";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class DecoratorFileCopy {
     }
 }

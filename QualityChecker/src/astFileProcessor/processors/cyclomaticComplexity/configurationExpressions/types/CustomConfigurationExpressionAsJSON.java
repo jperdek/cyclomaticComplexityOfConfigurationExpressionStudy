@@ -14,12 +14,18 @@ import org.json.simple.parser.ParseException;
 
 import astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatement;
 import astFileProcessor.processors.ASTTextExtractorTools;
+import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
 
 
 
 public class CustomConfigurationExpressionAsJSON implements ConfigurationExpressionType {
 
-	public CustomConfigurationExpressionAsJSON() {
+	private ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings;
+	
+	
+	public CustomConfigurationExpressionAsJSON(
+			ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings) {
+		this.expressionsForCyclomaticComplexityManipulationSettings = expressionsForCyclomaticComplexityManipulationSettings;
 	}
 
 	public enum Operator {
@@ -81,6 +87,11 @@ public class CustomConfigurationExpressionAsJSON implements ConfigurationExpress
 		}
 		if (!createNew) { return buildString; }
 		if (buildObject.keySet().size() == 0) { return buildString; }
+		if (this.expressionsForCyclomaticComplexityManipulationSettings.useReducedFormInJSONExpressions()) {
+			if (buildString.equals("")) { return buildObject.toString(); }
+			return "( "  + buildObject.toString() + " " + operator.sign + " " +  buildString + " )";
+		} 
+		
 		if (buildString.equals("")) { return "{ \"" + hierarchicalObjectName + "\": "  + buildObject.toString() + " }." + hierarchicalObjectName; }
 		return "({ \"" + hierarchicalObjectName + "\": "  + buildObject.toString() + " }." + hierarchicalObjectName + " " + operator.sign + " " + buildString + " )";
 	}

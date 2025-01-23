@@ -4,7 +4,7 @@ import { fabric } from "fabric";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { ExtendedPuzzle } from "src/app/models/extendedPuzzle";
 import { Point } from "src/app/models/point";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class SetPuzzleAreaOnBoardService {
         margin = 16;
         strokeWidth = 10;

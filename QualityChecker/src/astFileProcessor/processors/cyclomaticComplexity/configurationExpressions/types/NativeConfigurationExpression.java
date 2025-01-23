@@ -1,7 +1,6 @@
 package astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -96,7 +95,6 @@ public class NativeConfigurationExpression implements ConfigurationExpressionTyp
 		JSONObject conditionalStatement = (JSONObject) new JSONParser().parse(astObjectString);
 		return conditionalStatement;
 	}
-	
 	
 	@Override
 	public JSONObject transformConfigurationExpressionIntoConditionalStatementWithElsePart(

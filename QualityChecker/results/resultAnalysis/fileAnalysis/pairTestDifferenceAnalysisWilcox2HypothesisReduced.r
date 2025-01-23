@@ -14,13 +14,13 @@ library(data.table)
 #devtools::install_github("kassambara/easyGgplot2")
 library(easyGgplot2)
 
-setwd("E:/aspects/spaProductLine/QualityChecker/results/resultAnalysis")
-firstFormData <<- read.csv('../forms/form1/generalAGGREGATETYPHONE_FORM1.csv', sep=";")
-fourthFormData <<- read.csv('../forms/form4/generalAGGREGATETYPHONE_FORM4.csv', sep=";")
+setwd("E:/aspects/cyclomaticComplexityAnalysisStudy/QualityChecker/results/resultAnalysis")
+firstFormData <<- read.csv('../forms/nativeExpressions/generalAGGREGATETYPHONE_CYCLFORM1.csv', sep=";")
+secondFormData <<- read.csv('../forms/entireJSONExpressions/generalAGGREGATETYPHONE_CYCLFORM2.csv', sep=";")
 
 
-firstFormData <- filter(firstFormData, Overall.file.decorastors > 0)
-fourthFormData <- filter(fourthFormData, Overall.file.decorastors > 0)
+firstFormData <- filter(firstFormData, Overall.file.decorastors.2 > 0)
+fourthFormData <- filter(secondFormData, Overall.file.decorastors.2 > 0)
 fourthFormData <- fourthFormData[colnames(firstFormData)]
 firstFormData2 <- data.frame(firstFormData)
 
@@ -73,5 +73,5 @@ lapply(colnames(firstFormData), function(columnName, data1, data2) {
 colnames(finalWilcoxTest) <- testColumnNames
 print(finalWilcoxTest)
 print(nrow(firstFormData))
-write.table(finalWilcoxTest, ".\\fileAnalysis\\pairedTestForm1-4Reduced.csv", row.names=FALSE, dec=",", sep=";")
+write.table(finalWilcoxTest, ".\\fileAnalysis\\pairedTestFormNativeEntireJSONReduced.csv", row.names=FALSE, dec=",", sep=";")
 

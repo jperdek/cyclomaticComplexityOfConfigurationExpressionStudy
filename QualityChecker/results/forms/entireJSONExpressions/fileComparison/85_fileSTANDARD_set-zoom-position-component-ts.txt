@@ -3,9 +3,9 @@ import { Component, EventEmitter, Output } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { ZoomManagementInterface } from "src/app/models/zoomManagementInterface";
 import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
-if ({ "wholeBlockFile": {
-        "zoomCoordinates": "true"
-    } }.wholeBlockFile) {
+if ({
+    "zoomCoordinates": "true"
+}) {
     class SetZoomPositionComponent implements ZoomManagementInterface {
         centerX = 25;
         centerY = 25;

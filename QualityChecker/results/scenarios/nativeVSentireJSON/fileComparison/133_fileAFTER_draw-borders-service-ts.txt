@@ -8,9 +8,9 @@ import { Puzzle } from "src/app/store/puzzles/puzzles";
 import { DisableControlsService } from "../../../utils/disable-controls.service";
 import { RandomUtilsService } from "../../../utils/random-utils.service";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {
-        "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
-    } }.wholeBlockFile) {
+if ({
+    "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
+}) {
     class DrawBordersService {
         constructor(drawAdjacentPointService: DrawAdjacentPointsService, disableControlsService: DisableControlsService) { }
         createHTMLCanvas(width: number, height: number): HTMLCanvasElement {

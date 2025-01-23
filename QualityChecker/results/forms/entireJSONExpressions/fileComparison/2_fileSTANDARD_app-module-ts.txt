@@ -16,7 +16,7 @@ import { InitialPageComponent } from "./puzzle-builder/pages/initial-page/initia
 import { SmallMainMenuComponent } from "./components/small-main-menu/small-main-menu.component";
 import { PuzzleBuilderModule } from "./puzzle-builder/puzzle-builder.module";
 import { DecoratorTypesService } from "./featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class AppModule {
     }
 }

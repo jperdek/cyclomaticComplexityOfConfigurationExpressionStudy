@@ -5,24 +5,24 @@ import { RoutingModel } from "../models/routingModel";
 import { PuzzleChooserComponent } from "../puzzle-builder/pages/puzzle-chooser/puzzle-chooser.component";
 import { TemplatePreviewComponent } from "../puzzle-builder/pages/template-preview/template-preview.component";
 import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
-if ({ "skipLineVariableDeclaration": {
-        "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
-    } }.skipLineVariableDeclaration) {
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
 }
 import { ZoomManagementComponent } from "../puzzle-builder/pages/zoom-management/zoom-management.component";
-if ({ "skipLineVariableDeclaration": {
-        "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
-    } }.skipLineVariableDeclaration) {
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
 }
 import { ZoomManagementBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
-if ({ "skipLineVariableDeclaration": {
-        "imageGallery": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "imageGallery": "true"
+}) {
 }
 import { GalleryBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
-if ({ "skipLineVariableDeclaration": {
-        "imageGallery": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "imageGallery": "true"
+}) {
 }
 import { GalleryComponent } from "../puzzle-builder/pages/gallery/gallery.component";
 //import { GalleryComponent } from "../puzzle-builder/pages/gallery/gallery.component";
@@ -49,13 +49,13 @@ let RoutingModelData: RoutingModel[] = [
         "componentRef": GameConfigurationComponent
     }
 ];
-if ({ "skipLineVariableDeclaration": {
-        "imageGallery": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "imageGallery": "true"
+}) {
 }
-if ({ "skipLineVariableDeclaration": {
-        "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
-    } }.skipLineVariableDeclaration) {
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
 }
 //RoutingModelData.push({"name": "Zoom", "path": "/puzzle/zoom", "bottomSheetComponent": ZoomManagementBottomSheetComponent, "componentPathInModule": "zoom", "componentRef": ZoomManagementComponent});
 class RoutingModelMock {

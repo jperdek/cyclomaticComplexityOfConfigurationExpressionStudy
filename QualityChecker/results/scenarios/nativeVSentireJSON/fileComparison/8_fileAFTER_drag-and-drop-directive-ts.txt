@@ -2,7 +2,7 @@
 import { Directive, EventEmitter, HostBinding, HostListener, Output } from "@angular/core";
 import { Router } from "@angular/router";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class DragAndDropDirective {
         constructor(router: Router) { }
         apart = true;

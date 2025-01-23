@@ -2,7 +2,7 @@
 import { fabric } from "fabric";
 import { Decorator } from "./decorator";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class BottomLeftFabricMenuService implements Decorator {
         static _decorated: boolean = true;
         getDecorated(): boolean {

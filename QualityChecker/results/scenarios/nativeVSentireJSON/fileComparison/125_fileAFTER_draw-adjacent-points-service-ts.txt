@@ -2,9 +2,7 @@
 import { Injectable } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { Connection, Polygon } from "src/app/models/polygon";
-if ({ "wholeBlockFile": {} }
-    .
-        wholeBlockFile) {
+if ({}) {
     class DrawAdjacentPointsService {
         constructor() { }
         public drawCircle(ctx: any, red: number, green: number, blue: number, alpha: number): void {

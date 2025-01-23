@@ -5,16 +5,16 @@ import { RoutingModel } from "../models/routingModel";
 import { PuzzleChooserComponent } from "../puzzle-builder/pages/puzzle-chooser/puzzle-chooser.component";
 import { TemplatePreviewComponent } from "../puzzle-builder/pages/template-preview/template-preview.component";
 import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
-if ({ "layerOR2": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR2) {
+if ({ "zoomValue": "true", "zoomCoordinates": "true" }) {
 }
 import { ZoomManagementComponent } from "../puzzle-builder/pages/zoom-management/zoom-management.component";
-if ({ "layerOR2": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR2) {
+if ({ "zoomValue": "true", "zoomCoordinates": "true" }) {
 }
 import { ZoomManagementBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
-if ({ "layerAND1": { "imageGallery": "true" } }.layerAND1) {
+if ({ "imageGallery": "true" }) {
 }
 import { GalleryBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
-if ({ "layerAND1": { "imageGallery": "true" } }.layerAND1) {
+if ({ "imageGallery": "true" }) {
 }
 import { GalleryComponent } from "../puzzle-builder/pages/gallery/gallery.component";
 //import { GalleryComponent } from "../puzzle-builder/pages/gallery/gallery.component";
@@ -41,9 +41,9 @@ let RoutingModelData: RoutingModel[] = [
         "componentRef": GameConfigurationComponent
     }
 ];
-if ({ "layerAND1": { "imageGallery": "true" } }.layerAND1) {
+if ({ "imageGallery": "true" }) {
 }
-if ({ "layerOR2": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR2) {
+if ({ "zoomValue": "true", "zoomCoordinates": "true" }) {
 }
 //RoutingModelData.push({"name": "Zoom", "path": "/puzzle/zoom", "bottomSheetComponent": ZoomManagementBottomSheetComponent, "componentPathInModule": "zoom", "componentRef": ZoomManagementComponent});
 class RoutingModelMock {

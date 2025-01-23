@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
 import { DomSanitizer } from "@angular/platform-browser";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" }) {
 }
 import { Store } from "@ngrx/store";
 //import { Store } from '@ngrx/store';
@@ -15,26 +15,26 @@ import { ZoomManagerService } from "../services/puzzleEvents/zoom-manager.servic
 import { ImageSizeManagerService } from "../services/puzzleGenerator/image-size-manager.service";
 import { ManageGraphicsService } from "../services/puzzleGenerator/manage-puzzle.service";
 import { PuzzleManagerService } from "../services/puzzleGenerator/puzzle-manager.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" }) {
 }
 import { DrawBordersService } from "../services/puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/draw-borders.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" }) {
 }
 import { PuzzleGeneratorQuadroService } from "../services/puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/puzzle-generator-quadro.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['ANTI-JIGSAW']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['ANTI-JIGSAW']" }) {
 }
 import { DrawBordersService2 } from "../services/puzzleGenerator/puzzleRenderingAlgorithm/algorithm2/draw-borders2.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['ANTI-JIGSAW']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['ANTI-JIGSAW']" }) {
 }
 import { PuzzleGeneratorQuadroService2 } from "../services/puzzleGenerator/puzzleRenderingAlgorithm/algorithm2/puzzle-generator-quadro2.service";
 //import { PuzzleGeneratorQuadroService2 } from '../services/puzzleGenerator/puzzleRenderingAlgorithm/algorithm2/puzzle-generator-quadro2.service';
 import { SetPuzzleAreaOnBoardService } from "../services/puzzleGenerator/set-puzzle-area-on-board.service";
 import { DisableControlsService } from "../services/utils/disable-controls.service";
 import { ServiceToSkipService } from "../featureManagement/decoratorsVariationPointManagement/service-to-skip.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" }) {
 }
 import { ShufflePuzzlesService } from "../services/utils/shuffle-puzzles.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" }) {
 }
 import { PuzzleAppState } from "../store";
 //import { PuzzleAppState } from '../store';
@@ -47,17 +47,17 @@ class GameConfigurationComponent {
     serviceToSkip3: ServiceToSkipService, // drawBordersService2: DrawBordersService2,
     serviceToSkip4: ServiceToSkipService, // drawBordersService: DrawBordersService,
     manageGraphicsService: ManageGraphicsService, setPuzzleAreaOnBoardService: SetPuzzleAreaOnBoardService, imageSizeManagerService: ImageSizeManagerService, sanitizer: DomSanitizer, manipulationHandlerService: ManipulationHandlerService, resizeHandlerService: ResizeHandlerService, zoomManagerService: ZoomManagerService, disableControlsService: DisableControlsService, gameConfiguration: GameConfigurationService) {
-        if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" } }.layerAND1) {
-            if ({ "layerAND1": { "puzzleAlgorithmType": "['ANTI-JIGSAW']" } }.layerAND1) {
-                if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }.layerAND1) {
-                    if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }.layerAND1) {
-                        if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW']" } }.layerAND1) {
+        if ({ "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" }) {
+            if ({ "puzzleAlgorithmType": "['ANTI-JIGSAW']" }) {
+                if ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" }) {
+                    if ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" }) {
+                        if ({ "puzzleAlgorithmType": "['JIGSAW']" }) {
                         }
-                        if ({ "layerAND1": { "puzzleAlgorithmType": "['ANTI-JIGSAW']" } }.layerAND1) {
+                        if ({ "puzzleAlgorithmType": "['ANTI-JIGSAW']" }) {
                         }
-                        if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW2']" } }.layerAND1) {
+                        if ({ "puzzleAlgorithmType": "['JIGSAW2']" }) {
                         }
-                        if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+                        if ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" }) {
                         }
                         //algorithms.push({"name": "Old jigsaw 2", "instance": new PuzzleGeneratorQuadroService(this.drawBordersService, this.store, this.shufflePuzzlesService)});
                         var newA;

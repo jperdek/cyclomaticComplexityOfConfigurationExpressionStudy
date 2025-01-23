@@ -18,7 +18,7 @@ const returnPuzzles = createAction("[Puzzles] ReturnAll Puzzles");
 const addPuzzles = createAction("[Puzzles] AddMany Puzzles", props<{
     puzzles: Puzzle[];
 }>());
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class DecoratorFileCopy {
     }
 }

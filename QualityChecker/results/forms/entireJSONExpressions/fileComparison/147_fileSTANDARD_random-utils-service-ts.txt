@@ -1,7 +1,7 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/services/utils/random-utils-service-ts
 import { Injectable } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class RandomUtilsService {
         public static randomNumber(min: number, max: number): number {
             return Math.random() * (max - min) + min;

@@ -1,0 +1,126 @@
+// @ts-ignore
+//@DecoratorTypesService.skipLineVariableDeclaration({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[IMPORT=Store]") var newA;
+//if(true) {
+//}
+if ({"hierarchicCustomCondition": {
+  "AND": {
+    "OR": { 
+            "feature2": true, 
+            "feature3": false, 
+            "AND": {
+                "feature4": false, 
+                "feature5": true
+            }
+    }, 
+    "feature1": "true"}
+  }}.hierarchicCustomCondition) {
+
+}
+
+if ({"hierarchicCustomCondition": {
+  "AND": {
+    "OR": { 
+      "feature2": true, 
+      "feature3": false, 
+      "AND": {
+          "feature4": false, 
+          "feature5": true
+      }
+    }, 
+    "feature1": "true"
+  }}}.hierarchicCustomCondition) {
+
+}
+let aaa = "";
+let bbb = "";
+let ccc = "";
+let ddd = "";
+let eee = "";
+if ("feature1" === aaa && ("feature2" === bbb || "feature3" === ccc || ("feature4" === ddd && "feature5" === eee)) {
+
+}
+//import { Store } from '@ngrx/store';
+//type Store = (require('@ngrx/store').Store);
+type Store<T> = any;
+if (true) {
+  import('@ngrx/store')
+  .then((result) => {
+    type Store<T> = typeof result.Store;
+  });
+}
+
+import { Injectable} from '@angular/core';
+
+import { AlgorithmMap } from '../models/algorithmMap';
+import { PuzzleAppState } from '../store';
+
+// @ts-ignore
+@DecoratorTypesService.skipLineVariableDeclaration({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[IMPORT=PuzzleGeneratorQuadroService]") var newA;
+import { PuzzleGeneratorQuadroService } from './puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/puzzle-generator-quadro.service';
+// @ts-ignore
+@DecoratorTypesService.skipLineVariableDeclaration({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[IMPORT=ShufflePuzzlesService]") var newA;
+import { ShufflePuzzlesService } from './utils/shuffle-puzzles.service';
+import { DecoratorTypesService } from '../featureManagement/decoratorsVariationPointManagement/decorator-types.service';
+// @ts-ignore
+//@DecoratorTypesService.skipLineVariableDeclaration({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[IMPORT=DrawBordersService]") var newA;
+//import { DrawBordersService } from './puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/draw-borders.service';
+
+type DrawBordersService = any;
+if ({"drawBordersServiceImport": {"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}}.drawBordersServiceImport) {
+  import('./puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/draw-borders.service')
+  .then(({DrawBordersService}) => {
+   // type DrawBordersService = typeof result.DrawBordersService;
+  
+
+  //GameConfigurationService = null
+  if ({"wholeBlockFile": {}}.wholeBlockFile) {
+    @Injectable({
+      providedIn: 'root'
+    })
+    @DecoratorTypesService.wholeBlockFile({})
+    class GameConfigurationService {
+
+      availableAlgorithms: AlgorithmMap[] = [];
+
+      constructor(
+        @DecoratorTypesService.skipLineParameter({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[ARG=drawBordersService]")
+        private drawBordersService: DrawBordersService,
+        @DecoratorTypesService.skipLineParameter({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[ARG=store]")
+        private store: Store<PuzzleAppState>,
+        @DecoratorTypesService.skipLineParameter({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[ARG=shufflePuzzlesService]")
+        private shufflePuzzlesService: ShufflePuzzlesService
+        ) {
+          if({"value": {"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}}.value) {
+            this.drawBordersService = new DrawBordersService(Object.assign({}), Object.assign({})); 
+          } else {
+            (this.drawBordersService as unknown) = undefined;
+          }
+          // @ts-ignore
+          @DecoratorTypesService.skipLineVariableDeclaration({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[NOT=let puzzleQuatro = null]")
+          let puzzleQuatro = {"name": "jigsaw", "instance": new PuzzleGeneratorQuadroService(this.drawBordersService, this.store, this.shufflePuzzlesService)};
+
+          if (puzzleQuatro != null) this.availableAlgorithms.push(puzzleQuatro);
+          // @ts-ignore
+          @DecoratorTypesService.skipLineVariableDeclaration({"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}, "[NOT=let puzzleQuatro2 = null;]")
+          let puzzleQuatro2 = {"name": "jigsaw2", "instance": new PuzzleGeneratorQuadroService(this.drawBordersService, this.store, this.shufflePuzzlesService)};
+
+          if (puzzleQuatro2 != null) this.availableAlgorithms.push(puzzleQuatro2);
+          return this.applyToMe();
+        }
+
+      applyToMe(): GameConfigurationService {
+        return this;
+      }
+
+      getAlgorithms(): AlgorithmMap[] {
+        return this.availableAlgorithms;
+      }
+
+      setAlgorithms(algorithms: AlgorithmMap[]): void {
+        this.availableAlgorithms = algorithms;
+      }
+    }
+  }
+  });
+}
+

@@ -2,7 +2,7 @@
 import { Injectable } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { Point } from "src/app/models/point";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class ImageSizeManagerService {
         constructor() { }
         public getSizeAccordingAspectRatio(width: number, height: number, aspectRatio: number): Point {

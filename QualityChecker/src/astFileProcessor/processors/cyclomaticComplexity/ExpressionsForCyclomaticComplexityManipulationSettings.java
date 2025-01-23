@@ -17,7 +17,8 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 
 	private boolean analyzeIllegalDecorators = true;
 	private boolean shouldWholeFileContentBeStored = true;
-	private ConfigurationExpressionType configurationExpressionType = new EntireConfigurationExpressionAsJSON();
+	private boolean useReducedFormInJSONExpressions = true;
+	private ConfigurationExpressionType configurationExpressionType = new EntireConfigurationExpressionAsJSON(this);
 	
 	public static enum SearchType { START, MATCH, END, CONTAINS};
 	private SearchType chosenSearchType = SearchType.MATCH;
@@ -31,6 +32,10 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 		this.notAllowedDecoratorNames = new HashMap<String, Integer>();
 		this.importedDecoratorNames = new HashSet<String>();
 	}
+	
+	public void setReducedFormInJSONExpressions(boolean useReducedFormInJSONExpressions) { this.useReducedFormInJSONExpressions = useReducedFormInJSONExpressions; }
+	
+	public boolean useReducedFormInJSONExpressions() { return this.useReducedFormInJSONExpressions; }
 	
 	public boolean shouldWholeFileContentBeStored() { return this.shouldWholeFileContentBeStored; }
 	
@@ -185,7 +190,7 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
 				= new ExpressionsForCyclomaticComplexityManipulationSettings();
 		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
-				new EntireConfigurationExpressionAsJSON());
+				new EntireConfigurationExpressionAsJSON(cyclomaticComplexityExpressionsManipulationSettings));
 		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
 		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
 		return cyclomaticComplexityExpressionsManipulationSettings;
@@ -195,7 +200,7 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
 				= new ExpressionsForCyclomaticComplexityManipulationSettings();
 		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
-				new ConfigurationExpressionAsLayersAsJSON());
+				new ConfigurationExpressionAsLayersAsJSON(cyclomaticComplexityExpressionsManipulationSettings));
 		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
 		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
 		return cyclomaticComplexityExpressionsManipulationSettings;
@@ -215,7 +220,7 @@ public class ExpressionsForCyclomaticComplexityManipulationSettings {
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityExpressionsManipulationSettings 
 				= new ExpressionsForCyclomaticComplexityManipulationSettings();
 		cyclomaticComplexityExpressionsManipulationSettings.setConfigurationExpressionType(
-				new CustomConfigurationExpressionAsJSON());
+				new CustomConfigurationExpressionAsJSON(cyclomaticComplexityExpressionsManipulationSettings));
 		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyDefaultOnes();
 		cyclomaticComplexityExpressionsManipulationSettings.allowOnlyUsedAngularOnes();
 		return cyclomaticComplexityExpressionsManipulationSettings;

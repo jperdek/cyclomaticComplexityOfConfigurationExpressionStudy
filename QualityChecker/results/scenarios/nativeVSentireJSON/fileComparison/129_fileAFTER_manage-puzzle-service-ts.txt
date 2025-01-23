@@ -10,7 +10,7 @@ import { PuzzleControllerManagerService } from "../puzzleControllers/puzzle-cont
 import { DisableControlsService } from "../utils/disable-controls.service";
 import { SetPuzzleAreaOnBoardService } from "./set-puzzle-area-on-board.service";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class ManageGraphicsService {
         enablePuzzleRotation = true;
         puzzleAreaOnBoardService?: SetPuzzleAreaOnBoardService;

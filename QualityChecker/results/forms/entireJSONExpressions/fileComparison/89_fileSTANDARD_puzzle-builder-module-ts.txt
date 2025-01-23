@@ -14,115 +14,115 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { PuzzleChooserBottomSheetComponent } from "./pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
 import { TemplatePreviewBottomSheetComponent } from "./pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
 import { InsertTemplateImageBottomSheetComponent } from "./pages/bottom-sheets/insert-template-image-bottom-sheet/insert-template-image-bottom-sheet.component";
-if ({ "skipLineVariableDeclaration": {
-        "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
-    } }.skipLineVariableDeclaration) {
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
 }
 import { ZoomManagementComponent } from "./pages/zoom-management/zoom-management.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-if ({ "skipLineVariableDeclaration": {
-        "zoom": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "zoom": "true"
+}) {
 }
 import { ZoomMenuComponent } from "./components/zoom-menu/zoom-menu.component";
-if ({ "skipLineVariableDeclaration": {
-        "imageGallery": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "imageGallery": "true"
+}) {
 }
 import { GalleryComponent } from "./pages/gallery/gallery.component";
 import { DragAndDropImageComponent } from "./components/drag-and-drop-image/drag-and-drop-image.component";
-if ({ "skipLineVariableDeclaration": {
-        "imageGallery": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "imageGallery": "true"
+}) {
 }
 import { GalleryBottomSheetComponent } from "./pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
-if ({ "skipLineVariableDeclaration": {
-        "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
-    } }.skipLineVariableDeclaration) {
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
 }
 import { ZoomManagementBottomSheetComponent } from "./pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
 import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
-if ({ "skipLineVariableDeclaration": {
-        "zoom": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "zoom": "true"
+}) {
 }
 import { ZoomBlockComponent } from "./components/zoom-block/zoom-block.component";
-if ({ "skipLineVariableDeclaration": {
-        "zoomValue": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "zoomValue": "true"
+}) {
 }
 import { SetZoomComponent } from "./pages/zoom-management/set-zoom/set-zoom.component";
-if ({ "skipLineVariableDeclaration": {
-        "zoomCoordinates": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "zoomCoordinates": "true"
+}) {
 }
 import { SetZoomPositionComponent } from "./pages/zoom-management/set-zoom-position/set-zoom-position.component";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "skipLineVariableDeclaration": {
-        "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
-    } }.skipLineVariableDeclaration) {
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
     const declZoomManagementComponent = ZoomManagementComponent;
 }
 else {
     let declZoomManagementComponent = PuzzleBoardComponent;
 }
-if ({ "skipLineVariableDeclaration": {
-        "zoom": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "zoom": "true"
+}) {
     const declZoomMenuComponent = ZoomMenuComponent;
 }
 else {
     let declZoomMenuComponent = PuzzleBoardComponent;
 }
-if ({ "skipLineVariableDeclaration": {
-        "imageGallery": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "imageGallery": "true"
+}) {
     const declGalleryComponent = GalleryComponent;
 }
 else {
     let declGalleryComponent = PuzzleBoardComponent;
 }
-if ({ "skipLineVariableDeclaration": {
-        "imageGallery": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "imageGallery": "true"
+}) {
     const declGalleryBottomSheetComponent = GalleryBottomSheetComponent;
 }
 else {
     let declGalleryBottomSheetComponent = PuzzleBoardComponent;
 }
-if ({ "skipLineVariableDeclaration": {
-        "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
-    } }.skipLineVariableDeclaration) {
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
     const declZoomManagementBottomSheetComponent = ZoomManagementBottomSheetComponent;
 }
 else {
     let declZoomManagementBottomSheetComponent = PuzzleBoardComponent;
 }
-if ({ "skipLineVariableDeclaration": {
-        "zoom": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "zoom": "true"
+}) {
     const declZoomBlockComponent = ZoomBlockComponent;
 }
 else {
     let declZoomBlockComponent = PuzzleBoardComponent;
 }
-if ({ "skipLineVariableDeclaration": {
-        "zoomValue": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "zoomValue": "true"
+}) {
     const declSetZoomComponent = SetZoomComponent;
 }
 else {
     let declSetZoomComponent = PuzzleBoardComponent;
 }
-if ({ "skipLineVariableDeclaration": {
-        "zoomCoordinates": "true"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "zoomCoordinates": "true"
+}) {
     const declSetZoomPositionComponent = SetZoomPositionComponent;
 }
 else {
     let declSetZoomPositionComponent = PuzzleBoardComponent;
 }
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class PuzzleBuilderModule {
     }
 }

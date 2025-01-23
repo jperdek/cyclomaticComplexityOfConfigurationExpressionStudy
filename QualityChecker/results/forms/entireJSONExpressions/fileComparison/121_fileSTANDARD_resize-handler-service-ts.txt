@@ -4,7 +4,7 @@ import { ExtendedPuzzle } from "src/app/models/extendedPuzzle";
 import { ImageSizeManagerService } from "../puzzleGenerator/image-size-manager.service";
 import { SetPuzzleAreaOnBoardService } from "../puzzleGenerator/set-puzzle-area-on-board.service";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class ResizeHandlerService {
         constructor(imageSizeManagerService: ImageSizeManagerService) { }
         public registerResizeHandler(puzzleBoard: fabric.Canvas, setPuzzleAreaOnBoardService: SetPuzzleAreaOnBoardService, baseImageAspectRatio: number, puzzleBoardWrapperId: string = "puzzleBoardWrapper"): void {

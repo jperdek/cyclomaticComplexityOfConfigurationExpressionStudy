@@ -1,7 +1,7 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/components/zoom-block/zoom-block-component-ts
 import { Component, OnInit } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "layerAND1": { "zoom": "true" } }.layerAND1) {
+if ({ "zoom": "true" }) {
     class ZoomBlockComponent implements OnInit {
         constructor() { }
         ngOnInit(): void {

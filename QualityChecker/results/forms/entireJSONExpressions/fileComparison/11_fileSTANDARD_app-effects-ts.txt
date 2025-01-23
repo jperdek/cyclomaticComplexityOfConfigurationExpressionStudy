@@ -5,7 +5,7 @@ import { loadPuzzles } from "../store/puzzles/puzzles.actions";
 import { map } from "rxjs/operators";
 import { PuzzleMock } from "../mockups/puzzle.mock";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class AppEffects {
         constructor(actions$: Actions) { }
         init$ = createEffect(() => this.actions$.pipe(ofType(ROOT_EFFECTS_INIT), map(_ => loadPuzzles({ puzzles: PuzzleMock }))));

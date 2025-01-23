@@ -21,13 +21,14 @@ public class TransformationFormsForCyclomaticComplexity {
 	public TransformationFormsForCyclomaticComplexity() {	
 	}
 	
-	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithEntireHierarchicExpression() {
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithEntireHierarchicExpression(boolean useReducedForm) {
 		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
 			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForEntireConfigurationExpressionAsJSON();
 		exprForCyclomaticComplManipSettings.setWholeFileContentToBeStoredOption(true);
 		exprForCyclomaticComplManipSettings.allowOnlyDefaultOnes();
 		exprForCyclomaticComplManipSettings.allowOnlyUsedAngularOnes();
-		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new EntireConfigurationExpressionAsJSON());
+		exprForCyclomaticComplManipSettings.setReducedFormInJSONExpressions(useReducedForm);
+		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new EntireConfigurationExpressionAsJSON(exprForCyclomaticComplManipSettings));
 		return exprForCyclomaticComplManipSettings;
 	}
 	
@@ -41,23 +42,25 @@ public class TransformationFormsForCyclomaticComplexity {
 		return exprForCyclomaticComplManipSettings;
 	}
 	
-	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithLayeredConditions() {
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithLayeredConditions(boolean useReducedForm) {
 		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
 			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForConfigurationExpressionsEvaluatedAsLayers();
 		exprForCyclomaticComplManipSettings.setWholeFileContentToBeStoredOption(true);
 		exprForCyclomaticComplManipSettings.allowOnlyDefaultOnes();
 		exprForCyclomaticComplManipSettings.allowOnlyUsedAngularOnes();
-		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new ConfigurationExpressionAsLayersAsJSON());
+		exprForCyclomaticComplManipSettings.setReducedFormInJSONExpressions(useReducedForm);
+		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new ConfigurationExpressionAsLayersAsJSON(exprForCyclomaticComplManipSettings));
 		return exprForCyclomaticComplManipSettings;
 	}
 	
-	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithCustomConditions() {
+	public static ExpressionsForCyclomaticComplexityManipulationSettings getConditionalFlowWithCustomConditions(boolean useReducedForm) {
 		ExpressionsForCyclomaticComplexityManipulationSettings exprForCyclomaticComplManipSettings 
 			= ExpressionsForCyclomaticComplexityManipulationSettings.getSettingsForConfigurationExpressionsEvaluatedAsLayers();
 		exprForCyclomaticComplManipSettings.setWholeFileContentToBeStoredOption(true);
 		exprForCyclomaticComplManipSettings.allowOnlyDefaultOnes();
 		exprForCyclomaticComplManipSettings.allowOnlyUsedAngularOnes();
-		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new CustomConfigurationExpressionAsJSON());
+		exprForCyclomaticComplManipSettings.setReducedFormInJSONExpressions(useReducedForm);
+		exprForCyclomaticComplManipSettings.setConfigurationExpressionType(new CustomConfigurationExpressionAsJSON(exprForCyclomaticComplManipSettings));
 		return exprForCyclomaticComplManipSettings;
 	}
 	
@@ -71,29 +74,54 @@ public class TransformationFormsForCyclomaticComplexity {
 	public static void evaluateCyclomaticComplexityForm2() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
-				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithEntireHierarchicExpression();
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithEntireHierarchicExpression(true);
 		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM2", cyclomaticComplexityManipulationSettings);
 	}
 	
 	public static void evaluateCyclomaticComplexityForm3() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
-				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithLayeredConditions();
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithLayeredConditions(true);
 		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM3", cyclomaticComplexityManipulationSettings);
 	}
 	
 	public static void evaluateCyclomaticComplexityForm4() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
-				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithCustomConditions();
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithCustomConditions(true);
 		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM4", cyclomaticComplexityManipulationSettings);
 	}
 	
+	
+	public static void evaluateCyclomaticComplexityForm2Extended() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithEntireHierarchicExpression(false);
+		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM2EXT", cyclomaticComplexityManipulationSettings);
+	}
+	
+	public static void evaluateCyclomaticComplexityForm3Extendend() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithLayeredConditions(false);
+		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM3EXT", cyclomaticComplexityManipulationSettings);
+	}
+	
+	public static void evaluateCyclomaticComplexityForm4Extended() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
+		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
+				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithCustomConditions(false);
+		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM4EXT", cyclomaticComplexityManipulationSettings);
+	}
+	
 	public static void evaluateAllForms() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
-		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm1();
+		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm1();
 		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm2();
 		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm3();
-		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm4();
+		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm4();
+		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm2Extended();
+		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm3Extende();
+		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm4Extended();
 	}
 
 	public static void main(String args[]) throws NonExistingDecoratorTransformationType, IOException, 

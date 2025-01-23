@@ -15,9 +15,7 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     zoomValue = 1;
     zoomManagerService: ZoomManagerService;
     constructor(puzzleManagerService: PuzzleManagerService, componentFactoryService: ComponentFactoryService) {
-        if ({ "layerOR2": { "zoomValue": "true", "zoomCoordinates": "true" } }
-            .
-                layerOR2) {
+        if ({ "zoomValue": "true", "zoomCoordinates": "true" }) {
             this.zoomManagerService = puzzleManagerService.getZoomManagerService();
             this.zoomManagerService.initForComponent(this);
         }
@@ -27,15 +25,15 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     }
     public getComponentElement(self: ZoomManagementComponent): Element | null | undefined {
         const zoomHTML = document.getElementsByClassName("zoom-management-part")?.item(0);
-        if ({ "layerAND1": { "zoomCoordinates": "true" } }.layerAND1) {
+        if ({ "zoomCoordinates": "true" }) {
         }
-        if ({ "layerAND1": { "zoomValue": "true" } }.layerAND1) {
+        if ({ "zoomValue": "true" }) {
         }
         //  this.addZoomValue(zoomHTML);
         return zoomHTML;
     }
     public addZoomValue(zoomHTML: Element | null): void {
-        if ({ "layerAND1": { "zoomValue": "true" } }.layerAND1) {
+        if ({ "zoomValue": "true" }) {
             if (zoomHTML !== null) {
                 const positionAfterHeading = function <T>(domLocation: HTMLElement, componentRef: ComponentRef<T>) {
                     domLocation.insertBefore(componentRef.location.nativeElement, domLocation.children.item(1));
@@ -48,20 +46,20 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
         }
     }
     public instantiateZoomValueComponentAndEvents(zoomHTML: any, zoomManagementComp: ZoomManagementComponent, positionAfterHeading: Function): void {
-        if ({ "layerAND1": { "zoomValue": "true" } }.layerAND1) {
+        if ({ "zoomValue": "true" }) {
             const zoomValueRef = this.componentFactoryService.createComponent(SetZoomComponent, zoomHTML, undefined, positionAfterHeading);
             zoomValueRef.instance.zoomEmitter.subscribe((result: number) => zoomManagementComp.setZoomValue(result));
         }
     }
     public instantiateZoomCoordinatesComponentAndEvents(zoomHTML: any, zoomManagementComp: ZoomManagementComponent, positionAfterHeading: Function): void {
-        if ({ "layerAND1": { "zoomCoordinates": "true" } }.layerAND1) {
+        if ({ "zoomCoordinates": "true" }) {
             const zoomCoordinatesRef = this.componentFactoryService.createComponent(SetZoomPositionComponent, zoomHTML, undefined, positionAfterHeading);
             zoomCoordinatesRef.instance.centerXEmitter.subscribe((result: number) => zoomManagementComp.setCenterX(result));
             zoomCoordinatesRef.instance.centerYEmitter.subscribe((result: number) => zoomManagementComp.setCenterY(result));
         }
     }
     public addZoomCoordinates(zoomHTML: Element | null): void {
-        if ({ "layerAND1": { "zoomCoordinates": "true" } }.layerAND1) {
+        if ({ "zoomCoordinates": "true" }) {
             if (zoomHTML !== null) {
                 const positionAfterHeading = function <T>(domLocation: HTMLElement, componentRef: ComponentRef<T>) {
                     domLocation.insertBefore(componentRef.location.nativeElement, domLocation.children.item(1));
@@ -109,7 +107,7 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
         this.zoomManagerService.resetZoom(puzzleBoard);
     }
     public toggleZoom($event: MatSlideToggleChange): void {
-        if ({ "layerAND1": { "zoom": "true" } }.layerAND1) {
+        if ({ "zoom": "true" }) {
             if ($event.checked) {
                 const zoomContents = document.getElementsByClassName("zoom-content");
                 Array.from(zoomContents).forEach(zoomContentDiv => zoomContentDiv.classList.add("hide-zoom-content"));

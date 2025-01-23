@@ -4,9 +4,9 @@ import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVaria
 import { ZoomManagementInterface } from "src/app/models/zoomManagementInterface";
 import { ZoomManagerService } from "src/app/services/puzzleEvents/zoom-manager.service";
 import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
-if ({ "wholeBlockFile": {
-        "zoom": "true"
-    } }.wholeBlockFile) {
+if ({
+    "zoom": "true"
+}) {
     class ZoomMenuComponent implements ZoomManagementInterface {
         centerX = 25;
         centerY = 25;

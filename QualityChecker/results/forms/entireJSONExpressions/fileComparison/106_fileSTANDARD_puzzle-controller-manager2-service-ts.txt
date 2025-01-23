@@ -13,7 +13,7 @@ import { PuzzleController } from "src/app/services/puzzleControllers/puzzle-cont
 import { ManageGraphicsService } from "src/app/services/puzzleGenerator/manage-puzzle.service";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 type drawIconFunction = (context: CanvasRenderingContext2D, left: number, top: number, styleOverride: unknown, object: fabric.Object) => void;
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class PuzzleControllerManagerService2 extends PuzzleController {
         cornerSize = 27;
         constructor(returnPuzzleService: DeletePuzzleServiceService | null, helpPuzzleService: HelpPuzzleServiceService | null, bringToFrontService: BringToFrontService | null, bringToBackService: BringToBackService | null) { super(); }

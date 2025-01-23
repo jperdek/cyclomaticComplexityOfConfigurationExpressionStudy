@@ -1,7 +1,7 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/mockups/gallery-mock-ts
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { TemplateCategory, TemplateImage } from "../models/defaultTemplates";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class DecoratorFileCopy {
     }
 }

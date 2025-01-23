@@ -11,11 +11,16 @@ import org.json.simple.parser.ParseException;
 
 import astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatement;
 import astFileProcessor.processors.ASTTextExtractorTools;
+import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
 
 
 public class ConfigurationExpressionAsLayersAsJSON implements ConfigurationExpressionType {
 	
-	public ConfigurationExpressionAsLayersAsJSON() {	
+	private ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings;
+	
+	public ConfigurationExpressionAsLayersAsJSON(
+			ExpressionsForCyclomaticComplexityManipulationSettings expressionsForCyclomaticComplexityManipulationSettings) {
+		this.expressionsForCyclomaticComplexityManipulationSettings = expressionsForCyclomaticComplexityManipulationSettings;	
 	}
 	
 
@@ -61,10 +66,18 @@ public class ConfigurationExpressionAsLayersAsJSON implements ConfigurationExpre
 			}
 		}
 		if (buildObject.keySet().size() == 0) { return buildString; }
+		
+		//reduced form - start
+		if (this.expressionsForCyclomaticComplexityManipulationSettings.useReducedFormInJSONExpressions()) {
+			if (buildString.equals("")) { return buildObject.toString(); }
+			return "( "  + buildObject.toString() + " " + operator.sign + " " + buildString + " )";
+		}
+		//reduced form - end
 		if (buildString.equals("")) { return "{ \"layer" + operator.text + String.valueOf(depth) + "\": "  + buildObject.toString() + " }.layer" + operator.text
 				+ String.valueOf(depth); }
 		return "({ \"layer" + operator.text + String.valueOf(depth) + "\": "  + buildObject.toString() + " }.layer" + operator.text
 				+ String.valueOf(depth) + " " + operator.sign + " " + buildString + " )";
+
 	}
 	
 	@Override

@@ -4,7 +4,7 @@ interface TemplateCategory {
     name: string;
     images: TemplateImage[];
 }
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class DecoratorFileCopy {
     }
 }

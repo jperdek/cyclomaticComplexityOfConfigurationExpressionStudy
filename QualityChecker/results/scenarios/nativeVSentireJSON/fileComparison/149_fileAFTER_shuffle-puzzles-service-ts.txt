@@ -2,7 +2,7 @@
 import { Injectable } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { Puzzle } from "src/app/store/puzzles/puzzles";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class ShufflePuzzlesService {
         constructor() { }
         // -> Fisher–Yates shuffle algorithm

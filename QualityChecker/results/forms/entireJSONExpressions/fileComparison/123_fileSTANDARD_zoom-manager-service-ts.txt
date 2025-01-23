@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { fabric } from "fabric";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { ZoomManagementInterface } from "src/app/models/zoomManagementInterface";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class ZoomManagerService {
         maxZoom = 20; // can be 20
         minZoom = 0.4; // can be 0.01

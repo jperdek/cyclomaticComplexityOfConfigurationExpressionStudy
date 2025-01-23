@@ -2,7 +2,7 @@
 import { Component } from "@angular/core";
 import { MatBottomSheetRef } from "@angular/material/bottom-sheet";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class TemplatePreviewBottomSheetComponent {
         constructor(bottomSheetRef: MatBottomSheetRef<TemplatePreviewBottomSheetComponent>) { }
         public openLink(event: MouseEvent): void {

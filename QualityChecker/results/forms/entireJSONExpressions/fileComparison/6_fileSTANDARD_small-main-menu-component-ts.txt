@@ -6,7 +6,7 @@ import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVaria
 import { InsertTemplateImageBottomSheetComponent } from "src/app/puzzle-builder/pages/bottom-sheets/insert-template-image-bottom-sheet/insert-template-image-bottom-sheet.component";
 import { PuzzleChooserBottomSheetComponent } from "src/app/puzzle-builder/pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
 import { TemplatePreviewBottomSheetComponent } from "src/app/puzzle-builder/pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class SmallMainMenuComponent {
         constructor(bottomSheet: MatBottomSheet, router: Router) { }
         public loadingFromOtherModuleFix(): void {

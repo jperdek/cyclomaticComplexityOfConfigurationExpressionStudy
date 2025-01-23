@@ -42,7 +42,7 @@ effortDouble <- effortDoubleFirstForm
 #cyclDensityDouble <- as.double(unlist(lapply(loadedDataWithDecorators$Halstead.Effort, function(a)  str_replace(a, ",", "."))))
 #effortDouble <- as.double(unlist(lapply(loadedDataWithDecorators$Halstead.Effort, function(a)  str_replace(a, ",", "."))))
 
-numberDecorators <- as.double(unlist(lapply(loadedDataWithDecorators$Overall.file.decorastors, function(a)  str_replace(a, ",", "."))))
+numberDecorators <- as.double(unlist(lapply(loadedDataWithDecorators$Overall.file.decorastors.2, function(a)  str_replace(a, ",", "."))))
 originalPriceNormalized <- unlist(lapply(seq_along(effortDouble), function(index) effortDouble[index] / as.double(numberDecorators[index])))
 originalPriceNormalized <- unlist(lapply(seq.int(1, length(originalPriceNormalized), 5), function(index) mean(originalPriceNormalized[index: index + 3])))
 print(numberDecorators)

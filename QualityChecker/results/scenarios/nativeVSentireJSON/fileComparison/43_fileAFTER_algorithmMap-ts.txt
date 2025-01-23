@@ -4,7 +4,7 @@ interface AlgorithmMap {
     name: string;
     instance: any;
 }
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class DecoratorFileCopy {
     }
 }

@@ -2,7 +2,7 @@
 import { Injectable } from "@angular/core";
 import { fabric } from "fabric";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class DisableControlsService {
         public removeScalingOptions(img: fabric.Image): void {
             img.lockScalingX = true;

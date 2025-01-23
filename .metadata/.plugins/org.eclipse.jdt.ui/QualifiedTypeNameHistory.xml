@@ -2,9 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="astFileProcessor.processors.ExpressionsForCyclomaticComplexityManipulationSettings"/>
     <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.ASTCyclomaticTransformationProcessor"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.CustomConfigurationExpressionAsJSON"/>
-    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings"/>
     <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityEvaluationProjectWalker"/>
     <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityComparator"/>
     <fullyQualifiedTypeName name="codeConstructsEvaluation.analysis.CyclomaticComplexityMeasuresSettings"/>
@@ -20,11 +17,21 @@
     <fullyQualifiedTypeName name="astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatement"/>
     <fullyQualifiedTypeName name="astFileProcessor.processors.ASTTextExtractorTools"/>
     <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.NativeConfigurationExpression"/>
-    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
-    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.CustomConfigurationExpressionAsJSON"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="scenarios.Scenario"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings"/>
+    <fullyQualifiedTypeName name="astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatementReduced"/>
+    <fullyQualifiedTypeName name="scenarios.cyclomaticComplexityEvaluation.TransformationFormsForCyclomaticComplexity"/>
 </qualifiedTypeNameHistroy>

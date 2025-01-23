@@ -6,7 +6,7 @@ import { Route, Router, Routes } from "@angular/router";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { RoutingModelMock } from "src/app/mockups/routing.mock";
 import { RoutingModel } from "src/app/models/routingModel";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class MainNavigationComponent {
         routingModelData: RoutingModel[];
         constructor(bottomSheet: MatBottomSheet, router: Router) { this.routingModelData = this.loadMenu(); }

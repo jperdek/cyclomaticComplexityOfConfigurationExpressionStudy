@@ -3,8 +3,7 @@ import { Component } from "@angular/core";
 import { SafeResourceUrl } from "@angular/platform-browser";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
-if ({ "wholeBlockFile": {}
-}.wholeBlockFile) {
+if ({}) {
     class TemplatePreviewComponent {
         constructor(puzzleManagerService: PuzzleManagerService) { }
         public getTemplatePreviewImage(): SafeResourceUrl {

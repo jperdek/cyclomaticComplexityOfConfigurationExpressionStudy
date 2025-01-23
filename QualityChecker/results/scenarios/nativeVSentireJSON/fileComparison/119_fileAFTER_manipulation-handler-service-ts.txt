@@ -4,7 +4,7 @@ import { Point } from "src/app/models/point";
 import { ExtendedPuzzle } from "../../models/extendedPuzzle";
 import { PuzzleManagerService } from "../puzzleGenerator/puzzle-manager.service";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class ManipulationHandlerService {
         public registerCanvasOnManipulationEvents(puzzleBoard: fabric.Canvas, puzzleManagerService: PuzzleManagerService): void {
             this.processDraggingOnMouseDown(puzzleBoard, puzzleManagerService);

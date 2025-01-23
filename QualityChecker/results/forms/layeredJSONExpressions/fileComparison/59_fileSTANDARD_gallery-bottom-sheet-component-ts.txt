@@ -2,8 +2,7 @@
 import { Component } from "@angular/core";
 import { MatBottomSheetRef } from "@angular/material/bottom-sheet";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "layerAND1": { "imageGallery": "true" }
-}.layerAND1) {
+if ({ "imageGallery": "true" }) {
     class GalleryBottomSheetComponent {
         constructor(bottomSheetRef: MatBottomSheetRef<GalleryBottomSheetComponent>) { }
         public openLink(event: MouseEvent): void {

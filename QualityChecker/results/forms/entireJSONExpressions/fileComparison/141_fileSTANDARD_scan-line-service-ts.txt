@@ -1,7 +1,7 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/services/puzzleGenerator/scan-line-service-ts
 import { Injectable } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class ScanLineService {
         left = Number.MAX_SAFE_INTEGER;
         right = Number.MIN_SAFE_INTEGER;

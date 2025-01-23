@@ -5,7 +5,8 @@ import org.json.simple.JSONObject;
 
 public class ASTConditionalStatement {
 
-	public static String getAstConditionalExpressionStatement(String innerConfigurationExpressionAstProperties, String expressionName, String thenStatementAst) {
+	public static String getAstConditionalExpressionStatement(String innerConfigurationExpressionAstProperties,
+			String expressionName, String thenStatementAst) {
 		String conditionalStatementInAst = String.join("", "{",
 		  "\"pos\": 168,",
 		  "\"end\": 747,",
@@ -83,7 +84,8 @@ public class ASTConditionalStatement {
 	}
 	
 	
-	public static String getAstConditionalExpressionStatement(String innerConfigurationExpressionAstProperties, String expressionName, JSONArray thenStatementArrayAst) {
+	public static String getAstConditionalExpressionStatement(String innerConfigurationExpressionAstProperties, 
+			String expressionName, JSONArray thenStatementArrayAst) {
 		String conditionalStatementInAst = String.join("", "{",
 		  "\"pos\": 168,",
 		  "\"end\": 747,",
@@ -328,5 +330,4 @@ public class ASTConditionalStatement {
 		"}");
 		return conditionalStatementInAst;
 	}
-	
 }

@@ -1,29 +1,29 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/services/game-configuration-service-ts
 import { Injectable } from "@angular/core";
-if ({ "skipLineVariableDeclaration": {
-        "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
+}) {
 }
 import { Store } from "@ngrx/store";
 import { AlgorithmMap } from "../models/algorithmMap";
 import { PuzzleAppState } from "../store";
-if ({ "skipLineVariableDeclaration": {
-        "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
+}) {
 }
 import { DrawBordersService } from "./puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/draw-borders.service";
-if ({ "skipLineVariableDeclaration": {
-        "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
+}) {
 }
 import { PuzzleGeneratorQuadroService } from "./puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/puzzle-generator-quadro.service";
-if ({ "skipLineVariableDeclaration": {
-        "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
+}) {
 }
 import { ShufflePuzzlesService } from "./utils/shuffle-puzzles.service";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class GameConfigurationService {
         availableAlgorithms: AlgorithmMap[] = [];
         constructor(drawBordersService: DrawBordersService, store: Store<PuzzleAppState>, shufflePuzzlesService: ShufflePuzzlesService) {

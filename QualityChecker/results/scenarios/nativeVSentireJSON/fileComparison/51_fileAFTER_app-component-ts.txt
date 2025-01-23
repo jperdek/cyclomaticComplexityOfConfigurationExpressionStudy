@@ -1,15 +1,15 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/pages/app-component/app-component-ts
 import { Component } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "skipLineVariableDeclaration": { "toOmitCompletely": "true" } }.skipLineVariableDeclaration) {
+if ({ "toOmitCompletely": "true" }) {
 }
 import { TreeManagerService } from "src/app/featureManagement/tree-manager.service";
 class AppComponent {
     title = "puzzleToPlay";
     constructor(treeManagerService: TreeManagerService) {
-        if ({ "skipLineParameter": {
-                "toOmitCompletely": "true"
-            } }.skipLineParameter) {
+        if ({
+            "toOmitCompletely": "true"
+        }) {
         }
     }
 }

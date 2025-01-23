@@ -1,9 +1,9 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/zoom-management/set-zoom/set-zoom-component-ts
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {
-        "zoomValue": "true"
-    } }.wholeBlockFile) {
+if ({
+    "zoomValue": "true"
+}) {
     class SetZoomComponent {
         @Output()
         zoomEmitter: EventEmitter<number> = new EventEmitter();

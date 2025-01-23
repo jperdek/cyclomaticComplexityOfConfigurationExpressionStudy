@@ -4,7 +4,7 @@ import { fabric } from "fabric";
 import { Connection } from "src/app/models/polygon";
 import { DrawBordersService } from "../puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/draw-borders.service";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class OldPuzzleService {
         constructor(drawBordersService: DrawBordersService) { }
         public createNativeFabricImage(fabricCanvas: fabric.Canvas): void {

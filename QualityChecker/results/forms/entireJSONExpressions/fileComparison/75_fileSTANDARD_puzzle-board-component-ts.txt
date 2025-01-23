@@ -2,7 +2,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class PuzzleBoardComponent implements AfterViewInit {
         constructor(puzzleManager: PuzzleManagerService) { }
         @ViewChild("puzzleBoard")

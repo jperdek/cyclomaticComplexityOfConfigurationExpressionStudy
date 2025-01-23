@@ -1,17 +1,17 @@
 // FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/services/game-configuration-service-ts
 import { Injectable } from "@angular/core";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" }) {
 }
 import { Store } from "@ngrx/store";
 import { AlgorithmMap } from "../models/algorithmMap";
 import { PuzzleAppState } from "../store";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" }) {
 }
 import { DrawBordersService } from "./puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/draw-borders.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" }) {
 }
 import { PuzzleGeneratorQuadroService } from "./puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/puzzle-generator-quadro.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" }) {
 }
 import { ShufflePuzzlesService } from "./utils/shuffle-puzzles.service";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";

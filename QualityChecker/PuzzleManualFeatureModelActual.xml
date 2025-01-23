@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="6"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Puzzle to play">
+			<graphics key="collapsed" value="false"/>
+			<and abstract="true" mandatory="true" name="Puzzle Environment">
+				<graphics key="collapsed" value="false"/>
+				<and mandatory="true" name="Puzzle generator">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Jigsaw puzzle"/>
+					<feature name="Jigsaw 2 puzzle"/>
+					<feature name="Other puzzle"/>
+				</and>
+				<and abstract="true" mandatory="true" name="Puzzle game">
+					<graphics key="collapsed" value="false"/>
+					<and mandatory="true" name="Puzzle object">
+						<graphics key="collapsed" value="false"/>
+						<and abstract="true" mandatory="true" name="Controls">
+							<graphics key="collapsed" value="false"/>
+							<feature name="Return to drawer"/>
+							<feature name="Show position on board"/>
+							<feature mandatory="true" name="Rotate"/>
+							<feature name="Bring to front"/>
+							<feature name="Bring to back"/>
+						</and>
+						<feature mandatory="true" name="Moveable on puzzle board"/>
+						<feature mandatory="true" name="Select multiple puzzles"/>
+					</and>
+					<and mandatory="true" name="Puzzle board">
+						<graphics key="collapsed" value="false"/>
+						<and name="Zooming">
+							<graphics key="collapsed" value="false"/>
+							<and name="Zoom menu">
+								<graphics key="collapsed" value="false"/>
+								<feature name="Choose zoom point"/>
+								<feature name="Choose zoom value"/>
+								<feature name="Reset"/>
+							</and>
+						</and>
+						<feature mandatory="true" name="Boarder picture"/>
+					</and>
+					<and mandatory="true" name="Puzzle shuffling">
+						<graphics key="collapsed" value="false"/>
+						<feature mandatory="true" name="Rotation by a random angle"/>
+						<feature mandatory="true" name="Change puzzle ordering"/>
+					</and>
+					<feature mandatory="true" name="Puzzle drawer">
+						<graphics key="collapsed" value="false"/>
+					</feature>
+					<feature mandatory="true" name="Preview"/>
+				</and>
+				<feature name="Image loader"/>
+				<feature name="Image gallery"/>
+				<feature mandatory="true" name="Puzzle navigation"/>
+			</and>
+			<feature mandatory="true" name="Presentation/main page"/>
+			<feature mandatory="true" name="Main navigation"/>
+		</and>
+	</struct>
+</featureModel>

@@ -2,7 +2,7 @@
 import { ApplicationRef, ComponentFactoryResolver, ComponentRef, Injectable, Injector, Type, ViewContainerRef } from "@angular/core";
 import { ComponentPortal, DomPortalHost } from "@angular/cdk/portal";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     // OBTAINED FROM:
     // https://blog.cloudboost.io/dynamically-create-an-angular-component-and-add-it-to-the-dom-with-angular-cdk-d649549fdd49
     class ComponentFactoryService {

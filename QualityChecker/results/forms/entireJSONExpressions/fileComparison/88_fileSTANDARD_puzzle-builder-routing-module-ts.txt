@@ -8,7 +8,7 @@ const routes = RoutingModelDataAll.map((model: any) => model = {
     "path": model.componentPathInModule,
     "component": model.componentRef
 } as Route);
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     /*
     const routes: Routes = RoutingModelMock.getRoutingModelData().map((model: any) => model = {
       "path": model.componentPathInModule,

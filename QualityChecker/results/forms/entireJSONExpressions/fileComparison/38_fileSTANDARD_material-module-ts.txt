@@ -60,7 +60,7 @@ const MaterialComponents = [
     MatBottomSheetModule,
     MatCarouselModule
 ];
-if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+if ({}) {
     class MaterialModule {
     }
 }

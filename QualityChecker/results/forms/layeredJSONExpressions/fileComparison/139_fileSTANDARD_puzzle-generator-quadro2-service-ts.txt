@@ -10,7 +10,7 @@ import { RandomUtilsService } from "src/app/services/utils/random-utils.service"
 import { ShufflePuzzlesService } from "src/app/services/utils/shuffle-puzzles.service";
 import { DrawBordersService2 } from "./draw-borders2.service";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "layerAND1": { "puzzleAlgorithmType": "['ANTI-JIGSAW']" } }.layerAND1) {
+if ({ "puzzleAlgorithmType": "['ANTI-JIGSAW']" }) {
     class PuzzleGeneratorQuadroService2 {
         maxSquareSizeHeight = 75;
         maxSquareSizeWidth = 65;

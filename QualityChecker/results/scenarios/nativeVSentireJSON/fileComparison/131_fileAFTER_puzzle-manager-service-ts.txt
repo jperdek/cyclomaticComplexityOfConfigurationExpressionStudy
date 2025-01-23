@@ -13,14 +13,14 @@ import { ZoomManagerService } from "../puzzleEvents/zoom-manager.service";
 import { DisableControlsService } from "../utils/disable-controls.service";
 import { PuzzleAlgorithm } from "src/app/models/algorithmMap";
 import { DecoratorTypesService } from "../../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({ "skipLineVariableDeclaration": {
-        "puzzleAlgorithmType": "['ANTI-JIGSAW']"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "puzzleAlgorithmType": "['ANTI-JIGSAW']"
+}) {
 }
 import { PuzzleGeneratorQuadroService2 } from "./puzzleRenderingAlgorithm/algorithm2/puzzle-generator-quadro2.service";
-if ({ "skipLineVariableDeclaration": {
-        "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
-    } }.skipLineVariableDeclaration) {
+if ({
+    "puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"
+}) {
 }
 import { PuzzleGeneratorQuadroService } from "./puzzleRenderingAlgorithm/algorithm1/puzzle-generator-quadro.service";
 class PuzzleManagerService {
