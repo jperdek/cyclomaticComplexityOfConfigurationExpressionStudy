@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/effects/app-effects-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/effects/app-effects-ts
 import { Injectable } from "@angular/core";
 import { Actions, ROOT_EFFECTS_INIT, ofType, createEffect } from "@ngrx/effects";
 import { loadPuzzles } from "../store/puzzles/puzzles.actions";

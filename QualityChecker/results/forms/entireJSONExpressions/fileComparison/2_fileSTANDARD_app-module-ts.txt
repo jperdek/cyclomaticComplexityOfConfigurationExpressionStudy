@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/app-module-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/app-module-ts
 import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./pages/app-component/app.component";
@@ -16,7 +16,9 @@ import { InitialPageComponent } from "./puzzle-builder/pages/initial-page/initia
 import { SmallMainMenuComponent } from "./components/small-main-menu/small-main-menu.component";
 import { PuzzleBuilderModule } from "./puzzle-builder/puzzle-builder.module";
 import { DecoratorTypesService } from "./featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if ({}) {
+if ({
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
+}) {
     class AppModule {
     }
 }

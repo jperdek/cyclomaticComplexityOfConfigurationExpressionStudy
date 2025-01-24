@@ -125,6 +125,171 @@
       "mainNavigation":"true",
       "AND":{
          "AND":{
+            "OR":{
+	       "AND":{
+               	   "OR":{
+                       "zoomCoordinates":"true",
+                       "zoomValue":"true",
+                       "reset":"true",
+		       "toBack": "true",
+		       "toFront": "true",
+		       "boarderPicture":"true"
+                   },
+		  "zoom":"true"
+               },
+               "returnItem":"true",
+               "showPositionOnBoard":"true",
+               "rotate":"true",
+	       "boarderPicture":"true"
+            },
+            "moveableOnPuzzleBoard":"true",
+            "multiplePuzzleSelect":"true",
+            "randomAngleRotation":"true",
+            "changePuzzleOrdering":"true",
+            "puzzleDrawer":"true",
+            "preview":"true"
+         },
+         "OR":{
+            "imageLoader":"true",
+            "imageGallery":"true",
+            "puzzleNavigation":"true"
+         },
+         "puzzleNavigation":"true",
+         "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"
+      }
+   }
+}
+
+
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
+
+
+{"puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
+
+
+{"puzzleAlgorithmType": "['ANTI-JIGSAW']"}
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"['ANTI-JIGSAW']"}}}
+
+{"puzzleAlgorithmType": "['JIGSAW2']"}
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW2']"}}}
+
+{"puzzleAlgorithmType": "['JIGSAW']"}
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW']"}}}
+
+{"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW', 'JIGSAW2']"}}}
+
+{"imageGallery": "true"}
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"imageGallery":"true","puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
+
+{
+   "AND":{
+      "mainPage":"true",
+      "mainNavigation":"true",
+      "AND":{
+         "AND":{
+            "OR":{
+	       "AND":{
+               	   "OR":{
+                       "zoomCoordinates":"true",
+                       "zoomValue":"true",
+                       "reset":"true",
+		       "toBack": "true",
+		       "toFront": "true",
+		       "boarderPicture":"true"
+                   },
+		  "zoom":"true"
+               },
+               "returnItem":"true",
+               "showPositionOnBoard":"true",
+               "rotate":"true",
+	       "boarderPicture":"true"
+            },
+            "moveableOnPuzzleBoard":"true",
+            "multiplePuzzleSelect":"true",
+            "randomAngleRotation":"true",
+            "changePuzzleOrdering":"true",
+            "puzzleDrawer":"true",
+            "preview":"true"
+         },
+         "imageGallery":"true",
+         "puzzleNavigation":"true",
+         "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"
+      }
+   }
+}
+
+{"imageGallery": "false"}
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"imageGallery":"false","puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
+
+
+
+{"OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+{
+   "AND":{
+      "mainPage":"true",
+      "mainNavigation":"true",
+      "AND":{
+         "AND":{
+            "OR":{
+	       "AND":{
+               	   "OR":{
+                       "zoomCoordinates":"true",
+                       "zoomValue":"true",
+                   },
+		  "AND": {
+			"OR":{
+                           "reset":"true",
+		           "toBack": "true",
+		           "toFront": "true",
+		           "boarderPicture":"true"
+                        },
+		  	"zoom":"true"
+		  }	
+               },
+               "returnItem":"true",
+               "showPositionOnBoard":"true",
+               "rotate":"true",
+	       "boarderPicture":"true"
+            },
+            "moveableOnPuzzleBoard":"true",
+            "multiplePuzzleSelect":"true",
+            "randomAngleRotation":"true",
+            "changePuzzleOrdering":"true",
+            "puzzleDrawer":"true",
+            "preview":"true"
+         },
+         "OR":{
+            "imageLoader":"true",
+            "imageGallery":"true",
+            "puzzleNavigation":"true"
+         },
+         "puzzleNavigation":"true",
+         "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"
+      }
+   }
+}
+{ "AND":{ "mainPage":"true", "mainNavigation":"true", "AND":{ "AND":{ "OR":{ "AND":{ "OR":{ "zoomCoordinates":"true", "zoomValue":"true", }, "AND": { "OR":{ "reset":"true", "toBack": "true", "toFront": "true", "boarderPicture":"true" }, "zoom":"true" } }, "returnItem":"true", "showPositionOnBoard":"true", "rotate":"true", "boarderPicture":"true" }, "moveableOnPuzzleBoard":"true", "multiplePuzzleSelect":"true", "randomAngleRotation":"true", "changePuzzleOrdering":"true", "puzzleDrawer":"true", "preview":"true" }, "OR":{ "imageLoader":"true", "imageGallery":"true", "puzzleNavigation":"true" }, "puzzleNavigation":"true", "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } } }
+
+
+{"toOmitCompletely": "true"}
+{ "AND":{ "toOmitCompletely": "true", "mainPage":"true", "mainNavigation":"true", "AND":{ "AND":{ "OR":{ "AND":{ "OR":{ "zoomCoordinates":"true", "zoomValue":"true", }, "AND": { "OR":{ "reset":"true", "toBack": "true", "toFront": "true", "boarderPicture":"true" }, "zoom":"true" } }, "returnItem":"true", "showPositionOnBoard":"true", "rotate":"true", "boarderPicture":"true" }, "moveableOnPuzzleBoard":"true", "multiplePuzzleSelect":"true", "randomAngleRotation":"true", "changePuzzleOrdering":"true", "puzzleDrawer":"true", "preview":"true" }, "OR":{ "imageLoader":"true", "imageGallery":"true", "puzzleNavigation":"true" }, "puzzleNavigation":"true", "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } } }
+
+{"toOmitCompletely": "false"}
+{ "AND":{ "toOmitCompletely": "false", "mainPage":"true", "mainNavigation":"true", "AND":{ "AND":{ "OR":{ "AND":{ "OR":{ "zoomCoordinates":"true", "zoomValue":"true", }, "AND": { "OR":{ "reset":"true", "toBack": "true", "toFront": "true", "boarderPicture":"true" }, "zoom":"true" } }, "returnItem":"true", "showPositionOnBoard":"true", "rotate":"true", "boarderPicture":"true" }, "moveableOnPuzzleBoard":"true", "multiplePuzzleSelect":"true", "randomAngleRotation":"true", "changePuzzleOrdering":"true", "puzzleDrawer":"true", "preview":"true" }, "OR":{ "imageLoader":"true", "imageGallery":"true", "puzzleNavigation":"true" }, "puzzleNavigation":"true", "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } } }
+
+
+{"zoom": "true"}
+
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"OR":{"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
+
+{
+   "AND":{
+      "mainPage":"true",
+      "mainNavigation":"true",
+      "AND":{
+         "AND":{
             "AND":{
                "OR":{
                   "zoomCoordinates":"true",
@@ -161,21 +326,233 @@
 }
 
 
+{"zoomCoordinates": "true"}
 
-{"puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}
-{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"AND":{"OR":{"chooseZoomPoint":"true","chooseZoomValue":"true","reset":"true","boarderPicture":"true"},"boarderPicture":"true"},"OR":{"returnToDrawer":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleGenerator":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoomCoordinates":"true","zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
 
-{"puzzleAlgorithmType": "['ANTI-JIGSAW']"}
-{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"AND":{"OR":{"chooseZoomPoint":"true","chooseZoomValue":"true","reset":"true","boarderPicture":"true"},"boarderPicture":"true"},"OR":{"returnToDrawer":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleGenerator":"['ANTI-JIGSAW']"}}}
+{
+   "AND":{
+      "mainPage":"true",
+      "mainNavigation":"true",
+      "AND":{
+         "AND":{
+            "OR":{
+	       "AND":{
+               	   "OR":{
+                       "zoomValue":"true",
+                       "reset":"true",
+		       "toBack": "true",
+		       "toFront": "true",
+		       "boarderPicture":"true"
+                   },
+		  "zoomCoordinates":"true",
+		  "zoom":"true"
+               },
+               "returnItem":"true",
+               "showPositionOnBoard":"true",
+               "rotate":"true",
+	       "boarderPicture":"true"
+            },
+            "moveableOnPuzzleBoard":"true",
+            "multiplePuzzleSelect":"true",
+            "randomAngleRotation":"true",
+            "changePuzzleOrdering":"true",
+            "puzzleDrawer":"true",
+            "preview":"true"
+         },
+         "OR":{
+            "imageLoader":"true",
+            "imageGallery":"true",
+            "puzzleNavigation":"true"
+         },
+         "puzzleNavigation":"true",
+         "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"
+      }
+   }
+}
 
-{"puzzleAlgorithmType": "['JIGSAW2']"}
-{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"AND":{"OR":{"chooseZoomPoint":"true","chooseZoomValue":"true","reset":"true","boarderPicture":"true"},"boarderPicture":"true"},"OR":{"returnToDrawer":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleGenerator":"['JIGSAW2']"}}}
 
-{"puzzleAlgorithmType": "['JIGSAW']"}
-{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"AND":{"OR":{"chooseZoomPoint":"true","chooseZoomValue":"true","reset":"true","boarderPicture":"true"},"boarderPicture":"true"},"OR":{"returnToDrawer":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"false","imageGallery":"false","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleGenerator":"['JIGSAW']"}}}
+{"zoomValue": "true"}
 
-{"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']"}
-{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"AND":{"OR":{"chooseZoomPoint":"true","chooseZoomValue":"true","reset":"true","boarderPicture":"true"},"boarderPicture":"true"},"OR":{"returnToDrawer":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"false","imageGallery":"false","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleGenerator":"['JIGSAW', 'JIGSAW2']"}}}
+{ "AND":{ "mainPage":"true", "mainNavigation":"true", "AND":{ "AND":{ "OR":{ "AND":{ "OR":{ "zoomCoordinates":"true", "reset":"true", "toBack": "true", "toFront": "true", "boarderPicture":"true" }, "zoomValue": "true", "zoom":"true" }, "returnItem":"true", "showPositionOnBoard":"true", "rotate":"true", "boarderPicture":"true" }, "moveableOnPuzzleBoard":"true", "multiplePuzzleSelect":"true", "randomAngleRotation":"true", "changePuzzleOrdering":"true", "puzzleDrawer":"true", "preview":"true" }, "OR":{ "imageLoader":"true", "imageGallery":"true", "puzzleNavigation":"true" }, "puzzleNavigation":"true", "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } } }
+
+{
+   "AND":{
+      "mainPage":"true",
+      "mainNavigation":"true",
+      "AND":{
+         "AND":{
+            "OR":{
+	       "AND":{
+               	   "OR":{
+                       "zoomCoordinates":"true",
+                       "reset":"true",
+		       "toBack": "true",
+		       "toFront": "true",
+		       "boarderPicture":"true"
+                   },
+ 		   "zoomValue": "true",
+		   "zoom":"true"
+               },
+               "returnItem":"true",
+               "showPositionOnBoard":"true",
+               "rotate":"true",
+	       "boarderPicture":"true"
+            },
+            "moveableOnPuzzleBoard":"true",
+            "multiplePuzzleSelect":"true",
+            "randomAngleRotation":"true",
+            "changePuzzleOrdering":"true",
+            "puzzleDrawer":"true",
+            "preview":"true"
+         },
+         "OR":{
+            "imageLoader":"true",
+            "imageGallery":"true",
+            "puzzleNavigation":"true"
+         },
+         "puzzleNavigation":"true",
+         "puzzleAlgorithmType":"['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"
+      }
+   }
+}
 
 
-{"OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+{"puzzleAlgorithmType": "NOT ['JIGSAW', 'JIGSAW2']", "AND": { "puzzleAlgorithmType": "['ANTI-JIGSAW']" }}
+
+{"AND":{"mainPage":"true","mainNavigation":"true","puzzleAlgorithmType":"['ANTI-JIGSAW']","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"NOT ['JIGSAW', 'JIGSAW2']"}}}
+{
+   "AND":{
+      "mainPage":"true",
+      "mainNavigation":"true",
+      "puzzleAlgorithmType":"['ANTI-JIGSAW']",
+      "AND":{
+         "AND":{
+            "OR":{
+	       "AND":{
+               	   "OR":{
+                       "zoomCoordinates":"true",
+                       "zoomValue":"true",
+                       "reset":"true",
+		       "toBack": "true",
+		       "toFront": "true",
+		       "boarderPicture":"true"
+                   },
+		  "zoom":"true"
+               },
+               "returnItem":"true",
+               "showPositionOnBoard":"true",
+               "rotate":"true",
+	       "boarderPicture":"true"
+            },
+            "moveableOnPuzzleBoard":"true",
+            "multiplePuzzleSelect":"true",
+            "randomAngleRotation":"true",
+            "changePuzzleOrdering":"true",
+            "puzzleDrawer":"true",
+            "preview":"true"
+         },
+         "OR":{
+            "imageLoader":"true",
+            "imageGallery":"true",
+            "puzzleNavigation":"true"
+         },
+         "puzzleNavigation":"true",
+         "puzzleAlgorithmType":"NOT ['JIGSAW', 'JIGSAW2']"
+      }
+   }
+}
+
+
+{"puzzleAlgorithmType": "['ANTI-JIGSAW']", "AND": {"puzzleAlgorithmType": "['JIGSAW', 'JIGSAW2']" }}
+
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"ALL ['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
+
+{
+   "AND":{
+      "mainPage":"true",
+      "mainNavigation":"true",
+      "AND":{
+         "AND":{
+            "OR":{
+	       "AND":{
+               	   "OR":{
+                       "zoomCoordinates":"true",
+                       "zoomValue":"true",
+                       "reset":"true",
+		       "toBack": "true",
+		       "toFront": "true",
+		       "boarderPicture":"true"
+                   },
+		  "zoom":"true"
+               },
+               "returnItem":"true",
+               "showPositionOnBoard":"true",
+               "rotate":"true",
+	       "boarderPicture":"true"
+            },
+            "moveableOnPuzzleBoard":"true",
+            "multiplePuzzleSelect":"true",
+            "randomAngleRotation":"true",
+            "changePuzzleOrdering":"true",
+            "puzzleDrawer":"true",
+            "preview":"true"
+         },
+         "OR":{
+            "imageLoader":"true",
+            "imageGallery":"true",
+            "puzzleNavigation":"true"
+         },
+         "puzzleNavigation":"true",
+         "puzzleAlgorithmType":"ALL ['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"
+      }
+   }
+}
+
+
+
+{"puzzleAlgorithmType": "NOT ['JIGSAW', 'JIGSAW2', 'ANTI-JIGSAW']"}
+
+{"AND":{"mainPage":"true","mainNavigation":"true","AND":{"AND":{"OR":{"AND":{"OR":{"zoomCoordinates":"true","zoomValue":"true","reset":"true","toBack":"true","toFront":"true","boarderPicture":"true"},"zoom":"true"},"returnItem":"true","showPositionOnBoard":"true","rotate":"true","boarderPicture":"true"},"moveableOnPuzzleBoard":"true","multiplePuzzleSelect":"true","randomAngleRotation":"true","changePuzzleOrdering":"true","puzzleDrawer":"true","preview":"true"},"OR":{"imageLoader":"true","imageGallery":"true","puzzleNavigation":"true"},"puzzleNavigation":"true","puzzleAlgorithmType":"NOT ['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"}}}
+
+{
+   "AND":{
+      "mainPage":"true",
+      "mainNavigation":"true",
+      "AND":{
+         "AND":{
+            "OR":{
+	       "AND":{
+               	   "OR":{
+                       "zoomCoordinates":"true",
+                       "zoomValue":"true",
+                       "reset":"true",
+		       "toBack": "true",
+		       "toFront": "true",
+		       "boarderPicture":"true"
+                   },
+		  "zoom":"true"
+               },
+               "returnItem":"true",
+               "showPositionOnBoard":"true",
+               "rotate":"true",
+	       "boarderPicture":"true"
+            },
+            "moveableOnPuzzleBoard":"true",
+            "multiplePuzzleSelect":"true",
+            "randomAngleRotation":"true",
+            "changePuzzleOrdering":"true",
+            "puzzleDrawer":"true",
+            "preview":"true"
+         },
+         "OR":{
+            "imageLoader":"true",
+            "imageGallery":"true",
+            "puzzleNavigation":"true"
+         },
+         "puzzleNavigation":"true",
+         "puzzleAlgorithmType":"NOT ['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']"
+      }
+   }
+}
+

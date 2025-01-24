@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/zoom-management/zoom-management-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/pages/zoom-management/zoom-management-component-ts
 import { AfterViewInit, Component, Inject } from "@angular/core";
 import { MatSlideToggleChange } from "@angular/material/slide-toggle";
 import { ZoomManagementInterface } from "src/app/models/zoomManagementInterface";

@@ -1,0 +1,13 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/effects/app-effects-ts
+import { Injectable } from "@angular/core";
+import { Actions, ROOT_EFFECTS_INIT, ofType, createEffect } from "@ngrx/effects";
+import { loadPuzzles } from "../store/puzzles/puzzles.actions";
+import { map } from "rxjs/operators";
+import { PuzzleMock } from "../mockups/puzzle.mock";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "mainNavigation": "true", "mainPage": "true" } && ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } && { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } && ({ "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } && ({ "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } || ({ "zoom": "true" } && { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }))))) {
+    class AppEffects {
+        constructor(actions$: Actions) { }
+        init$ = createEffect(() => this.actions$.pipe(ofType(ROOT_EFFECTS_INIT), map(_ => loadPuzzles({ puzzles: PuzzleMock }))));
+    }
+}

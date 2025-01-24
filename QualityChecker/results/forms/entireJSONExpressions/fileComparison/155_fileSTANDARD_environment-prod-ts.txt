@@ -1,0 +1,4 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/environments/environment-prod-ts
+const environment = {
+    production: true
+};

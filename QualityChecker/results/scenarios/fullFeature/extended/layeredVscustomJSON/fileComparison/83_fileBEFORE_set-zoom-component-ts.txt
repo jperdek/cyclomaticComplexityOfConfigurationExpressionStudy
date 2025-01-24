@@ -1,0 +1,16 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/pages/zoom-management/set-zoom/set-zoom-component-ts
+import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && {
+    "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoomValue": "true", "zoom": "true" } }.layerAND6 && { "layerOR7": { "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) {
+    class SetZoomComponent {
+        @Output()
+        zoomEmitter: EventEmitter<number> = new EventEmitter();
+        zoomValue: number = 1;
+        constructor() {
+        }
+        setZoomFromDefaultToPoint(): void {
+            this.zoomEmitter.emit(this.zoomValue);
+        }
+    }
+}

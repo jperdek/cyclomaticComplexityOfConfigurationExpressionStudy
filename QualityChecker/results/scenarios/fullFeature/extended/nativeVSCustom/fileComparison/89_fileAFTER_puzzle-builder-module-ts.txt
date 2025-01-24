@@ -1,0 +1,96 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/puzzle-builder-module-ts
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { PuzzleBuilderRoutingModule } from "./puzzle-builder-routing.module";
+import { PuzzleBoardComponent } from "./pages/puzzle-board/puzzle-board.component";
+import { PuzzleBuilderComponent } from "./pages/puzzle-builder-component/puzzle-builder.component";
+import { MaterialModule } from "../material/material.module";
+import { PuzzleChooserComponent } from "./pages/puzzle-chooser/puzzle-chooser.component";
+import { RemoveDirective } from "../directives/remove.directive";
+import { TemplatePreviewComponent } from "./pages/template-preview/template-preview.component";
+import { InsertTemplateImageComponent } from "./pages/insert-template-image/insert-template-image.component";
+import { DragAndDropDirective } from "../directives/drag-and-drop.directive";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { PuzzleChooserBottomSheetComponent } from "./pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
+import { TemplatePreviewBottomSheetComponent } from "./pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
+import { InsertTemplateImageBottomSheetComponent } from "./pages/bottom-sheets/insert-template-image-bottom-sheet/insert-template-image-bottom-sheet.component";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "zoomCoordinates": "true" }, "AND": { "OR": { "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" } }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+}
+import { ZoomManagementComponent } from "./pages/zoom-management/zoom-management.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "moveableOnPuzzleBoard": "true" } } } } }.base) {
+}
+import { ZoomMenuComponent } from "./components/zoom-menu/zoom-menu.component";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "imageGallery": "false", "puzzleNavigation": "true", "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+}
+import { GalleryComponent } from "./pages/gallery/gallery.component";
+import { DragAndDropImageComponent } from "./components/drag-and-drop-image/drag-and-drop-image.component";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "imageGallery": "false", "puzzleNavigation": "true", "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+}
+import { GalleryBottomSheetComponent } from "./pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "zoomCoordinates": "true" }, "AND": { "OR": { "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" } }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+}
+import { ZoomManagementBottomSheetComponent } from "./pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
+import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "moveableOnPuzzleBoard": "true" } } } } }.base) {
+}
+import { ZoomBlockComponent } from "./components/zoom-block/zoom-block.component";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "zoomValue": "true", "OR": { "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+}
+import { SetZoomComponent } from "./pages/zoom-management/set-zoom/set-zoom.component";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoomCoordinates": "true", "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+}
+import { SetZoomPositionComponent } from "./pages/zoom-management/set-zoom-position/set-zoom-position.component";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "zoomCoordinates": "true" }, "AND": { "OR": { "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" } }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    const declZoomManagementComponent = ZoomManagementComponent;
+}
+else {
+    let declZoomManagementComponent = PuzzleBoardComponent;
+}
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    const declZoomMenuComponent = ZoomMenuComponent;
+}
+else {
+    let declZoomMenuComponent = PuzzleBoardComponent;
+}
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "imageGallery": "false", "puzzleNavigation": "true", "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    const declGalleryComponent = GalleryComponent;
+}
+else {
+    let declGalleryComponent = PuzzleBoardComponent;
+}
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "imageGallery": "false", "puzzleNavigation": "true", "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    const declGalleryBottomSheetComponent = GalleryBottomSheetComponent;
+}
+else {
+    let declGalleryBottomSheetComponent = PuzzleBoardComponent;
+}
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "zoomCoordinates": "true" }, "AND": { "OR": { "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" } }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    const declZoomManagementBottomSheetComponent = ZoomManagementBottomSheetComponent;
+}
+else {
+    let declZoomManagementBottomSheetComponent = PuzzleBoardComponent;
+}
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    const declZoomBlockComponent = ZoomBlockComponent;
+}
+else {
+    let declZoomBlockComponent = PuzzleBoardComponent;
+}
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "zoomValue": "true", "OR": { "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    const declSetZoomComponent = SetZoomComponent;
+}
+else {
+    let declSetZoomComponent = PuzzleBoardComponent;
+}
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoomCoordinates": "true", "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    const declSetZoomPositionComponent = SetZoomPositionComponent;
+}
+else {
+    let declSetZoomPositionComponent = PuzzleBoardComponent;
+}
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    class PuzzleBuilderModule {
+    }
+}

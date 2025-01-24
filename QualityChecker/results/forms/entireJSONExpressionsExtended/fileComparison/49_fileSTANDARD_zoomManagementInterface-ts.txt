@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/models/zoomManagementInterface-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/models/zoomManagementInterface-ts
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 if ({ "wholeBlockFile": {} }.wholeBlockFile) {
     class DecoratorFileCopy {

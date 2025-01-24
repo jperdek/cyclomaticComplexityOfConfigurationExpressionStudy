@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/gallery/gallery-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/pages/gallery/gallery-component-ts
 import { Component } from "@angular/core";
 import { of } from "rxjs";
 import { Observable } from "rxjs";

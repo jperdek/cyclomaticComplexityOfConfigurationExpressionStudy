@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/pages/app-component/app-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/pages/app-component/app-component-ts
 import { Component } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 if ({ "skipLineVariableDeclaration": { "toOmitCompletely": "true" } }.skipLineVariableDeclaration) {

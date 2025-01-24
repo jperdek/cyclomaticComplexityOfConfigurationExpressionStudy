@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/gallery/gallery-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/pages/gallery/gallery-component-ts
 import { Component } from "@angular/core";
 import { of } from "rxjs";
 import { Observable } from "rxjs";
@@ -7,7 +7,7 @@ import { GalleryMock } from "src/app/mockups/gallery.mock";
 import { TemplateCategory, TemplateImage } from "src/app/models/defaultTemplates";
 import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
 if ({
-    "imageGallery": "true"
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "imageGallery": "false", "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
 }) {
     class GalleryComponent {
         constructor(puzzleManagerService: PuzzleManagerService) { }

@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/decoratorsVariationPointManagement/decorator-types-service-spec-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/featureManagement/decoratorsVariationPointManagement/decorator-types-service-spec-ts
 import { TestBed } from "@angular/core/testing";
 import { DecoratorTypesService } from "./decorator-types.service";
 describe("DecoratorTypesService", () => {

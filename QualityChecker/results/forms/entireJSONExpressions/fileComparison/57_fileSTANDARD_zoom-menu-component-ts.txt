@@ -1,11 +1,11 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/components/zoom-menu/zoom-menu-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/components/zoom-menu/zoom-menu-component-ts
 import { Component } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { ZoomManagementInterface } from "src/app/models/zoomManagementInterface";
 import { ZoomManagerService } from "src/app/services/puzzleEvents/zoom-manager.service";
 import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
 if ({
-    "zoom": "true"
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "OR": { "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
 }) {
     class ZoomMenuComponent implements ZoomManagementInterface {
         centerX = 25;

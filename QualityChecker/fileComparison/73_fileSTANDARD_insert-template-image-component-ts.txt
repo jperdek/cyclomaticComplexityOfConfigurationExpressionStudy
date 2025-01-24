@@ -1,7 +1,0 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/insert-template-image/insert-template-image-component-ts
-import { Component } from "@angular/core";
-import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if (true) {
-    class InsertTemplateImageComponent {
-    }
-}

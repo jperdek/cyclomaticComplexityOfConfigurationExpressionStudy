@@ -1,0 +1,107 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/puzzle-builder-module-ts
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { PuzzleBuilderRoutingModule } from "./puzzle-builder-routing.module";
+import { PuzzleBoardComponent } from "./pages/puzzle-board/puzzle-board.component";
+import { PuzzleBuilderComponent } from "./pages/puzzle-builder-component/puzzle-builder.component";
+import { MaterialModule } from "../material/material.module";
+import { PuzzleChooserComponent } from "./pages/puzzle-chooser/puzzle-chooser.component";
+import { RemoveDirective } from "../directives/remove.directive";
+import { TemplatePreviewComponent } from "./pages/template-preview/template-preview.component";
+import { InsertTemplateImageComponent } from "./pages/insert-template-image/insert-template-image.component";
+import { DragAndDropDirective } from "../directives/drag-and-drop.directive";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { PuzzleChooserBottomSheetComponent } from "./pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
+import { TemplatePreviewBottomSheetComponent } from "./pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
+import { InsertTemplateImageBottomSheetComponent } from "./pages/bottom-sheets/insert-template-image-bottom-sheet/insert-template-image-bottom-sheet.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { ZoomManagementComponent } from "./pages/zoom-management/zoom-management.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) && "moveableOnPuzzleBoard" == true))) {
+}
+import { ZoomMenuComponent } from "./components/zoom-menu/zoom-menu.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "imageGallery" != false && "puzzleNavigation" == true && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront"
+    == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) || "returnItem" == true ||
+    "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { GalleryComponent } from "./pages/gallery/gallery.component";
+import { DragAndDropImageComponent } from "./components/drag-and-drop-image/drag-and-drop-image.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "imageGallery" != false && "puzzleNavigation" == true && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront"
+    == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) || "returnItem" == true ||
+    "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { GalleryBottomSheetComponent } from "./pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { ZoomManagementBottomSheetComponent } from "./pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
+import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) && "moveableOnPuzzleBoard" == true))) {
+}
+import { ZoomBlockComponent } from "./components/zoom-block/zoom-block.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || ("zoomValue" == true && ("toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack"
+    == true) && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { SetZoomComponent } from "./pages/zoom-management/set-zoom/set-zoom.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoomCoordinates" == true && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { SetZoomPositionComponent } from "./pages/zoom-management/set-zoom-position/set-zoom-position.component";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    const declZoomManagementComponent = ZoomManagementComponent;
+}
+else {
+    let declZoomManagementComponent = PuzzleBoardComponent;
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) && "moveableOnPuzzleBoard" == true))) {
+    const declZoomMenuComponent = ZoomMenuComponent;
+}
+else {
+    let declZoomMenuComponent = PuzzleBoardComponent;
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "imageGallery" != false && "puzzleNavigation" == true && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront"
+    == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) || "returnItem" == true ||
+    "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    const declGalleryComponent = GalleryComponent;
+}
+else {
+    let declGalleryComponent = PuzzleBoardComponent;
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "imageGallery" != false && "puzzleNavigation" == true && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront"
+    == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) || "returnItem" == true ||
+    "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    const declGalleryBottomSheetComponent = GalleryBottomSheetComponent;
+}
+else {
+    let declGalleryBottomSheetComponent = PuzzleBoardComponent;
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    const declZoomManagementBottomSheetComponent = ZoomManagementBottomSheetComponent;
+}
+else {
+    let declZoomManagementBottomSheetComponent = PuzzleBoardComponent;
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) && "moveableOnPuzzleBoard" == true))) {
+    const declZoomBlockComponent = ZoomBlockComponent;
+}
+else {
+    let declZoomBlockComponent = PuzzleBoardComponent;
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || ("zoomValue" == true && ("toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack"
+    == true) && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    const declSetZoomComponent = SetZoomComponent;
+}
+else {
+    let declSetZoomComponent = PuzzleBoardComponent;
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoomCoordinates" == true && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    const declSetZoomPositionComponent = SetZoomPositionComponent;
+}
+else {
+    let declSetZoomPositionComponent = PuzzleBoardComponent;
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack"
+    == true) && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    class PuzzleBuilderModule {
+    }
+}

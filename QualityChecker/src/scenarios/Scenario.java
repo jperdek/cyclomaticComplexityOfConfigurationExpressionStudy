@@ -22,7 +22,7 @@ public interface Scenario {
 	                                    IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap;
 	
 	public static SPLDecoratorComplexityComparator getDefaultComplexityComparator() {
-		String pathToProjectTree = "file:///E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src";
+		String pathToProjectTree = "file:///E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src";
 		ComplexityService defaultComplexityService = new TyphonTypeScriptComplexityAnalysis();
 		DecoratorComplexityComparator decoratorComplexityComparator = new DecoratorComplexityComparator();
 		DecoratorComplexityMeasuresSettings decoratorComplexitySettings = new DecoratorComplexityMeasuresSettings(
@@ -43,7 +43,18 @@ public interface Scenario {
 	}
 	
 	public static SPLDecoratorComplexityComparator getDefaultCyclomaticComplexityComparator() {
-		String pathToProjectTree = "file:///E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src";
+		String pathToProjectTree = "file:///E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src";
+		ComplexityService defaultComplexityService = new TyphonTypeScriptComplexityAnalysis();
+		CyclomaticComplexityComparator cyclomaticComplexityComparator = new CyclomaticComplexityComparator();
+		CyclomaticComplexityMeasuresSettings cyclomaticComplexitySettings = new CyclomaticComplexityMeasuresSettings(
+				cyclomaticComplexityComparator, defaultComplexityService);
+		SPLDecoratorComplexityComparator splDecoratorComparator = 
+				new SPLDecoratorComplexityComparator(pathToProjectTree, cyclomaticComplexitySettings);
+		return splDecoratorComparator;
+	}
+	
+	public static SPLDecoratorComplexityComparator getDefaultCyclomaticComplexityComparatorFullyFetaureTreeExpressions() {
+		String pathToProjectTree = "file:///E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src";
 		ComplexityService defaultComplexityService = new TyphonTypeScriptComplexityAnalysis();
 		CyclomaticComplexityComparator cyclomaticComplexityComparator = new CyclomaticComplexityComparator();
 		CyclomaticComplexityMeasuresSettings cyclomaticComplexitySettings = new CyclomaticComplexityMeasuresSettings(

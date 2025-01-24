@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/components/drag-and-drop-image/drag-and-drop-image-component-spec-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/components/drag-and-drop-image/drag-and-drop-image-component-spec-ts
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { DragAndDropImageComponent } from "./drag-and-drop-image.component";
 describe("DragAndDropImageComponent", () => {

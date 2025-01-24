@@ -1,0 +1,10 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/services/utils/random-utils-service-ts
+import { Injectable } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+    class RandomUtilsService {
+        public static randomNumber(min: number, max: number): number {
+            return Math.random() * (max - min) + min;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/zoom-management/set-zoom-position/set-zoom-position-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/pages/zoom-management/set-zoom-position/set-zoom-position-component-ts
 import { Component, EventEmitter, Output } from "@angular/core";
 import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { ZoomManagementInterface } from "src/app/models/zoomManagementInterface";

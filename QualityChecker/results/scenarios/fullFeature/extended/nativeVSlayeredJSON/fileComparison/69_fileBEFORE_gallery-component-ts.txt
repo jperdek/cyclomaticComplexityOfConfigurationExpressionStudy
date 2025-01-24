@@ -1,0 +1,23 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/pages/gallery/gallery-component-ts
+import { Component } from "@angular/core";
+import { of } from "rxjs";
+import { Observable } from "rxjs";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+import { GalleryMock } from "src/app/mockups/gallery.mock";
+import { TemplateCategory, TemplateImage } from "src/app/models/defaultTemplates";
+import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
+if ("mainNavigation" == true && "mainPage"
+    == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "imageGallery" != false && "puzzleNavigation" == true && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" ==
+    true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true
+    &&
+        "moveableOnPuzzleBoard" == true))) {
+    class GalleryComponent {
+        constructor(puzzleManagerService: PuzzleManagerService) { }
+        public getGallery(): Observable<TemplateCategory[]> {
+            return of(GalleryMock);
+        }
+        public startNewGame(image: TemplateImage): void {
+            this.puzzleManagerService.startGame(image.src);
+        }
+    }
+}

@@ -1,0 +1,25 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/pages/zoom-management/set-zoom-position/set-zoom-position-component-ts
+import { Component, EventEmitter, Output } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+import { ZoomManagementInterface } from "src/app/models/zoomManagementInterface";
+import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }
+    .
+        layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && { "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoomCoordinates": "true", "zoom": "true" } }.layerAND6 && { "layerOR7": { "zoomValue": "true", "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) {
+    class SetZoomPositionComponent implements ZoomManagementInterface {
+        centerX = 25;
+        centerY = 25;
+        @Output()
+        centerXEmitter: EventEmitter<number> = new EventEmitter();
+        @Output()
+        centerYEmitter: EventEmitter<number> = new EventEmitter();
+        constructor(puzzleManagerService: PuzzleManagerService) {
+            const zoomManagerService = this.puzzleManagerService.getZoomManagerService();
+            zoomManagerService.initForComponent(this);
+        }
+        setCenterXAndY(x: number, y: number): void {
+            this.centerX = x;
+            this.centerY = y;
+        }
+    }
+}

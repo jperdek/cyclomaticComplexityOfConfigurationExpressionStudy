@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/mockups/routing-mock-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/mockups/routing-mock-ts
 import { PuzzleChooserBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
 import { TemplatePreviewBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
 import { RoutingModel } from "../models/routingModel";
@@ -6,22 +6,22 @@ import { PuzzleChooserComponent } from "../puzzle-builder/pages/puzzle-chooser/p
 import { TemplatePreviewComponent } from "../puzzle-builder/pages/template-preview/template-preview.component";
 import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
 if ({
-    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true" }, "AND": { "OR": { "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" } }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
 }) {
 }
 import { ZoomManagementComponent } from "../puzzle-builder/pages/zoom-management/zoom-management.component";
 if ({
-    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true" }, "AND": { "OR": { "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" } }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
 }) {
 }
 import { ZoomManagementBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
 if ({
-    "imageGallery": "true"
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "imageGallery": "true", "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
 }) {
 }
 import { GalleryBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
 if ({
-    "imageGallery": "true"
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "imageGallery": "true", "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
 }) {
 }
 import { GalleryComponent } from "../puzzle-builder/pages/gallery/gallery.component";
@@ -50,11 +50,11 @@ let RoutingModelData: RoutingModel[] = [
     }
 ];
 if ({
-    "imageGallery": "true"
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "imageGallery": "true", "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
 }) {
 }
 if ({
-    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true" }, "AND": { "OR": { "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" } }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
 }) {
 }
 //RoutingModelData.push({"name": "Zoom", "path": "/puzzle/zoom", "bottomSheetComponent": ZoomManagementBottomSheetComponent, "componentPathInModule": "zoom", "componentRef": ZoomManagementComponent});

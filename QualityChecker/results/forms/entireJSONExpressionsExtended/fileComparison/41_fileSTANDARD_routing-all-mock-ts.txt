@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/mockups/routing-all-mock-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/mockups/routing-all-mock-ts
 import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
 import { RoutingModel } from "../models/routingModel";
 if ({ "skipLineVariableDeclaration": { "imageGallery": "true" } }.skipLineVariableDeclaration) {

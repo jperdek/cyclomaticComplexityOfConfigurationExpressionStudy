@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/components/small-main-menu/small-main-menu-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/components/small-main-menu/small-main-menu-component-ts
 import { Component } from "@angular/core";
 import { MatBottomSheet } from "@angular/material/bottom-sheet";
 import { Router } from "@angular/router";

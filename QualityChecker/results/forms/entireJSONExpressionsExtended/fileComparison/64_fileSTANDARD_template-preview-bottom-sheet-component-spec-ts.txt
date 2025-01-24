@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet-component-spec-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet-component-spec-ts
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { TemplatePreviewBottomSheetComponent } from "./template-preview-bottom-sheet.component";
 describe("TemplatePreviewBottomSheetComponent", () => {

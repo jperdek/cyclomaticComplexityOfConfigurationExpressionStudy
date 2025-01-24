@@ -1,0 +1,65 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/mockups/routing-all-mock-ts
+import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
+import { RoutingModel } from "../models/routingModel";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "imageGallery": "true", "puzzleNavigation": "true" } }.layerAND3 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoom": "true" } }.layerAND6 && { "layerOR7": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) { }
+import { GalleryBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
+import { InsertTemplateImageBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/insert-template-image-bottom-sheet/insert-template-image-bottom-sheet.component";
+import { PuzzleChooserBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
+import { TemplatePreviewBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && { "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || { "layerOR7": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR7 && ({ "layerAND7": { "zoom": "true" } }.layerAND7 && { "layerOR8": { "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR8))))) { }
+import { ZoomManagementBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "imageGallery": "true", "puzzleNavigation": "true" } }.layerAND3 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoom": "true" } }.layerAND6 && { "layerOR7": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) { }
+import { GalleryComponent } from "../puzzle-builder/pages/gallery/gallery.component";
+import { InsertTemplateImageComponent } from "../puzzle-builder/pages/insert-template-image/insert-template-image.component";
+import { PuzzleChooserComponent } from "../puzzle-builder/pages/puzzle-chooser/puzzle-chooser.component";
+import { TemplatePreviewComponent } from "../puzzle-builder/pages/template-preview/template-preview.component";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && { "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || { "layerOR7": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR7 && ({ "layerAND7": { "zoom": "true" } }.layerAND7 && { "layerOR8": { "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR8))))) { }
+import { ZoomManagementComponent } from "../puzzle-builder/pages/zoom-management/zoom-management.component";
+let RoutingModelDataAll: RoutingModel[] = [
+    {
+        "name": "Load image",
+        "path": "/puzzle/loadImage",
+        "bottomSheetComponent": InsertTemplateImageBottomSheetComponent,
+        "componentPathInModule": "loadImage",
+        "componentRef": InsertTemplateImageComponent
+    },
+    {
+        "name": "Play",
+        "path": "/puzzle/selectPuzzles",
+        "bottomSheetComponent": PuzzleChooserBottomSheetComponent,
+        "componentPathInModule": "selectPuzzles",
+        "componentRef": PuzzleChooserComponent
+    },
+    {
+        "name": "Preview",
+        "path": "/puzzle/preview",
+        "bottomSheetComponent": TemplatePreviewBottomSheetComponent,
+        "componentPathInModule": "preview",
+        "componentRef": TemplatePreviewComponent
+    },
+    {
+        "name": "Config",
+        "path": "/puzzle/config",
+        "bottomSheetComponent": null,
+        "componentPathInModule": "config",
+        "componentRef": GameConfigurationComponent
+    }
+];
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && { "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || { "layerOR7": { "zoomValue": "true", "zoomCoordinates": "true" } }.layerOR7 && ({ "layerAND7": { "zoom": "true" } }.layerAND7 && { "layerOR8": { "toFront": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR8))))) {
+    let zoomConfig = { "name": "Zoom", "path": "/puzzle/zoom", "bottomSheetComponent": ZoomManagementBottomSheetComponent, "componentPathInModule": "zoom", "componentRef": ZoomManagementComponent };
+}
+else {
+    let zoomConfig = null;
+}
+if (zoomConfig !== null)
+    RoutingModelDataAll.push(zoomConfig);
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "imageGallery": "true", "puzzleNavigation": "true" } }.layerAND3 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoom": "true" } }.layerAND6 && { "layerOR7": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) {
+    let galleryConfig = { "name": "Gallery", "path": "/puzzle/gallery", "bottomSheetComponent": GalleryBottomSheetComponent, "componentPathInModule": "gallery", "componentRef": GalleryComponent };
+}
+else {
+    let galleryConfig = null;
+}
+if (galleryConfig != null)
+    RoutingModelDataAll.push(galleryConfig);
+export default RoutingModelDataAll;
+var newA;

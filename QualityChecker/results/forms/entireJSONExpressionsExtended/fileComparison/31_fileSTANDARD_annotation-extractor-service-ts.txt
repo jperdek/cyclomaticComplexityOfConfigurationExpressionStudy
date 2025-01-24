@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/utils/annotation-extractor-service-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/featureManagement/utils/annotation-extractor-service-ts
 import { Injectable, Type } from "@angular/core";
 import "reflect-metadata";
 declare let Reflect: any;

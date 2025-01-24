@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/mockups/puzzle-mock-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/mockups/puzzle-mock-ts
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 import { Puzzle } from "../store/puzzles/puzzles";
 if ({ "wholeBlockFile": {} }.wholeBlockFile) {

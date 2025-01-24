@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/services/puzzle-algorithm-manager-service-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/featureManagement/services/puzzle-algorithm-manager-service-ts
 import { Injectable } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { GameConfigurationService } from "src/app/services/game-configuration.service";

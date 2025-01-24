@@ -1,0 +1,10 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/components/zoom-block/zoom-block-component-ts
+import { Component, OnInit } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "moveableOnPuzzleBoard": "true" } } } }) {
+    class ZoomBlockComponent implements OnInit {
+        constructor() { }
+        ngOnInit(): void {
+        }
+    }
+}

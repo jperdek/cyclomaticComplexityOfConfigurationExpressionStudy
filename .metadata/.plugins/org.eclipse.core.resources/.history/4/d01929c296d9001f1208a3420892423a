@@ -1,0 +1,44 @@
+package scenarios.cyclomaticComplexityEvaluation;
+
+import java.io.IOException;
+
+import org.json.simple.parser.ParseException;
+
+import SPLComplexityEvaluation.SPLDecoratorComplexityComparator;
+import astFileProcessor.annotationManagment.astConstructs.NotFoundBlockElementToWrap;
+import astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings;
+import codeConstructsEvaluation.transformation.ComplexityService;
+import scenarios.Scenario;
+import unsupportedDecoratorsManagement.NonExistingDecoratorTransformationType;
+import unsupportedDecoratorsManagement.entities.IllegalImportNameSpecifiedException;
+
+
+
+public class Scenario2LayeredConfigurationExpressionsEval {
+	
+	public Scenario2LayeredConfigurationExpressionsEval() {}
+	
+	public void launchScenario() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splCyclomaticComplexityComparator = Scenario.getDefaultCyclomaticComplexityComparator();
+		ExpressionsForCyclomaticComplexityManipulationSettings nativeConfExpressionsConf 
+			= TransformationFormsForCyclomaticComplexity.getConditionalFlowWithNativeConditions();
+		ExpressionsForCyclomaticComplexityManipulationSettings layeredConfExpressionsAsJsonConf
+			= TransformationFormsForCyclomaticComplexity.getConditionalFlowWithLayeredConditions(true);
+		splCyclomaticComplexityComparator.compareComplexityForScenario(
+				nativeConfExpressionsConf, layeredConfExpressionsAsJsonConf);
+	}
+	
+	public void launchScenario(String pathToProjectTree, ComplexityService complexityService)
+			   throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		SPLDecoratorComplexityComparator splCyclomaticComplexityComparator = Scenario.getDefaultCyclomaticComplexityComparator(pathToProjectTree, complexityService);
+		ExpressionsForCyclomaticComplexityManipulationSettings nativeConfExpressionsConf = TransformationFormsForCyclomaticComplexity.getConditionalFlowWithNativeConditions();
+		ExpressionsForCyclomaticComplexityManipulationSettings layeredConfExpressionsAsJsonConf
+						= TransformationFormsForCyclomaticComplexity.getConditionalFlowWithLayeredConditions(true);
+		splCyclomaticComplexityComparator.compareComplexityForScenario(nativeConfExpressionsConf, layeredConfExpressionsAsJsonConf);
+	}
+
+	public static void main(String args[]) throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+		Scenario2LayeredConfigurationExpressionsEval scenarioConfigurationExpressionsEval = new Scenario2LayeredConfigurationExpressionsEval();
+		scenarioConfigurationExpressionsEval.launchScenario();
+	}
+}

@@ -1,0 +1,13 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet-component-ts
+import { Component } from "@angular/core";
+import { MatBottomSheetRef } from "@angular/material/bottom-sheet";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "mainNavigation": "true", "mainPage": "true" } && ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } && { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } && ({ "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } && ({ "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } || ({ "zoom": "true" } && { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }))))) {
+    class ZoomManagementBottomSheetComponent {
+        constructor(bottomSheetRef: MatBottomSheetRef<ZoomManagementBottomSheetComponent>) { }
+        public openLink(event: MouseEvent): void {
+            this.bottomSheetRef.dismiss();
+            event.preventDefault();
+        }
+    }
+}

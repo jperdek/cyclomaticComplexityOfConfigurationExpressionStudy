@@ -1,0 +1,14 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/pages/app-component/app-component-ts
+import { Component } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ("mainNavigation" == true && "mainPage"
+    == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true)) && "toOmitCompletely" == true) { }
+import { TreeManagerService } from "src/app/featureManagement/tree-manager.service";
+class AppComponent {
+    title = "puzzleToPlay";
+    constructor(treeManagerService: TreeManagerService) {
+        if ("mainNavigation" == true && "mainPage"
+            == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true)) && "toOmitCompletely" == true) { }
+    }
+}
+var newA;

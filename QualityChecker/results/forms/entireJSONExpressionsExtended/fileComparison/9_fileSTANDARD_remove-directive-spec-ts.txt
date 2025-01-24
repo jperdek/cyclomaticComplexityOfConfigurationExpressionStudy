@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/directives/remove-directive-spec-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/directives/remove-directive-spec-ts
 import { RemoveDirective } from "./remove.directive";
 describe("RemoveDirective", () => {
     it("should create an instance", () => {

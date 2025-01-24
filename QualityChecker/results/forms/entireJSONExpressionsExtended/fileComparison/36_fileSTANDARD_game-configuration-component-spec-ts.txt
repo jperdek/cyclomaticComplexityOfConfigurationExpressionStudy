@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/game-configuration/game-configuration-component-spec-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/game-configuration/game-configuration-component-spec-ts
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { GameConfigurationComponent } from "./game-configuration.component";
 describe("GameConfigurationComponent", () => {

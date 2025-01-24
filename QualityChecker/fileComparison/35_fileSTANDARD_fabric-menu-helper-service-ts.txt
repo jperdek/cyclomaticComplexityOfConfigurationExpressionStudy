@@ -1,5 +1,0 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/utils/fabric-menu-helper-service-ts
-import { Injectable } from "@angular/core";
-class FabricMenuHelperService {
-    constructor() { }
-}

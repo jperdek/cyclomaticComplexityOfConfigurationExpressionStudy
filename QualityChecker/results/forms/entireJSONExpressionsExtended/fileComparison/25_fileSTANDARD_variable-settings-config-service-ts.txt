@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/services/variable-settings-config-service-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/featureManagement/services/variable-settings-config-service-ts
 import { Injectable } from "@angular/core";
 import { RoutingModelMock } from "src/app/mockups/routing.mock";
 import { GalleryBottomSheetComponent } from "src/app/puzzle-builder/pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";

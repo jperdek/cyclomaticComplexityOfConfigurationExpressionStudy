@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/components/main-navigation/main-navigation-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/components/main-navigation/main-navigation-component-ts
 import { Component } from "@angular/core";
 import { MatBottomSheet } from "@angular/material/bottom-sheet";
 import { MatSlideToggleChange } from "@angular/material/slide-toggle";

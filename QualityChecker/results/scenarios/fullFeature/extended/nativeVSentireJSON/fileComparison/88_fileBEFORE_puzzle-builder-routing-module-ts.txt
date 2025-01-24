@@ -1,0 +1,34 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/puzzle-builder-routing-module-ts
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { Route, RouterModule } from "@angular/router";
+import RoutingModelDataAll from "../mockups/routing-all.mock";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+const routes = RoutingModelDataAll.map((model: any) => model = {
+    "path": model.componentPathInModule,
+    "component": model.componentRef
+} as Route);
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" ==
+    true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset"
+    == true || "toBack" == true) && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true &&
+    "moveableOnPuzzleBoard"
+        == true))) {
+    /*
+    const routes: Routes = RoutingModelMock.getRoutingModelData().map((model: any) => model = {
+      "path": model.componentPathInModule,
+      "component": model.componentRef} as Route);
+    console.log(routes);
+    
+    const routeProvider = {
+      provide: ROUTES,
+      useFactory: () => {
+          return [
+            ...routes
+          ];
+      },
+      multi: true
+    };
+    */
+    class PuzzleBuilderRoutingModule {
+    }
+}

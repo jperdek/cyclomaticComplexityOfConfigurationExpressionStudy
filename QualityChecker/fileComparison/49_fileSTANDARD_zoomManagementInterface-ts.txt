@@ -1,9 +1,0 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/models/zoomManagementInterface-ts
-import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
-if (true) {
-    class DecoratorFileCopy {
-    }
-}
-interface ZoomManagementInterface {
-    setCenterXAndY(x: number, y: number): void;
-}

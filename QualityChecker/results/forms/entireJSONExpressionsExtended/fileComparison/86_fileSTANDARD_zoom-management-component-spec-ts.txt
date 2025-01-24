@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/zoom-management/zoom-management-component-spec-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/pages/zoom-management/zoom-management-component-spec-ts
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { ZoomManagementComponent } from "./zoom-management.component";
 describe("ZoomManagementComponent", () => {

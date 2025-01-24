@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/components/small-main-menu/small-main-menu-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/components/small-main-menu/small-main-menu-component-ts
 import { Component } from "@angular/core";
 import { MatBottomSheet } from "@angular/material/bottom-sheet";
 import { Router } from "@angular/router";
@@ -6,7 +6,9 @@ import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVaria
 import { InsertTemplateImageBottomSheetComponent } from "src/app/puzzle-builder/pages/bottom-sheets/insert-template-image-bottom-sheet/insert-template-image-bottom-sheet.component";
 import { PuzzleChooserBottomSheetComponent } from "src/app/puzzle-builder/pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
 import { TemplatePreviewBottomSheetComponent } from "src/app/puzzle-builder/pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
-if ({}) {
+if ({
+    "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
+}) {
     class SmallMainMenuComponent {
         constructor(bottomSheet: MatBottomSheet, router: Router) { }
         public loadingFromOtherModuleFix(): void {

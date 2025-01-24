@@ -1,0 +1,33 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/services/puzzleGenerator/scan-line-service-ts
+import { Injectable } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "mainNavigation": "true", "mainPage": "true" } && ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } && { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }
+    && ({ "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } && ({ "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } || ({ "zoom": "true" } && { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }))))) {
+    class ScanLineService {
+        left = Number.MAX_SAFE_INTEGER;
+        right = Number.MIN_SAFE_INTEGER;
+        constructor() { }
+        public setBoundary(leftRight: number): void {
+            if (leftRight < this.left) {
+                this.left = leftRight;
+            }
+            if (leftRight - 1 > this.right) {
+                this.right = leftRight - 1;
+            }
+        }
+        public clearBoundary(): void {
+            this.left = Number.MAX_SAFE_INTEGER;
+            this.right = Number.MIN_SAFE_INTEGER;
+        }
+        public isValid(): boolean {
+            return (this.left <= this.right);
+        }
+        public set(newLeft: number, newRight: number): void {
+            this.left = newLeft;
+            this.right = newRight;
+        }
+        public equals(left: number, right: number): boolean {
+            return (this.left === left && this.right === right);
+        }
+    }
+}

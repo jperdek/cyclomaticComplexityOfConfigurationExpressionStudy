@@ -1,5 +1,0 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/decoratorsVariationPointManagement/service-to-skip-service-ts
-import { Injectable } from "@angular/core";
-class ServiceToSkipService {
-    constructor() { }
-}

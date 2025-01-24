@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/zoom-management/zoom-management-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/pages/zoom-management/zoom-management-component-ts
 import { AfterViewInit, Component, Inject } from "@angular/core";
 import { MatSlideToggleChange } from "@angular/material/slide-toggle";
 import { ZoomManagementInterface } from "src/app/models/zoomManagementInterface";
@@ -16,7 +16,7 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     zoomManagerService: ZoomManagerService;
     constructor(puzzleManagerService: PuzzleManagerService, componentFactoryService: ComponentFactoryService) {
         if ({
-            "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+            "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true" }, "AND": { "OR": { "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" } }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
         }) {
             this.zoomManagerService = puzzleManagerService.getZoomManagerService();
             this.zoomManagerService.initForComponent(this);
@@ -28,11 +28,11 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     public getComponentElement(self: ZoomManagementComponent): Element | null | undefined {
         const zoomHTML = document.getElementsByClassName("zoom-management-part")?.item(0);
         if ({
-            "zoomCoordinates": "true"
+            "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoomCoordinates": "true", "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
         }) {
         }
         if ({
-            "zoomValue": "true"
+            "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoomValue": "true", "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
         }) {
         }
         //  this.addZoomValue(zoomHTML);
@@ -40,7 +40,7 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     }
     public addZoomValue(zoomHTML: Element | null): void {
         if ({
-            "zoomValue": "true"
+            "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoomValue": "true", "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
         }) {
             if (zoomHTML !== null) {
                 const positionAfterHeading = function <T>(domLocation: HTMLElement, componentRef: ComponentRef<T>) {
@@ -55,7 +55,7 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     }
     public instantiateZoomValueComponentAndEvents(zoomHTML: any, zoomManagementComp: ZoomManagementComponent, positionAfterHeading: Function): void {
         if ({
-            "zoomValue": "true"
+            "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoomValue": "true", "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
         }) {
             const zoomValueRef = this.componentFactoryService.createComponent(SetZoomComponent, zoomHTML, undefined, positionAfterHeading);
             zoomValueRef.instance.zoomEmitter.subscribe((result: number) => zoomManagementComp.setZoomValue(result));
@@ -63,7 +63,7 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     }
     public instantiateZoomCoordinatesComponentAndEvents(zoomHTML: any, zoomManagementComp: ZoomManagementComponent, positionAfterHeading: Function): void {
         if ({
-            "zoomCoordinates": "true"
+            "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoomCoordinates": "true", "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
         }) {
             const zoomCoordinatesRef = this.componentFactoryService.createComponent(SetZoomPositionComponent, zoomHTML, undefined, positionAfterHeading);
             zoomCoordinatesRef.instance.centerXEmitter.subscribe((result: number) => zoomManagementComp.setCenterX(result));
@@ -72,7 +72,7 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     }
     public addZoomCoordinates(zoomHTML: Element | null): void {
         if ({
-            "zoomCoordinates": "true"
+            "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoomCoordinates": "true", "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
         }) {
             if (zoomHTML !== null) {
                 const positionAfterHeading = function <T>(domLocation: HTMLElement, componentRef: ComponentRef<T>) {
@@ -122,7 +122,7 @@ class ZoomManagementComponent implements ZoomManagementInterface, AfterViewInit 
     }
     public toggleZoom($event: MatSlideToggleChange): void {
         if ({
-            "zoom": "true"
+            "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "OR": { "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
         }) {
             if ($event.checked) {
                 const zoomContents = document.getElementsByClassName("zoom-content");

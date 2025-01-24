@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/components/small-main-menu/small-main-menu-component-spec-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/components/small-main-menu/small-main-menu-component-spec-ts
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { SmallMainMenuComponent } from "./small-main-menu.component";
 describe("SmallMainMenuComponent", () => {

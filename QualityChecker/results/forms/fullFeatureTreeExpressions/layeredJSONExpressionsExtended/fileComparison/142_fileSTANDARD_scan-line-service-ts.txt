@@ -1,0 +1,32 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/services/puzzleGenerator/scan-line-service-ts
+import { Injectable } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && { "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoom": "true" } }.layerAND6 && { "layerOR7": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) {
+    class ScanLineService {
+        left = Number.MAX_SAFE_INTEGER;
+        right = Number.MIN_SAFE_INTEGER;
+        constructor() { }
+        public setBoundary(leftRight: number): void {
+            if (leftRight < this.left) {
+                this.left = leftRight;
+            }
+            if (leftRight - 1 > this.right) {
+                this.right = leftRight - 1;
+            }
+        }
+        public clearBoundary(): void {
+            this.left = Number.MAX_SAFE_INTEGER;
+            this.right = Number.MIN_SAFE_INTEGER;
+        }
+        public isValid(): boolean {
+            return (this.left <= this.right);
+        }
+        public set(newLeft: number, newRight: number): void {
+            this.left = newLeft;
+            this.right = newRight;
+        }
+        public equals(left: number, right: number): boolean {
+            return (this.left === left && this.right === right);
+        }
+    }
+}

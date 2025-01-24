@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/directives/remove-directive-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/directives/remove-directive-ts
 import { Directive, ElementRef } from "@angular/core";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
 if ({ "wholeBlockFile": {} }.wholeBlockFile) {

@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/services/variable-settings-config-service-spec-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/featureManagement/services/variable-settings-config-service-spec-ts
 import { TestBed } from "@angular/core/testing";
 import { VariableSettingsConfigService } from "./variable-settings-config.service";
 describe("VariableSettingsConfigService", () => {

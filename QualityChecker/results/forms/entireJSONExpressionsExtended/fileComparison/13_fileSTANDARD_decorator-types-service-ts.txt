@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/decoratorsVariationPointManagement/decorator-types-service-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/featureManagement/decoratorsVariationPointManagement/decorator-types-service-ts
 import { Injectable } from "@angular/core";
 class DecoratorTypesService {
     static wholeInitialization(arg0: {}) {

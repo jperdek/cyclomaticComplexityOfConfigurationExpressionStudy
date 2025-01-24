@@ -1,0 +1,25 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/services/utils/shuffle-puzzles-service-ts
+import { Injectable } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+import { Puzzle } from "src/app/store/puzzles/puzzles";
+if ({ "mainNavigation": "true", "mainPage": "true" } && ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } && { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } && ({ "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } && ({ "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } || ({ "zoom": "true" } && { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }))))) {
+    class ShufflePuzzlesService {
+        constructor() { }
+        // -> Fisher–Yates shuffle algorithm
+        public shuffleArray(array: Array<Puzzle>): Array<Puzzle> {
+            let m = array.length;
+            let t;
+            let i;
+            // While there remain elements to shuffle
+            while (m) {
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
+                // And swap it with the current element.
+                t = array[m];
+                array[m] = array[i];
+                array[i] = t;
+            }
+            return array;
+        }
+    }
+}

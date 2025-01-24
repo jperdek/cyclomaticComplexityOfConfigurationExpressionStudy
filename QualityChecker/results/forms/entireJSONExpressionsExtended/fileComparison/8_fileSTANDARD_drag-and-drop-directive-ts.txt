@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/directives/drag-and-drop-directive-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/directives/drag-and-drop-directive-ts
 import { Directive, EventEmitter, HostBinding, HostListener, Output } from "@angular/core";
 import { Router } from "@angular/router";
 import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";

@@ -1,4 +1,4 @@
-// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/initial-page/initial-page-component-ts
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/pages/initial-page/initial-page-component-ts
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable, of } from "rxjs";

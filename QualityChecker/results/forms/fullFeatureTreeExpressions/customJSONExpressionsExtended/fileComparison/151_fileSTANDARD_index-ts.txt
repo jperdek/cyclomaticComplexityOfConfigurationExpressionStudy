@@ -1,0 +1,15 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/store/index-ts
+import { ActionReducerMap } from "@ngrx/store";
+import * as puzzleState from "./puzzles/puzzles.reducer";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+interface PuzzleAppState {
+    [puzzleState.puzzlesFeatureKey]: puzzleState.PuzzleToSelectState;
+}
+const reducers: ActionReducerMap<PuzzleAppState> = {
+    [puzzleState.puzzlesFeatureKey]: puzzleState.reducer
+};
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "OR": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    class DecoratorFileCopy {
+    }
+}
+const puzzleListForSelect = (state: PuzzleAppState): puzzleState.PuzzleToSelectState => state[puzzleState.puzzlesFeatureKey];

@@ -1,0 +1,16 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/pages/zoom-management/set-zoom/set-zoom-component-ts
+import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "base": { "AND": { "mainNavigation": "true", "mainPage": "true", "AND": {
+                "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true", "OR": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" }, "AND": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "OR": { "rotate": "true", "boarderPicture": "true", "AND": { "zoomValue": "true", "OR": { "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true" }, "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } } } } }.base) {
+    class SetZoomComponent {
+        @Output()
+        zoomEmitter: EventEmitter<number> = new EventEmitter();
+        zoomValue: number = 1;
+        constructor() {
+        }
+        setZoomFromDefaultToPoint(): void {
+            this.zoomEmitter.emit(this.zoomValue);
+        }
+    }
+}

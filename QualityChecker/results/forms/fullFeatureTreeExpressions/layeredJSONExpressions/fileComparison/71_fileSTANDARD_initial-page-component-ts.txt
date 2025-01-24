@@ -1,0 +1,24 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/pages/initial-page/initial-page-component-ts
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { Observable, of } from "rxjs";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+import { ImagesToPuzzleMock } from "src/app/mockups/gallery.mock";
+import { TemplateImage } from "src/app/models/defaultTemplates";
+import { PuzzleManagerService } from "src/app/services/puzzleGenerator/puzzle-manager.service";
+if ({ "mainNavigation": "true", "mainPage": "true" } &&
+    ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } && { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } && ({ "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } && ({ "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } || ({ "zoom": "true" } && { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }))))) {
+    class InitialPageComponent implements OnInit {
+        constructor(puzzleManagerService: PuzzleManagerService, router: Router) { }
+        ngOnInit(): void {
+        }
+        public getSlides(): Observable<TemplateImage[]> {
+            return of(ImagesToPuzzleMock);
+        }
+        public createPuzzleForImage(slide: TemplateImage): void {
+            this.router.navigateByUrl("/puzzle/selectPuzzles");
+            // its in another module which needs to be loaded first
+            setTimeout(() => this.puzzleManagerService.startGame(slide.src), 700);
+        }
+    }
+}
