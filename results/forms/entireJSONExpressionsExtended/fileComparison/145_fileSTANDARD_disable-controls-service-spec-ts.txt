@@ -1,0 +1,13 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/services/utils/disable-controls-service-spec-ts
+import { TestBed } from "@angular/core/testing";
+import { DisableControlsService } from "./disable-controls.service";
+describe("DisableControlsService", () => {
+    let service: DisableControlsService;
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(DisableControlsService);
+    });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
+});

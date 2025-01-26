@@ -1,0 +1,25 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/app-routing-module-ts
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { InitialPageComponent } from "./puzzle-builder/pages/initial-page/initial-page.component";
+import { PuzzleBuilderComponent } from "./puzzle-builder/pages/puzzle-builder-component/puzzle-builder.component";
+import { DecoratorTypesService } from "./featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+const routes: Routes = [
+    {
+        path: "",
+        component: InitialPageComponent,
+        loadChildren: () => import("./puzzle-builder/puzzle-builder.module").then(m => m.PuzzleBuilderModule)
+    },
+    {
+        path: "puzzle",
+        component: PuzzleBuilderComponent,
+        loadChildren: () => import("./puzzle-builder/puzzle-builder.module").then(m => m.PuzzleBuilderModule)
+    }
+];
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && {
+    "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": {
+        "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoom": "true"
+    } }.layerAND6 && { "layerOR7": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) {
+    class AppRoutingModule {
+    }
+}

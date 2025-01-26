@@ -1,0 +1,13 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/services/puzzleGenerator/puzzleRenderingAlgorithm/algorithm1/draw-borders-service-spec-ts
+import { TestBed } from "@angular/core/testing";
+import { DrawBordersService } from "./draw-borders.service";
+describe("DrawBordersService", () => {
+    let service: DrawBordersService;
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(DrawBordersService);
+    });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
+});

@@ -22,8 +22,6 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.CustomConfigurationExpressionAsJSON"/>
-    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON"/>
-    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -34,4 +32,6 @@
     <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.ExpressionsForCyclomaticComplexityManipulationSettings"/>
     <fullyQualifiedTypeName name="astFileProcessor.astObjects.cyclomaticComplexity.ASTConditionalStatementReduced"/>
     <fullyQualifiedTypeName name="scenarios.cyclomaticComplexityEvaluation.TransformationFormsForCyclomaticComplexity"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.EntireConfigurationExpressionAsJSON"/>
+    <fullyQualifiedTypeName name="astFileProcessor.processors.cyclomaticComplexity.configurationExpressions.types.ConfigurationExpressionAsLayersAsJSON"/>
 </qualifiedTypeNameHistroy>

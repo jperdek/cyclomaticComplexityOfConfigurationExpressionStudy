@@ -1,5 +1,0 @@
-package astFileProcessor.astObjects.cyclomaticComplexity;
-
-public class ASTConditionalStatement {
-
-}

@@ -1,0 +1,13 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/services/puzzleControllers/puzzle-controller-interface-ts
+import { Injectable } from "@angular/core";
+import { ManageGraphicsService } from "../puzzleGenerator/manage-puzzle.service";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ("mainNavigation" == true && "mainPage"
+    == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1
+    && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview"
+    == true && "randomAngleRotation" == true
+    && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    abstract class PuzzleController {
+        abstract registerControllers(ManageGraphicsService: ManageGraphicsService): void;
+    }
+}

@@ -1,0 +1,13 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/featureManagement/utils/annotation-extractor-service-spec-ts
+import { TestBed } from "@angular/core/testing";
+import { AnnotationExtractorService } from "./annotation-extractor.service";
+describe("AnnotationExtractorService", () => {
+    let service: AnnotationExtractorService;
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(AnnotationExtractorService);
+    });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
+});

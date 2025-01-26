@@ -556,3 +556,28 @@
    }
 }
 
+
+
+if ({"AND": { "feat1": "true", "feat2": "false", "OR": { 
+                    "feat3": "true",  "OR": {
+"feat4": "true", "feat5": "true"}}, 
+                "AND": { "feat6": "true"}}}) { /* code */ }
+
+
+
+
+Table 2. Native vs. entire JSON configuration expressions in program flow – more complex conditions from hierarchic relations
+Name of compared metric	Corr.	W	p value	95% CI	Est.	p > 0.05
+Cyclomatic Number	0.5035					F
+CyclomaticDensity						F
+Halstead’s Bugs						F
+Halstead’s Difficulty						F
+Halstead’s Effort				-		F
+Halstead’s Length						F
+Halstead’s Time						F
+Halstead’s Vocabulary						F
+Halstead’sVolume						F
+
+
+•	RQ3: How incorporation of helper naming made as wrapping of hierarchic conditions affect code complexity metrics compared to native conditions and hierarchic conditional object? 
+

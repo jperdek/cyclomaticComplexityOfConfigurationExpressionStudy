@@ -1,0 +1,12 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/components/zoom-block/zoom-block-component-ts
+import { Component, OnInit } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "wholeBlockFile": {
+        "zoom": "true"
+    } }.wholeBlockFile) {
+    class ZoomBlockComponent implements OnInit {
+        constructor() { }
+        ngOnInit(): void {
+        }
+    }
+}

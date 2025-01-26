@@ -1,0 +1,20 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/store/puzzles/puzzles-ts
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && { "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoom": "true" } }.layerAND6 && { "layerOR7": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) {
+    class DecoratorFileCopy {
+    }
+}
+interface Puzzle {
+    id: string;
+    positionIndex: number;
+    puzzleImageSrc: string;
+    width: number;
+    height: number;
+    rotateAngle: number;
+    positionLeftOnImage: number;
+    positionTopOnImage: number;
+    boardCanvasWidth: number;
+    boardCanvasHeight: number;
+    imageCanvasWidth: number;
+    imageCanvasHeight: number;
+}

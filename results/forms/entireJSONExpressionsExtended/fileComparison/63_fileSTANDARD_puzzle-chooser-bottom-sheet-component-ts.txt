@@ -1,0 +1,13 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet-component-ts
+import { Component } from "@angular/core";
+import { MatBottomSheetRef } from "@angular/material/bottom-sheet";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+    class PuzzleChooserBottomSheetComponent {
+        constructor(bottomSheetRef: MatBottomSheetRef<PuzzleChooserBottomSheetComponent>) { }
+        public openLink(event: MouseEvent): void {
+            this.bottomSheetRef.dismiss();
+            event.preventDefault();
+        }
+    }
+}

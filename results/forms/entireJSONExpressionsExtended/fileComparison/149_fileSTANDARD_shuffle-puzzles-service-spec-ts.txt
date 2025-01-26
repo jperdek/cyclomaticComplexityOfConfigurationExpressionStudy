@@ -1,0 +1,13 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/services/utils/shuffle-puzzles-service-spec-ts
+import { TestBed } from "@angular/core/testing";
+import { ShufflePuzzlesService } from "./shuffle-puzzles.service";
+describe("ShufflePuzzlesService", () => {
+    let service: ShufflePuzzlesService;
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(ShufflePuzzlesService);
+    });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
+});

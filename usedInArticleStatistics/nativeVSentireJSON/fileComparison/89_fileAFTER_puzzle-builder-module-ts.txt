@@ -1,0 +1,128 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/puzzle-builder-module-ts
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { PuzzleBuilderRoutingModule } from "./puzzle-builder-routing.module";
+import { PuzzleBoardComponent } from "./pages/puzzle-board/puzzle-board.component";
+import { PuzzleBuilderComponent } from "./pages/puzzle-builder-component/puzzle-builder.component";
+import { MaterialModule } from "../material/material.module";
+import { PuzzleChooserComponent } from "./pages/puzzle-chooser/puzzle-chooser.component";
+import { RemoveDirective } from "../directives/remove.directive";
+import { TemplatePreviewComponent } from "./pages/template-preview/template-preview.component";
+import { InsertTemplateImageComponent } from "./pages/insert-template-image/insert-template-image.component";
+import { DragAndDropDirective } from "../directives/drag-and-drop.directive";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { PuzzleChooserBottomSheetComponent } from "./pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
+import { TemplatePreviewBottomSheetComponent } from "./pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
+import { InsertTemplateImageBottomSheetComponent } from "./pages/bottom-sheets/insert-template-image-bottom-sheet/insert-template-image-bottom-sheet.component";
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
+}
+import { ZoomManagementComponent } from "./pages/zoom-management/zoom-management.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+if ({
+    "zoom": "true"
+}) {
+}
+import { ZoomMenuComponent } from "./components/zoom-menu/zoom-menu.component";
+if ({
+    "imageGallery": "true"
+}) {
+}
+import { GalleryComponent } from "./pages/gallery/gallery.component";
+import { DragAndDropImageComponent } from "./components/drag-and-drop-image/drag-and-drop-image.component";
+if ({
+    "imageGallery": "true"
+}) {
+}
+import { GalleryBottomSheetComponent } from "./pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
+}
+import { ZoomManagementBottomSheetComponent } from "./pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
+import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
+if ({
+    "zoom": "true"
+}) {
+}
+import { ZoomBlockComponent } from "./components/zoom-block/zoom-block.component";
+if ({
+    "zoomValue": "true"
+}) {
+}
+import { SetZoomComponent } from "./pages/zoom-management/set-zoom/set-zoom.component";
+if ({
+    "zoomCoordinates": "true"
+}) {
+}
+import { SetZoomPositionComponent } from "./pages/zoom-management/set-zoom-position/set-zoom-position.component";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
+    const declZoomManagementComponent = ZoomManagementComponent;
+}
+else {
+    let declZoomManagementComponent = PuzzleBoardComponent;
+}
+if ({
+    "zoom": "true"
+}) {
+    const declZoomMenuComponent = ZoomMenuComponent;
+}
+else {
+    let declZoomMenuComponent = PuzzleBoardComponent;
+}
+if ({
+    "imageGallery": "true"
+}) {
+    const declGalleryComponent = GalleryComponent;
+}
+else {
+    let declGalleryComponent = PuzzleBoardComponent;
+}
+if ({
+    "imageGallery": "true"
+}) {
+    const declGalleryBottomSheetComponent = GalleryBottomSheetComponent;
+}
+else {
+    let declGalleryBottomSheetComponent = PuzzleBoardComponent;
+}
+if ({
+    "OR": { "zoomCoordinates": "true", "zoomValue": "true" }
+}) {
+    const declZoomManagementBottomSheetComponent = ZoomManagementBottomSheetComponent;
+}
+else {
+    let declZoomManagementBottomSheetComponent = PuzzleBoardComponent;
+}
+if ({
+    "zoom": "true"
+}) {
+    const declZoomBlockComponent = ZoomBlockComponent;
+}
+else {
+    let declZoomBlockComponent = PuzzleBoardComponent;
+}
+if ({
+    "zoomValue": "true"
+}) {
+    const declSetZoomComponent = SetZoomComponent;
+}
+else {
+    let declSetZoomComponent = PuzzleBoardComponent;
+}
+if ({
+    "zoomCoordinates": "true"
+}) {
+    const declSetZoomPositionComponent = SetZoomPositionComponent;
+}
+else {
+    let declSetZoomPositionComponent = PuzzleBoardComponent;
+}
+if ({}) {
+    class PuzzleBuilderModule {
+    }
+}

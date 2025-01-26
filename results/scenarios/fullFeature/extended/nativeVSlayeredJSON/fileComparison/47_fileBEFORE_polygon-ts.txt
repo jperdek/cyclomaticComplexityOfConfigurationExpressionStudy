@@ -1,0 +1,20 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/models/polygon-ts
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+import { Point } from "./point";
+enum Connection {
+    hole,
+    fill,
+    none
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true
+    && ("imageGallery" == true || "puzzleNavigation" == true
+        ||
+            "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    class DecoratorFileCopy {
+    }
+}
+interface Polygon {
+    points: Point[];
+    connections: Connection[];
+    innerCircles: ImageData[];
+}

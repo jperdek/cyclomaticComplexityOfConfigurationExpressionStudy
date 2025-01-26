@@ -1,0 +1,5 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/featureManagement/decoratorsVariationPointManagement/service-to-skip-service-ts
+import { Injectable } from "@angular/core";
+class ServiceToSkipService {
+    constructor() { }
+}

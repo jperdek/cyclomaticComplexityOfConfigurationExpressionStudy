@@ -1,0 +1,15 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/models/extendedPuzzle-ts
+import { fabric } from "fabric";
+import { Puzzle } from "../store/puzzles/puzzles";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "mainNavigation": "true", "mainPage": "true" } && ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } && { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } && ({ "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } && ({ "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } || ({ "zoom": "true" } && { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }))))) {
+    class DecoratorFileCopy {
+    }
+}
+interface ExtendedPuzzle extends fabric.Image {
+    puzzleData: Puzzle;
+    dragPointer: fabric.Point | undefined;
+    // for responsiveness
+    previousCanvasWidth: number | undefined;
+    previousCanvasHeight: number | undefined;
+}

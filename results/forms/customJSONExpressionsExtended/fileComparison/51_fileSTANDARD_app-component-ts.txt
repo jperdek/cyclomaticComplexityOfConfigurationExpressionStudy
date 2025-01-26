@@ -1,0 +1,16 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/pages/app-component/app-component-ts
+import { Component } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "base": { "toOmitCompletely": "true" } }
+    .base) {
+}
+import { TreeManagerService } from "src/app/featureManagement/tree-manager.service";
+class AppComponent {
+    title = "puzzleToPlay";
+    constructor(treeManagerService: TreeManagerService) {
+        if ({ "base": { "toOmitCompletely": "true" } }
+            .base) {
+        }
+    }
+}
+var newA;

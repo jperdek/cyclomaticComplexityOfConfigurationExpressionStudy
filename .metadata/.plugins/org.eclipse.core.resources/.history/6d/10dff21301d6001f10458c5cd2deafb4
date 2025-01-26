@@ -1,8 +1,0 @@
-package astFileProcessor.processors;
-
-public class Snippet {
-	public static void main(String[] args) {
-		ASTTextExtractorTools.java (13 matches)
-	}
-}
-

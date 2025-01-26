@@ -1,0 +1,38 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/services/utils/disable-controls-service-ts
+import { Injectable } from "@angular/core";
+import { fabric } from "fabric";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ("mainNavigation" == true && "mainPage"
+    == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true && ("imageGallery" == true || "puzzleNavigation"
+    == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) || "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+    class DisableControlsService {
+        public removeScalingOptions(img: fabric.Image): void {
+            img.lockScalingX = true;
+            img.lockScalingY = true;
+            img.setControlsVisibility({
+                mt: false,
+                mb: false,
+                ml: false,
+                mr: false,
+                tl: false,
+                tr: false,
+                bl: false,
+                br: false
+            });
+        }
+        public removeScalingOptionsForGroups(): void {
+            fabric.Group.prototype.lockScalingX = true;
+            fabric.Group.prototype.lockScalingY = true;
+            fabric.Group.prototype.setControlsVisibility({
+                mt: false,
+                mb: false,
+                ml: false,
+                mr: false,
+                tl: false,
+                tr: false,
+                bl: false,
+                br: false
+            });
+        }
+    }
+}

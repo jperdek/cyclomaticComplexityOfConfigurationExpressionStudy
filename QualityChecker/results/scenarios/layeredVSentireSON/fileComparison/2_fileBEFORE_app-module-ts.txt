@@ -1,0 +1,23 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/app-module-ts
+import { NgModule } from "@angular/core";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./pages/app-component/app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MaterialModule } from "./material/material.module";
+import { MainNavigationComponent } from "./components/main-navigation/main-navigation.component";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { EffectsModule } from "@ngrx/effects";
+import { environment } from "src/environments/environment";
+import { StoreModule } from "@ngrx/store";
+import { reducers } from "./store";
+import { AppEffects } from "./effects/app.effects";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { InitialPageComponent } from "./puzzle-builder/pages/initial-page/initial-page.component";
+import { SmallMainMenuComponent } from "./components/small-main-menu/small-main-menu.component";
+import { PuzzleBuilderModule } from "./puzzle-builder/puzzle-builder.module";
+import { DecoratorTypesService } from "./featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && { "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4 && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoom": "true" } }.layerAND6 && {
+    "layerOR7": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) {
+    class AppModule {
+    }
+}

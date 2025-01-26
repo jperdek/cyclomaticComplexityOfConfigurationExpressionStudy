@@ -1,0 +1,4 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/environments/environment-prod-ts
+const environment = {
+    production: true
+};

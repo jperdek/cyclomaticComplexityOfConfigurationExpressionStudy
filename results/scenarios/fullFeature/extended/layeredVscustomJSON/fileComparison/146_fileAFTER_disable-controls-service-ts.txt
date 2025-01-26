@@ -1,0 +1,38 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/services/utils/disable-controls-service-ts
+import { Injectable } from "@angular/core";
+import { fabric } from "fabric";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "wholeBlockFile": {
+        "AND": { "mainPage": "true", "mainNavigation": "true", "AND": { "AND": { "OR": { "AND": { "OR": { "zoomCoordinates": "true", "zoomValue": "true", "reset": "true", "toBack": "true", "toFront": "true", "boarderPicture": "true" }, "zoom": "true" }, "returnItem": "true", "showPositionOnBoard": "true", "rotate": "true", "boarderPicture": "true" }, "moveableOnPuzzleBoard": "true", "multiplePuzzleSelect": "true", "randomAngleRotation": "true", "changePuzzleOrdering": "true", "puzzleDrawer": "true", "preview": "true" }, "OR": { "imageLoader": "true", "imageGallery": "true", "puzzleNavigation": "true" }, "puzzleNavigation": "true", "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']" } }
+    } }.wholeBlockFile) {
+    class DisableControlsService {
+        public removeScalingOptions(img: fabric.Image): void {
+            img.lockScalingX = true;
+            img.lockScalingY = true;
+            img.setControlsVisibility({
+                mt: false,
+                mb: false,
+                ml: false,
+                mr: false,
+                tl: false,
+                tr: false,
+                bl: false,
+                br: false
+            });
+        }
+        public removeScalingOptionsForGroups(): void {
+            fabric.Group.prototype.lockScalingX = true;
+            fabric.Group.prototype.lockScalingY = true;
+            fabric.Group.prototype.setControlsVisibility({
+                mt: false,
+                mb: false,
+                ml: false,
+                mr: false,
+                tl: false,
+                tr: false,
+                bl: false,
+                br: false
+            });
+        }
+    }
+}

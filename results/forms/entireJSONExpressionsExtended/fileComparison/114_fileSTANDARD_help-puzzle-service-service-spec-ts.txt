@@ -1,0 +1,13 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/services/puzzleControllers/help-puzzle-service-service-spec-ts
+import { TestBed } from "@angular/core/testing";
+import { HelpPuzzleServiceService } from "./help-puzzle-service.service";
+describe("HelpPuzzleServiceService", () => {
+    let service: HelpPuzzleServiceService;
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(HelpPuzzleServiceService);
+    });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
+});

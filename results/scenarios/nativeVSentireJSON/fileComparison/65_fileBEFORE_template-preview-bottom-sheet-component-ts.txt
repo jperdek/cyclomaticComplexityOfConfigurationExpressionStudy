@@ -1,0 +1,13 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/puzzle-builder/pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet-component-ts
+import { Component } from "@angular/core";
+import { MatBottomSheetRef } from "@angular/material/bottom-sheet";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if (true) {
+    class TemplatePreviewBottomSheetComponent {
+        constructor(bottomSheetRef: MatBottomSheetRef<TemplatePreviewBottomSheetComponent>) { }
+        public openLink(event: MouseEvent): void {
+            this.bottomSheetRef.dismiss();
+            event.preventDefault();
+        }
+    }
+}

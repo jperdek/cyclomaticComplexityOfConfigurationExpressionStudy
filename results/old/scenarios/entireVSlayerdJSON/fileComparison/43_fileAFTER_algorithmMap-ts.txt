@@ -1,0 +1,13 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/models/algorithmMap-ts
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+interface AlgorithmMap {
+    name: string;
+    instance: any;
+}
+if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+    class DecoratorFileCopy {
+    }
+}
+interface PuzzleAlgorithm {
+    divideToPuzzle(sourceCanvas: HTMLCanvasElement, targetCanvas: fabric.Canvas, photoCanvasWidth: number, photoCanvasHeight: number, boardCanvasWidth: number, boardCanvasHeight: number, radius: number, randomAngle: boolean): void;
+}

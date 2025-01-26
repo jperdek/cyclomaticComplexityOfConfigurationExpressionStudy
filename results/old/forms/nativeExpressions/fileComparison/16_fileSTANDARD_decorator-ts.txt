@@ -1,0 +1,5 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/featureManagement/designPatternsModels/decorator-ts
+interface Decorator {
+    setDecorated(decorated: boolean): void;
+    getDecorated(): boolean;
+}

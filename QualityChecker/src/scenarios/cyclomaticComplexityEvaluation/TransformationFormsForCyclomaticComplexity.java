@@ -100,7 +100,7 @@ public class TransformationFormsForCyclomaticComplexity {
 		splDecoratorComparator.evaluateComplexitiesOfAllForms("CYCLFORM2EXT", cyclomaticComplexityManipulationSettings);
 	}
 	
-	public static void evaluateCyclomaticComplexityForm3Extendend() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
+	public static void evaluateCyclomaticComplexityForm3Extended() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		SPLDecoratorComplexityComparator splDecoratorComparator = Scenario.getDefaultCyclomaticComplexityComparator();
 		ExpressionsForCyclomaticComplexityManipulationSettings cyclomaticComplexityManipulationSettings = 
 				TransformationFormsForCyclomaticComplexity.getConditionalFlowWithLayeredConditions(false);
@@ -116,12 +116,12 @@ public class TransformationFormsForCyclomaticComplexity {
 	
 	public static void evaluateAllForms() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
 		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm1();
-		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm2();
-		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm3();
-		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm4();
-		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm2Extended();
-		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm3Extende();
-		//TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm4Extended();
+		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm2();
+		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm3();
+		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm4();
+		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm2Extended();
+		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm3Extended();
+		TransformationFormsForCyclomaticComplexity.evaluateCyclomaticComplexityForm4Extended();
 	}
 
 	public static void main(String args[]) throws NonExistingDecoratorTransformationType, IOException, 

@@ -1,0 +1,8 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/puzzle-builder/pages/puzzle-builder-component/puzzle-builder-component-ts
+import { Component } from "@angular/core";
+import { DecoratorTypesService } from "src/app/featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+    class PuzzleBuilderComponent {
+        constructor() { }
+    }
+}

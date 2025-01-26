@@ -1,0 +1,47 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/puzzle-builder/puzzle-builder-routing-module-ts
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { Route, RouterModule } from "@angular/router";
+import RoutingModelDataAll from "../mockups/routing-all.mock";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+const routes = RoutingModelDataAll.map((model: any) => model = {
+    "path": model.componentPathInModule,
+    "component": model.componentRef
+} as Route);
+if ({ "layerAND2": { "mainNavigation": "true", "mainPage": "true" } }.layerAND2 && ({ "layerAND3": { "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } }.layerAND3 && { "layerOR4": { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } }.layerOR4 && ({ "layerAND4": { "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } }.layerAND4
+    /*
+    const routes: Routes = RoutingModelMock.getRoutingModelData().map((model: any) => model = {
+      "path": model.componentPathInModule,
+      "component": model.componentRef} as Route);
+    console.log(routes);
+    
+    const routeProvider = {
+      provide: ROUTES,
+      useFactory: () => {
+          return [
+            ...routes
+          ];
+      },
+      multi: true
+    };
+    */
+    && ({ "layerOR5": { "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } }.layerOR5 || ({ "layerAND6": { "zoom": "true" } }.layerAND6 && { "layerOR7": { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" } }.layerOR7))))) {
+    /*
+    const routes: Routes = RoutingModelMock.getRoutingModelData().map((model: any) => model = {
+      "path": model.componentPathInModule,
+      "component": model.componentRef} as Route);
+    console.log(routes);
+    
+    const routeProvider = {
+      provide: ROUTES,
+      useFactory: () => {
+          return [
+            ...routes
+          ];
+      },
+      multi: true
+    };
+    */
+    class PuzzleBuilderRoutingModule {
+    }
+}

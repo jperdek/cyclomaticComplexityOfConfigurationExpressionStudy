@@ -1,0 +1,13 @@
+// FROM: E:/aspects/testComplexity/variabilityConstructsComplexitySubmission/variabilityConstructsComplexitySubmission/canvasSPLforSPA/src/app/services/puzzleGenerator/scan-line-service-spec-ts
+import { TestBed } from "@angular/core/testing";
+import { ScanLineService } from "./scan-line.service";
+describe("ScanLineService", () => {
+    let service: ScanLineService;
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(ScanLineService);
+    });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
+});

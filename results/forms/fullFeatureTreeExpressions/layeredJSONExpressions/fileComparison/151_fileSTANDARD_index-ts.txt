@@ -1,0 +1,16 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/store/index-ts
+import { ActionReducerMap } from "@ngrx/store";
+import * as puzzleState from "./puzzles/puzzles.reducer";
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+interface PuzzleAppState {
+    [puzzleState.puzzlesFeatureKey]: puzzleState.PuzzleToSelectState;
+}
+const reducers: ActionReducerMap<PuzzleAppState> = {
+    [puzzleState.puzzlesFeatureKey]: puzzleState.reducer
+};
+if ({ "mainNavigation": "true", "mainPage": "true" }
+    && ({ "puzzleAlgorithmType": "['JIGSAW', 'ANTI-JIGSAW', 'JIGSAW2']", "puzzleNavigation": "true" } && { "imageGallery": "true", "puzzleNavigation": "true", "imageLoader": "true" } && ({ "preview": "true", "randomAngleRotation": "true", "puzzleDrawer": "true", "changePuzzleOrdering": "true", "multiplePuzzleSelect": "true", "moveableOnPuzzleBoard": "true" } && ({ "rotate": "true", "boarderPicture": "true", "returnItem": "true", "showPositionOnBoard": "true" } || ({ "zoom": "true" } && { "zoomValue": "true", "toFront": "true", "zoomCoordinates": "true", "boarderPicture": "true", "reset": "true", "toBack": "true" }))))) {
+    class DecoratorFileCopy {
+    }
+}
+const puzzleListForSelect = (state: PuzzleAppState): puzzleState.PuzzleToSelectState => state[puzzleState.puzzlesFeatureKey];

@@ -1,0 +1,6 @@
+@DecoratorTypesService.wholeBlockFile({"AND": { "feat1": "f1", "feat2": "f2", "OR": { 
+                    "feat3": "f3", 
+                    "OR": {"feat4": "f4", "feat5": "f5"}}, 
+                "MyFeatGroup1": { "feat6": "f6"}}})
+class AppRoutingModule {
+}

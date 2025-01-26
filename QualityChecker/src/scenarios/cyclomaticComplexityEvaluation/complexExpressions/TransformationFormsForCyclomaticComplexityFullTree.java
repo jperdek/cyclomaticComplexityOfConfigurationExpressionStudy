@@ -115,12 +115,12 @@ public class TransformationFormsForCyclomaticComplexityFullTree {
 	}
 	
 	public static void evaluateAllForms() throws NonExistingDecoratorTransformationType, IOException, IllegalImportNameSpecifiedException, NotFoundBlockElementToWrap, ParseException {
-		//TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm1();
-		//TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm2();
-		//TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm3();
-		//TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm4();
-		//TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm2Extended();
-		//TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm3Extendend();
+		TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm1();
+		TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm2();
+		TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm3();
+		TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm4();
+		TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm2Extended();
+		TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm3Extendend();
 		TransformationFormsForCyclomaticComplexityFullTree.evaluateCyclomaticComplexityForm4Extended();
 	}
 

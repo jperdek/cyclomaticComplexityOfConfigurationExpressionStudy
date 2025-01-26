@@ -1,0 +1,69 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineHierarchic/src/app/mockups/routing-mock-ts
+import { PuzzleChooserBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/puzzle-chooser-bottom-sheet/puzzle-chooser-bottom-sheet.component";
+import { TemplatePreviewBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/template-preview-bottom-sheet/template-preview-bottom-sheet.component";
+import { RoutingModel } from "../models/routingModel";
+import { PuzzleChooserComponent } from "../puzzle-builder/pages/puzzle-chooser/puzzle-chooser.component";
+import { TemplatePreviewComponent } from "../puzzle-builder/pages/template-preview/template-preview.component";
+import { GameConfigurationComponent } from "../game-configuration/game-configuration.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true
+    && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true ||
+    (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard"
+    == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { ZoomManagementComponent } from "../puzzle-builder/pages/zoom-management/zoom-management.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true
+    && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true ||
+    (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard"
+    == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { ZoomManagementBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/zoom-management-bottom-sheet/zoom-management-bottom-sheet.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "imageGallery" == true &&
+    "puzzleNavigation" == true && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) ||
+    "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { GalleryBottomSheetComponent } from "../puzzle-builder/pages/bottom-sheets/gallery-bottom-sheet/gallery-bottom-sheet.component";
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "imageGallery" == true &&
+    "puzzleNavigation" == true && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) ||
+    "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+import { GalleryComponent } from "../puzzle-builder/pages/gallery/gallery.component";
+//import { GalleryComponent } from "../puzzle-builder/pages/gallery/gallery.component";
+let RoutingModelData: RoutingModel[] = [
+    {
+        "name": "Play",
+        "path": "/puzzle/selectPuzzles",
+        "bottomSheetComponent": PuzzleChooserBottomSheetComponent,
+        "componentPathInModule": "selectPuzzles",
+        "componentRef": PuzzleChooserComponent
+    },
+    {
+        "name": "Preview",
+        "path": "/puzzle/preview",
+        "bottomSheetComponent": TemplatePreviewBottomSheetComponent,
+        "componentPathInModule": "preview",
+        "componentRef": TemplatePreviewComponent
+    },
+    {
+        "name": "Config",
+        "path": "/puzzle/config",
+        "bottomSheetComponent": null,
+        "componentPathInModule": "config",
+        "componentRef": GameConfigurationComponent
+    }
+];
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "imageGallery" == true &&
+    "puzzleNavigation" == true && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true || (("zoomValue" == true || "toFront" == true || "zoomCoordinates" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true) ||
+    "returnItem" == true || "showPositionOnBoard" == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+if ("mainNavigation" == true && "mainPage" == true && (["JIGSAW", "ANTI-JIGSAW", "JIGSAW2"].indexOf(puzzleAlgorithmType) > -1 && "puzzleNavigation" == true
+    && ("imageGallery" == true || "puzzleNavigation" == true || "imageLoader" == true) && ("preview" == true && "randomAngleRotation" == true && "puzzleDrawer" == true && ("rotate" == true || "boarderPicture" == true ||
+    (("zoomValue" == true || "zoomCoordinates" == true) && (("toFront" == true || "boarderPicture" == true || "reset" == true || "toBack" == true) && "zoom" == true)) || "returnItem" == true || "showPositionOnBoard"
+    == true) && "changePuzzleOrdering" == true && "multiplePuzzleSelect" == true && "moveableOnPuzzleBoard" == true))) {
+}
+//RoutingModelData.push({"name": "Zoom", "path": "/puzzle/zoom", "bottomSheetComponent": ZoomManagementBottomSheetComponent, "componentPathInModule": "zoom", "componentRef": ZoomManagementComponent});
+class RoutingModelMock {
+    static getRoutingModelData(): RoutingModel[] {
+        return RoutingModelData;
+    }
+}
+var newA;

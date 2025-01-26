@@ -1,0 +1,10 @@
+// FROM: E:/aspects/cyclomaticComplexityAnalysisStudy/ProductLineBased/src/app/models/point-ts
+import { DecoratorTypesService } from "../featureManagement/decoratorsVariationPointManagement/decorator-types.service";
+if ({ "wholeBlockFile": {} }.wholeBlockFile) {
+    class DecoratorFileCopy {
+    }
+}
+interface Point {
+    x: number;
+    y: number;
+}
